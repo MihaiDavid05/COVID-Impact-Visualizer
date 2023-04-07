@@ -56,12 +56,14 @@ The *Impact of Covid-19 on Employment* dataset comprises a total of 283 data poi
 
 ### Related work
 
-
+We analysed the following projects and related work to get insights and ideas for our project:
 - [COVID Visualizer](https://www.covidvisualizer.com)
 - [Then and now: visualizing COVID-19’s impact on air traffic](https://www.flightradar24.com/blog/then-and-now-visualizing-covid-19s-impact-on-air-traffic/)
 - [Analysis on Impact of Covid on Employment](https://www.kaggle.com/code/zusmani/analysis-on-impact-of-covid-on-employment)
 - [D3.js Geographic Bounding Boxes](https://www.jasondavies.com/maps/bounds/)
 - [D3.js Connection map](https://d3-graph-gallery.com/connectionmap.html)
+
+The COVID Visualizer, which displays COVID cases and deaths on an interactive 3D globe, is the primary inspiration for our work. While the dataset for flights in Europe lacks data to build a connection map, this type of visualization would be a valuable addition in case we acquire supplementary data. Additionally, the notebook analyzing the impact of COVID on employment provides a practical starting point for our analysis.
 
 To the best of our knowledge, our approach is original because it combines multiple datasets to provide a comprehensive understanding of the pandemic's impact on society. We will use interactive data visualizations to engage viewers and enable them to understand the scale and complexity of the pandemic's impact.
 
