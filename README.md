@@ -44,8 +44,6 @@ Finally, we aim to assess the impact of COVID-19 on employment by examining the 
 
 [Exploratory Data Analysis, Preprocessing and Data Cleaning](/data/exploratory_data_analysis.ipynb)
 
-The *Impact of Covid-19 on Employment* dataset comprises a total of 283 data points from 2020, consisting of 189 for countries and 94 for regions. Although the dataset includes eight features, our focus will be on the `percentage_of_working_hrs_lost` attribute, which represents the percentage of hours lost compared to the baseline (the fourth quarter of 2019). Upon examining the data for countries, we observe that the percentage of working hours lost follows a distribution with a mean of 8.8% and a standard deviation of 4.8%.
-
 The COVID data is spanning from the beginning of the year 2020 until the end of March 2023 (the start and end day may differ from country to country) and there are 254 countries/regions represented. For each day, and each country we have a list of 67 features, including new cases, total cases, new deaths, total deaths, cases_per_million, and deaths_per_million, which are the columns of interest to us. USA, China, India and France, in that order, have the highest number of COVID deaths until March 2023.
 
 For the population and overall deaths data in 2020, we have 265 countries/regions represented. We compute the `deaths_per year` from the `deaths_per_1000_people` and the `population_per_year`. India, China, USA and Nigeria, in that order, had the most deaths in 2020.
@@ -53,6 +51,8 @@ For the population and overall deaths data in 2020, we have 265 countries/region
 The *European Flights by Eurocontrol* dataset contains features regarding the number of flights for most European airports (identifiable by the ICAO code) between *January 1st, 2016*, to *May 31st, 2022*. There are two sources for the number of IFR flights (for simplicity, commercial flights): one provided by the Network Manager (without missing values) and one by the Airport Operator (containing *~69.72%* missing values, imposing an argument to remove these features).
 
 The dataset is inner-joined with the *IATA/ICAO List by IP2Location* dataset that describes the airports worldwide with details about the location (i.e., `latitude` and `longitude` required for visualizing airports on maps) on the `APT_ICAO` column.
+
+The *Impact of Covid-19 on Employment* dataset comprises a total of 283 data points from 2020, consisting of 189 for countries and 94 for regions. Although the dataset includes eight features, our focus will be on the `percentage_of_working_hrs_lost` attribute, which represents the percentage of hours lost compared to the baseline (the fourth quarter of 2019). Upon examining the data for countries, we observe that the percentage of working hours lost follows a distribution with a mean of 8.8% and a standard deviation of 4.8%.
 
 ### Related work
 
