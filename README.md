@@ -36,7 +36,7 @@ For our project, _**COVID-19 impact through data visualization**_, we aim to pro
 
 In terms of COVID-19 cases and deaths, we plan to create an interactive 3D heatmap globe to display the data for different countries. This visualization will allow us to analyze the pandemic's development and movement, as well as the different results achieved by countries with different preventative measures. By adding a slider to change the time at which the map is displayed, we can examine how the pandemic has progressed over time.
 
-The impact of COVID-19 on mobility and travel is another significant aspect that we plan to visualize. By using the dataset with flights, we can analyze and visualize how the pandemic has affected the movement of people, with a focus on Europe. The visualization will provide an interactive way to explore the flight data, including flight cancellations and reductions.
+The impact of COVID-19 on mobility and travel is another significant aspect that we plan to visualize. By using the dataset with flights, we can analyze and visualize how the pandemic has affected the movement of people, with a focus on Europe. The visualization will provide an interactive way to explore the flight data, including the decrease and drop in the number of flights at the begining of the pandemic.
 
 Finally, we aim to assess the impact of COVID-19 on employment by examining the percentage of lost working hours per country. We plan to use the Impact of COVID-19 on Employment dataset to understand how different COVID-19-related policies, such as lockdowns, work-from-home, and curfews, have impacted employment. By visualizing this indicator for different countries and regions, we can assess the effectiveness of different approaches to managing the pandemic.
 
