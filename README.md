@@ -32,9 +32,13 @@ We have conducted an initial analysis of the datasets and have found them to be 
 
 ### Problematic
 
-> Frame the general topic of your visualization and the main axis that you want to develop.
-> - What am I trying to show with my visualization?
-> - Think of an overview for the project, your motivation, and the target audience.
+For our project, _**COVID-19 impact through data visualization**_, we aim to provide a comprehensive understanding of the pandemic's impact on society through three main aspects: COVID-19 cases and deaths, flights to assess travel in Europe, and the impact of COVID-19 on employment. Our primary goal is to create an informative, interactive, and engaging visualization that enables viewers to understand the scale and complexity of the pandemic's impact.
+
+In terms of COVID-19 cases and deaths, we plan to create an interactive 3D heatmap globe to display the data for different countries. This visualization will allow us to analyze the pandemic's development and movement, as well as the different results achieved by countries with different preventative measures. By adding a slider to change the time at which the map is displayed, we can examine how the pandemic has progressed over time.
+
+The impact of COVID-19 on mobility and travel is another significant aspect that we plan to visualize. By using the dataset with flights, we can analyze and visualize how the pandemic has affected the movement of people, with a focus on Europe. The visualization will provide an interactive way to explore the flight data, including flight cancellations and reductions.
+
+Finally, we aim to assess the impact of COVID-19 on employment by examining the percentage of lost working hours per country. We plan to use the Impact of COVID-19 on Employment dataset to understand how different COVID-19-related policies, such as lockdowns, work-from-home, and curfews, have impacted employment. By visualizing this indicator for different countries and regions, we can assess the effectiveness of different approaches to managing the pandemic.
 
 ### Exploratory Data Analysis
 
