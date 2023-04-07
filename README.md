@@ -10,12 +10,7 @@
 
 ## Milestone 1 (7th April, 5pm)
 
-**10% of the final grade**
-
-This is a preliminary milestone to let you set up goals for your final project and assess the feasibility of your ideas.
-Please, fill the following sections about your project.
-
-*(max. 2000 characters per section)*
+Goals and ideas for **COVID-19 Impact through Data Visualization**, analysis of the dataset, description of the problematic, steps for data-cleaning and exploratory data analysis, and a summary of related work.
 
 ### Dataset
 
