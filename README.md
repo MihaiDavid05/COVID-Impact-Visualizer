@@ -32,7 +32,7 @@ We have conducted an initial analysis of the datasets and have found them to be 
 
 ### Problematic
 
-For our project, _**COVID-19 impact through data visualization**_, we aim to provide a comprehensive understanding of the pandemic's impact on society through three main aspects: COVID-19 cases and deaths, flights to assess travel in Europe, and the impact of COVID-19 on employment. Our primary goal is to create an informative, interactive, and engaging visualization that enables viewers to understand the scale and complexity of the pandemic's impact.
+For our project, **COVID-19 Impact through Data Visualization**, we aim to provide a comprehensive understanding of the pandemic's impact on society through three main aspects: COVID-19 cases and deaths, flights to assess travel in Europe, and the impact of COVID-19 on employment. Our primary goal is to create an informative, interactive, and engaging visualization that enables viewers to understand the scale and complexity of the pandemic's impact.
 
 In terms of COVID-19 cases and deaths, we plan to create an interactive 3D heatmap globe to display the data for different countries. This visualization will allow us to analyze the pandemic's development and movement, as well as the different results achieved by countries with different preventative measures. By adding a slider to change the time at which the map is displayed, we can examine how the pandemic has progressed over time.
 
