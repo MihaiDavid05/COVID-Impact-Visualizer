@@ -19,9 +19,16 @@ Please, fill the following sections about your project.
 
 ### Dataset
 
-> Find a dataset (or multiple) that you will explore. Assess the quality of the data it contains and how much preprocessing / data-cleaning it will require before tackling visualization. We recommend using a standard dataset as this course is not about scraping nor data processing.
->
-> Hint: some good pointers for finding quality publicly available datasets ([Google dataset search](https://datasetsearch.research.google.com/), [Kaggle](https://www.kaggle.com/datasets), [OpenSwissData](https://opendata.swiss/en/), [SNAP](https://snap.stanford.edu/data/) and [FiveThirtyEight](https://data.fivethirtyeight.com/)), you could use also the DataSets proposed by the ENAC (see the Announcements section on Zulip).
+We have selected three high-quality datasets for our project, which will serve as the foundation for our analysis.
+- [Data on COVID-19 (coronavirus) by Our World in Data](https://github.com/owid/covid-19-data/tree/master/public/data)
+- [European Flights by Eurocontrol](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-07-12)
+- [Impact of Covid-19 on Employment by ILOSTAT](https://www.kaggle.com/datasets/vineethakkinapalli/impact-of-covid19-on-employment-ilostat)
+
+To further enhance our analysis, we will utilize two additional datasets for the enrichment (e.g., calculating the number of cases per 1000 people and getting airport latitude and longitude).
+- [Population estimated and projections by The World Bank](https://databank.worldbank.org/source/population-estimates-and-projections/preview/on)
+- [IATA/ICAO List by IP2Location](https://github.com/ip2location/ip2location-iata-icao)
+
+We have conducted an initial analysis of the datasets and have found them to be of high quality, with minimal missing values and outliers.
 
 ### Problematic
 
