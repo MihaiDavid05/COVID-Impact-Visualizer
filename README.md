@@ -8,7 +8,7 @@
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
-## Milestone 1 (7th April, 5pm)
+## Milestone 1
 
 Goals and ideas for **COVID-19 Impact through Data Visualization**, analysis of the dataset, description of the problematic, steps for data-cleaning and exploratory data analysis, and a summary of related work.
 
