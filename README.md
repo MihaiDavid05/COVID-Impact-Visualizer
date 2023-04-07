@@ -48,10 +48,13 @@ Finally, we aim to assess the impact of COVID-19 on employment by examining the 
 ### Related work
 
 
-> - What others have already done with the data?
-> - Why is your approach original?
-> - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
-> - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
+- [COVID Visualizer](https://www.covidvisualizer.com)
+- [Then and now: visualizing COVID-19’s impact on air traffic](https://www.flightradar24.com/blog/then-and-now-visualizing-covid-19s-impact-on-air-traffic/)
+- [Analysis on Impact of Covid on Employment](https://www.kaggle.com/code/zusmani/analysis-on-impact-of-covid-on-employment)
+- [D3.js Geographic Bounding Boxes](https://www.jasondavies.com/maps/bounds/)
+- [D3.js Connection map](https://d3-graph-gallery.com/connectionmap.html)
+
+To the best of our knowledge, our approach is original because it combines multiple datasets to provide a comprehensive understanding of the pandemic's impact on society. We will use interactive data visualizations to engage viewers and enable them to understand the scale and complexity of the pandemic's impact.
 
 ## Milestone 2 (7th May, 5pm)
 
