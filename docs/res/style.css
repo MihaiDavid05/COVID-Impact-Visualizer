@@ -6,6 +6,7 @@ body {
 
 html{
     scroll-padding-top: 60px;
+    scroll-behavior: smooth;
 }
 
 .navbar-covid {
