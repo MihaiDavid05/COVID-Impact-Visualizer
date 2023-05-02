@@ -82,6 +82,18 @@ html{
     color: transparent;
 }
 
+.highlight-icon {
+    background-image: linear-gradient(to right, #ffc73f 0%, #fd3459 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.employment-text {
+    font-weight: 700 !important;
+    color: #111 !important;
+}
+
   body {
     max-width: 2000px;
   }

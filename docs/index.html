@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css"
     integrity="sha512-KJRB1wUfcipHY35z9dEE+Jqd+pGCuQ2JMZmQPAjwPjXuzz9oL1pZm2cd79vyUgHQxvb9sFQ6f05DIz0IqcG1Jw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.0.0/d3.js"></script>
 <script src="//unpkg.com/d3"></script>
@@ -169,7 +170,23 @@
     <div class="section light-section">
         <div class="container pt-2 pb-2 text-center">
             <div id="employment"></div>
-            <img src="res/employment_placeholder.png" class="img-fluid" />
+            
+            <div class="row pt-4 pb-4">
+                <div class="col-5 text-center infographic" data-repeat="40" data-highlight="3" data-newline="10">
+                    <i class="fa-solid fa-person h1"></i>
+                </div>
+                <div class="col-5 text-center employment-text h2 my-auto">
+                    <span class="numbers-highlight">3 in 40</span> employees lost their job in the <span class="numbers-highlight">United States</span>
+                </div>
+            </div>
+            <div class="row mt-2 p-2 justify-content-between">
+                <div class="col-5 text-center summary-numbers employment-text h2 my-auto">
+                    <span class="numbers-highlight">In China</span>, on every 50 working hours, <span class="numbers-highlight">13 hours</span> were lost.
+                </div>
+                <div class="col-5 text-center infographic" data-repeat="50" data-highlight="13" data-newline="10">
+                    <i class="fa-solid fa-clock h4"></i>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -191,6 +208,8 @@
         integrity="sha512-Dqm3h1Y4qiHUjbhxTuBGQsza0Tfppn53SHlu/uj1f+RT+xfShfe7r6czRf5r2NmllO2aKx+tYJgoxboOkn1Scg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="res/map.js"></script>
+    <script src="res/script.js"></script>
+    <script src="res/employment.js"></script>
 </body>
 
 </html>

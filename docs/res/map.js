@@ -1,9 +1,4 @@
 $(function () {
-    $(document).scroll(function () {
-        var $nav = $(".navbar-covid");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > 5);
-    });
-
     var map = L.map('flights-map').setView([50, 10], 13);
 
     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
