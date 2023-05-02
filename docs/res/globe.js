@@ -27,7 +27,7 @@ fetch('res/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(coun
     .polygonsData(countries.features)
     .polygonAltitude(0.03)
     // make countries without data light grey and make Ghana the red colour of the Ghanaian flag
-    .polygonCapColor(feat =>  getVal(feat) === -1 ? 'lightgrey' : colorScale(getVal(feat)))
+    .polygonCapColor(feat => getVal(feat) === -1 ? 'lightgrey' : colorScale(getVal(feat)))
     .polygonSideColor(() => 'rgba(0, 50, 50, 0.5)')
     .polygonStrokeColor(feat => 'green')
     .polygonLabel(
@@ -58,6 +58,6 @@ fetch('res/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(coun
     .polygonsTransitionDuration(200)
     .pointOfView(MAP_CENTER, 10)
     (document.getElementById('cases'))
-    document.getElementById('cases').getElementsByTagName('canvas')[0].height = 0.7 * window.innerHeight
-    // alert(document.getElementById('cases').getElementsByTagName('canvas')[0].height)
+  document.getElementById('cases').getElementsByTagName('canvas')[0].height = 0.7 * window.innerHeight
+  // alert(document.getElementById('cases').getElementsByTagName('canvas')[0].height)
 })
