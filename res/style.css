@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: 'Figtree', sans-serif !important;
+    background-color: #13142d !important;
+}
+
+html{
+    scroll-padding-top: 60px;
+}
+
+.navbar-covid {
+    background-color: transparent !important;
+}
+
+.section {
+    width: 100%;
+}
+
+.first-section {
+    margin-top: 60px;
+}
+
+.dark-section {
+    background-color: #13142d;
+    color: #fff;
+}
+
+.light-section {
+    background-color: #fff;
+    color: #111;
+}
+
+.grey-section {
+    background-color: #fafafa;
+    color: #111;
+}
+
+.scrolled {
+    background-color: #fff !important;
+    transition: background-color 150ms linear;
+    -webkit-box-shadow: 0px 2px 4px -4px rgba(0,0,0,0.5); 
+    box-shadow: 0px 2px 4px -4px rgba(0,0,0,0.5);
+}
+
+#flights-map {
+    height: 600px;
+}
+
+.covid-menu li {
+    display: inline !important;
+    margin-right: 7px;
+}
+
+.covid-menu li a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.scrolled .covid-menu li a {
+    color: #111;
+}
+
+.summary-numbers {
+    font-weight: 700;
+    color: #fff;
+}
+
+.numbers-large {
+    font-size: 70px;
+}
+
+.numbers-medium {
+    font-size: 60px;
+}
+
+.numbers-highlight {
+    background-image: linear-gradient(to right, #ffc73f 0%, #fd3459 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
