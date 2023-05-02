@@ -5,7 +5,7 @@ body {
     background-color: #13142d !important;
 }
 
-html{
+html {
     scroll-padding-top: 60px;
     scroll-behavior: smooth;
 }
@@ -40,8 +40,8 @@ html{
 .scrolled {
     background-color: #fff !important;
     transition: background-color 150ms linear;
-    -webkit-box-shadow: 0px 2px 4px -4px rgba(0,0,0,0.5); 
-    box-shadow: 0px 2px 4px -4px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 2px 4px -4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 4px -4px rgba(0, 0, 0, 0.5);
 }
 
 #flights-map {
@@ -78,6 +78,7 @@ html{
 
 .numbers-highlight {
     background-image: linear-gradient(to right, #ffc73f 0%, #fd3459 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -85,6 +86,7 @@ html{
 
 .highlight-icon {
     background-image: linear-gradient(to right, #ffc73f 0%, #fd3459 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -95,27 +97,28 @@ html{
     color: #111 !important;
 }
 
-  body {
+body {
     max-width: 2000px;
-  }
+}
 
-  .parameter-value text {
+.parameter-value text {
     fill: #aaa;
-  }
-  .slider text {
+}
+
+.slider text {
     font-size: 12px;
     color: #aaa;
-  }
-  
-  .slider {
-    cursor: pointer;
-  }
-  
-  .parameter-value path {
-    fill: #0f8243;
-  }
+}
 
-  #play-button {
+.slider {
+    cursor: pointer;
+}
+
+.parameter-value path {
+    fill: #0f8243;
+}
+
+#play-button {
     background: #f08080;
     padding-right: 26px;
     border-radius: 3px;
@@ -126,9 +129,20 @@ html{
     width: 60px;
     cursor: pointer;
     height: 30px;
-  }
-  
-  #play-button:hover {
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+#play-button:hover {
     background-color: #696969;
-  }
-  
+}
+
+#value-time {
+    color: #aaa;
+}
+
+#chart-div {
+    width: 300px;
+    height: 300px;
+    display: none;
+}
