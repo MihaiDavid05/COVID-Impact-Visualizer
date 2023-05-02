@@ -1,76 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-    </head>
-        <meta charset="utf-8">
-        <title>COVID-19 Impact through Data</title>
-        <link rel="stylesheet" href="res/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css" integrity="sha512-KJRB1wUfcipHY35z9dEE+Jqd+pGCuQ2JMZmQPAjwPjXuzz9oL1pZm2cd79vyUgHQxvb9sFQ6f05DIz0IqcG1Jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <nav class="navbar fixed-top navbar-covid">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="res/covid_logo.png" width="30" height="30" alt="COVID Logo">
-                </a>
-                <ul class="mr-auto covid-menu mt-2">
-                    <li>
-                        <a href="#">Summary</a>
-                    </li>
-                    <li>
-                        <a href="#cases">Cases</a>
-                    </li>
-                    <li>
-                        <a href="#employment">Employment</a>
-                    </li>
-                    <li>
-                        <a href="#flights">Flights</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+</head>
+<meta charset="utf-8">
+<title>COVID-19 Impact through Data</title>
+<link rel="stylesheet" href="res/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+    integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css"
+    integrity="sha512-KJRB1wUfcipHY35z9dEE+Jqd+pGCuQ2JMZmQPAjwPjXuzz9oL1pZm2cd79vyUgHQxvb9sFQ6f05DIz0IqcG1Jw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.0.0/d3.js"></script>
+<script src="//unpkg.com/d3"></script>
+<script src="//unpkg.com/globe.gl"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://unpkg.com/d3-simple-slider"></script>
+</head>
 
-        <div class="section dark-section first-section">
-            <div class="container pt-2 pb-2">
-                <div id="summary"></div>
-                <div class="row">
-                    <div class="col-12 text-center summary-numbers numbers-large">
-                        Cases <span class="numbers-highlight">687,138,232</span>
-                    </div>
-                    <div class="col-12 text-center summary-numbers numbers-medium">
-                        Deaths <span class="numbers-highlight">6,863,985</span>
-                    </div>
+<body>
+    <nav class="navbar fixed-top navbar-covid">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="res/covid_logo.png" width="30" height="30" alt="COVID Logo">
+            </a>
+            <ul class="mr-auto covid-menu mt-2">
+                <li>
+                    <a href="#">Summary</a>
+                </li>
+                <li>
+                    <a href="#covid">Cases</a>
+                </li>
+                <li>
+                    <a href="#employment">Employment</a>
+                </li>
+                <li>
+                    <a href="#flights">Flights</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="section dark-section first-section">
+        <div class="container pt-2 pb-2">
+            <div id="summary"></div>
+            <div class="row">
+                <div class="col-12 text-center summary-numbers numbers-large">
+                    Cases <span class="numbers-highlight">687,138,232</span>
                 </div>
-                
+                <div class="col-12 text-center summary-numbers numbers-medium">
+                    Deaths <span class="numbers-highlight">6,863,985</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section dark-section">
+        <div id="covid">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <script src="https://d3js.org/d3.v5.min.js"></script>
+                <script src="https://unpkg.com/d3-simple-slider"></script>
+
+                <p id="value-time" style="color: #aaa"></p>
+                <div style="display: flex; align-items: center">
+                    <button id="play-button" style="margin-bottom: 30px; margin-right: 30px;">Play</button>
+                    <div id="slider-time"></div>
+                </div>
+                <script>
+                    var margin = { top: 50, right: 50, bottom: 0, left: 50 },
+                        width = 960 - margin.left - margin.right,
+                        height = 500 - margin.top - margin.bottom;
+
+                    var formatTickDate = d3.timeFormat("%Y");
+                    var formatTooltipDate = d3.timeFormat("%Y - %B");
+
+                    var startDate = new Date(2018, 0, 1);
+                    var endDate = new Date(2022, 11, 31);
+
+                    Date.prototype.addDays = function (days) {
+                        var date = new Date(this.valueOf());
+                        date.setDate(date.getDate() + days);
+                        return date;
+                    };
+
+                    var moving = false;
+                    var targetValue = width;
+                    var timer;
+
+                    // endDate = endDate.addDays(10);
+
+                    var tickVals = [0, 1, 2, 3, 4].map(iter => new Date(2018 + iter, 0, 1));
+
+                    var playButton = d3.select("#play-button");
+
+                    var sliderTime = d3
+                        .sliderBottom()
+                        .min(startDate)
+                        .max(endDate)
+                        .step(1000 * 60 * 60 * 24 * 31)
+                        .width(width + margin.left + margin.right - 20)
+                        .tickFormat(formatTickDate)
+                        .tickValues(tickVals)
+                        .fill('#2196f3')
+                        .displayFormat(formatTooltipDate)
+                        .default(startDate)
+                        .handle(d3.symbol().type(d3.symbolCircle).size(200)())
+                        .on("drag", function (val) {
+                            resetTimer();
+                        }).on("onchange", function (val) {
+                            d3.select(".tick text").attr("opacity", "1");
+                            d3.select("p#value-time").text(formatTooltipDate(val))
+                        });
+
+                    var gTime = d3
+                        .select("div#slider-time")
+                        .append("svg")
+                        .attr("width", 1000)
+                        .attr("height", 100)
+                        .append("g")
+                        .attr("transform", "translate(40,30)");
+
+                    gTime.call(sliderTime);
+
+                    d3.select("p#value-time").text(formatTooltipDate(sliderTime.value()));
+                    d3.select(".parameter-value text").attr("y", "-29");
+                    d3.selectAll(".tick text").style("text-anchor", "start");
+                    document.querySelector(".parameter-value path").removeAttribute("tabindex");
+
+                    playButton.on("click", function () {
+                        var button = d3.select(this);
+                        if (button.text() == "Pause") {
+                            resetTimer();
+                        } else {
+                            moving = true;
+                            timer = setInterval(update, 100);
+                            button.text("Pause");
+                        }
+                    });
+
+
+                    function update() {
+                        var offset = sliderTime.value().valueOf() + (1000 * 60 * 60 * 24 * 31);
+                        sliderTime.value(offset);
+                        //pause, uncomment to restart
+                        if (offset >= endDate.valueOf()) {
+                            // resetTimer();
+                            sliderTime.value(startDate.valueOf());
+                        }
+                    }
+
+                    function resetTimer() {
+                        moving = false;
+                        clearInterval(timer);
+                        playButton.text("Play");
+                    }
+                </script>
+            </div>
+            <div id="cases">
+                <script src="res/globe.js"></script>
             </div>
         </div>
+    </div>
 
-        <div class="section light-section">
-            <div class="container pt-2 pb-2 text-center">
-                <div id="cases"></div>
-                <img src="res/globe_placeholder.png" class="img-fluid" />
-            </div>
+    <div class="section light-section">
+        <div class="container pt-2 pb-2 text-center">
+            <div id="employment"></div>
+            <img src="res/employment_placeholder.png" class="img-fluid" />
         </div>
+    </div>
 
-        <div class="section dark-section">
-            <div class="container pt-2 pb-2 text-center">
-                <div id="employment"></div>
-                <img src="res/employment_placeholder.png" class="img-fluid" />
-            </div>
-        </div>
+    <div class="section">
+        <div id="flights"></div>
+        <div id="flights-map"></div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+        <canvas id="chart-div" style="width: 300px; height: 300px; display: none">
+    </div>
+    </div>
 
-        <div class="section">
-            <div id="flights"></div>
-            <div id="flights-map"></div>
-        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.js"
+        integrity="sha512-Dqm3h1Y4qiHUjbhxTuBGQsza0Tfppn53SHlu/uj1f+RT+xfShfe7r6czRf5r2NmllO2aKx+tYJgoxboOkn1Scg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="res/map.js"></script>
+</body>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.js" integrity="sha512-Dqm3h1Y4qiHUjbhxTuBGQsza0Tfppn53SHlu/uj1f+RT+xfShfe7r6czRf5r2NmllO2aKx+tYJgoxboOkn1Scg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="res/script.js"></script>
-    </body>
 </html>

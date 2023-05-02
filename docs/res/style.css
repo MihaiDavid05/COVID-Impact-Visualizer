@@ -81,3 +81,41 @@ html{
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
+
+  body {
+    max-width: 2000px;
+  }
+
+  .parameter-value text {
+    fill: #aaa;
+  }
+  .slider text {
+    font-size: 12px;
+    color: #aaa;
+  }
+  
+  .slider {
+    cursor: pointer;
+  }
+  
+  .parameter-value path {
+    fill: #0f8243;
+  }
+
+  #play-button {
+    background: #f08080;
+    padding-right: 26px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    margin: 0;
+    padding: 0 12px;
+    width: 60px;
+    cursor: pointer;
+    height: 30px;
+  }
+  
+  #play-button:hover {
+    background-color: #696969;
+  }
+  
