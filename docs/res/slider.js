@@ -8,14 +8,7 @@ var formatTooltipDate = d3.timeFormat("%Y - %B");
 var startDate = new Date(2018, 0, 1);
 var endDate = new Date(2022, 11, 31);
 
-Date.prototype.addDays = function (days) {
-    var date = new Date(this.valueOf());
-    date.setDate(date.getDate() + days);
-    return date;
-};
-
 var moving = false;
-var targetValue = width;
 var timer;
 
 var tickVals = [0, 1, 2, 3, 4].map(iter => new Date(2018 + iter, 0, 1));
@@ -36,7 +29,8 @@ var sliderTime = d3
     .handle(d3.symbol().type(d3.symbolCircle).size(200)())
     .on("drag", function (val) {
         resetTimer();
-    }).on("onchange", function (val) {
+    })
+    .on("onchange", function (val) {
         d3.select(".tick text").attr("opacity", "1");
         d3.select("p#value-time").text(formatTooltipDate(val))
     });

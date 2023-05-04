@@ -1,32 +1,24 @@
 // create a colour scale
 const colorScale = d3.scaleSequentialPow(d3.interpolateGnBu).exponent(0.15);
 
-// centre map at Ghana
+// centre map
 const MAP_CENTER = { lat: 6.518, lng: -0.27, altitude: 1.8 };
 
 // assign url where to find flags
 const flagEndpoint = 'https://corona.lmao.ninja/assets/img/flags';
 
 // load in the geojson data
-// and set feature I want to plot (trade value)
 const getVal = feat => feat.properties.Total;
 fetch('res/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries => {
 
-  //const maxVal = Math.max(...countries.features.map(getVal));
-
-  // I have to make sure that in the colour scale I do not include the World Total (Ghana).
-  // So, I am setting a manual domain.
+  // Set manual domain.
   colorScale.domain([0, 4345000000]);
 
   const world = Globe()
-    // by default there is a little map image overlaid, but I do not need that
-    // .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
     // add a nice night sky
     .backgroundColor('#13142d')
-    // .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
     .polygonsData(countries.features)
     .polygonAltitude(0.03)
-    // make countries without data light grey and make Ghana the red colour of the Ghanaian flag
     .polygonCapColor(feat => getVal(feat) === -1 ? 'lightgrey' : colorScale(getVal(feat)))
     .polygonSideColor(() => 'rgba(0, 50, 50, 0.5)')
     .polygonStrokeColor(feat => 'green')
@@ -59,5 +51,4 @@ fetch('res/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(coun
     .pointOfView(MAP_CENTER, 10)
     (document.getElementById('cases'))
   document.getElementById('cases').getElementsByTagName('canvas')[0].height = 0.7 * window.innerHeight
-  // alert(document.getElementById('cases').getElementsByTagName('canvas')[0].height)
 })
