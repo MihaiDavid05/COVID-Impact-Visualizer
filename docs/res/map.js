@@ -8,45 +8,42 @@ $(function () {
         minZoom: 4
     }).addTo(map);
 
+    var chartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        datasets: [{
+            label: '2018',
+            data: [8, 13, 7, 9, 4, 6, 8, 10, 12, 15, 17, 20],
+            fill: false,
+            borderColor: 'blue',
+            tension: 0.1
+        }, {
+            label: '2019',
+            data: [5, 10, 5, 7, 3, 5, 7, 9, 11, 13, 16, 19],
+            fill: false,
+            borderColor: 'green',
+            tension: 0.1
+        }, {
+            label: '2020',
+            data: [3, 6, 2, 4, 1, 2, 4, 6, 8, 10, 12, 15],
+            fill: false,
+            borderColor: 'red',
+            tension: 0.1
+        }, {
+            label: '2021',
+            data: [2, 4, 1, 3, 1, 2, 3, 5, 6, 8, 10, 12],
+            fill: false,
+            borderColor: 'orange',
+            tension: 0.1
+        }]
+    }
+
     // Create a new chart instance
     const ctx = document.getElementById('chart-div').getContext('2d');
     const myChart = new Chart(ctx, {
         type: 'line',
-        data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-            datasets: [{
-                label: '2017',
-                data: [12, 19, 3, 5, 2, 3, 5, 7, 9, 12, 15, 18],
-                fill: false,
-                borderColor: 'purple',
-                tension: 0.1
-            }, {
-                label: '2018',
-                data: [8, 13, 7, 9, 4, 6, 8, 10, 12, 15, 17, 20],
-                fill: false,
-                borderColor: 'blue',
-                tension: 0.1
-            }, {
-                label: '2019',
-                data: [5, 10, 5, 7, 3, 5, 7, 9, 11, 13, 16, 19],
-                fill: false,
-                borderColor: 'green',
-                tension: 0.1
-            }, {
-                label: '2020',
-                data: [3, 6, 2, 4, 1, 2, 4, 6, 8, 10, 12, 15],
-                fill: false,
-                borderColor: 'red',
-                tension: 0.1
-            }, {
-                label: '2021',
-                data: [2, 4, 1, 3, 1, 2, 3, 5, 6, 8, 10, 12],
-                fill: false,
-                borderColor: 'orange',
-                tension: 0.1
-            }]
-        },
+        data: chartData,
         options: {
+            legend: { display: false },
             scales: {
                 x: {
                     stacked: true,
