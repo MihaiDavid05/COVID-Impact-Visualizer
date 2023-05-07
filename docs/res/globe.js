@@ -33,10 +33,10 @@ fetch('res/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(coun
 <div class="card-spacer"></div>
    <hr />
    <div class="card-spacer"></div>
-   <span style="color:black"><b>Total deaths:</b> ${d.Total === -1 ? 'No Data available' : d3.format('.4s')(d.Total).replace(/G/, "B USD").replace(/M/, "M USD").replace(/k/, "k USD")} </span><br />
+   <span style="color:black"><b>Total deaths:</b> ${d.Total === -1 ? 'No Data available' : 9010} </span><br />
    <div class="card-spacer"></div>  
-   <span style="color:black"><b>Total vaccinations:</b> ${d.Import_trade_value_usd === -1 ? 'No Data available' : d.Import_commodity}</span><br />
-   <span style="color:black"><b>Total recovered: </b>${d.Import_trade_value_usd === -1 ? 'No Data available' : d3.format('.4s')(d.Import_trade_value_usd).replace(/G/, "B USD").replace(/M/, "M USD").replace(/k/, "k USD")} </span>             
+   <span style="color:black"><b>Total vaccinations:</b> ${d.Import_trade_value_usd === -1 ? 'No Data available' : 1234}</span><br />
+   <span style="color:black"><b>Total recovered: </b>${d.Import_trade_value_usd === -1 ? 'No Data available' : 5678} </span>             
    <hr />
 </div>
 </div>
