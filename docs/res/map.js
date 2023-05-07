@@ -1,12 +1,34 @@
 $(function () {
-    var map = L.map('flights-map').setView([50, 10], 13);
+    const map = L.map('flights-map').setView([51.515, -0.09], 13);
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    const osmLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
         subdomains: 'abcd',
-        maxZoom: 4,
-        minZoom: 4
     }).addTo(map);
+
+    const stamenLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+    }).addTo(map)
+
+    map.createPane("left")
+    map.createPane("right")
+
+    const leftCircle = L.circle([51.505, -0.09], {
+        pane: "left",
+        radius: 800,
+        color: "#ff0000"
+    }).addTo(map);
+
+    const rightCircle = L.circle([51.505, -0.09], {
+        pane: "right",
+        radius: 100,
+        color: "#0000ff"
+    }).addTo(map);
+
+    const compare = L.control.compare([leftCircle, stamenLayer], [rightCircle, osmLayer]).addTo(map);
+
+    /*
 
     var chartData = {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -75,4 +97,6 @@ $(function () {
         .bindPopup(document.getElementById('chart-div'), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
         .openPopup()
         .closePopup();
+
+    */
 });
