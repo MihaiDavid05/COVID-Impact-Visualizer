@@ -4,14 +4,15 @@ var margin = { top: 50, right: 50, bottom: 0, left: 50 },
 
 var formatTickDate = d3.timeFormat("%Y");
 var formatTooltipDate = d3.timeFormat("%Y - %B");
+var globeformatTooltipDate = d3.timeFormat("%Y - %m");
 
-var startDate = new Date(2018, 0, 1);
+var startDate = new Date(2020, 0, 1);
 var endDate = new Date(2022, 11, 31);
 
 var moving = false;
 var timer;
 
-var tickVals = [0, 1, 2, 3, 4].map(iter => new Date(2018 + iter, 0, 1));
+var tickVals = [0, 1, 2, 3, 4].map(iter => new Date(2020 + iter, 0, 1));
 
 var playButton = d3.select("#play-button");
 
@@ -32,7 +33,7 @@ var sliderTime = d3
     })
     .on("onchange", function (val) {
         d3.select(".tick text").attr("opacity", "1");
-        d3.select("p#value-time").text(formatTooltipDate(val))
+        d3.select("p#value-time").text(globeformatTooltipDate(val))
     });
 
 var gTime = d3
@@ -45,7 +46,7 @@ var gTime = d3
 
 gTime.call(sliderTime);
 
-d3.select("p#value-time").text(formatTooltipDate(sliderTime.value()));
+d3.select("p#value-time").text(globeformatTooltipDate(sliderTime.value()));
 d3.select(".parameter-value text").attr("y", "-29");
 d3.selectAll(".tick text").style("text-anchor", "start");
 document.querySelector(".parameter-value path").removeAttribute("tabindex");
@@ -56,7 +57,7 @@ playButton.on("click", function () {
         resetTimer();
     } else {
         moving = true;
-        timer = setInterval(update, 100);
+        timer = setInterval(update, 500);
         button.text("Pause");
     }
 });
