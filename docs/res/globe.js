@@ -34,13 +34,17 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
     world.controls().autoRotate = true;
     world.controls().autoRotateSpeed = 1.0;
 
-    // Function to get covid cases for heatmap represented at polygon level
+    // Get covid cases for heatmap represented at polygon level
     function getCasesHeatmap(feat, selectedYear, selectedMonth) {
       if (feat.properties.hasOwnProperty('covidCasesHeatmap')) {
         if (feat.properties.covidCasesHeatmap !== null) {
           let key = `${selectedYear}_${selectedMonth}`
           if (key in feat.properties.covidCasesHeatmap) {
-            return feat.properties.covidCasesHeatmap[key]
+            if (feat.properties.covidCasesHeatmap[key] !== null) {
+              return feat.properties.covidCasesHeatmap[key]
+            } else {
+              return -1
+            }
           } else {
             return -1
           }
@@ -50,13 +54,17 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
       }
     }
 
-    // Function to get new covid cases represented at polygon level
+    // Get new covid cases represented at polygon level
     function getCasesNew(feat, selectedYear, selectedMonth) {
       if (feat.properties.hasOwnProperty('covidCasesNew')) {
         if (feat.properties.covidCasesNew !== null) {
           let key = `${selectedYear}_${selectedMonth}`
           if (key in feat.properties.covidCasesNew) {
-            return feat.properties.covidCasesNew[key]
+            if (feat.properties.covidCasesNew[key] !== null) {
+              return feat.properties.covidCasesNew[key]
+            } else {
+              return -1
+            }
           } else {
             return -1
           }
@@ -66,13 +74,17 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
       }
     }
 
-    // Function to get new covid deaths represented at polygon level
+    // Get new covid deaths represented at polygon level
     function getDeathsNew(feat, selectedYear, selectedMonth) {
       if (feat.properties.hasOwnProperty('covidDeathsNew')) {
         if (feat.properties.covidDeathsNew !== null) {
           let key = `${selectedYear}_${selectedMonth}`
           if (key in feat.properties.covidDeathsNew) {
-            return feat.properties.covidDeathsNew[key]
+            if (feat.properties.covidDeathsNew[key] !== null) {
+              return feat.properties.covidDeathsNew[key]
+            } else {
+              return -1
+            }
           } else {
             return -1
           }
@@ -83,10 +95,10 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
     }
     
 
-    // Function to update the globe polygons
+    // Update the globe polygons
     function updateGlobe(world, year, month) {
 
-      world.polygonCapColor(feat => getCasesHeatmap(feat, year, month) === -1 ? 'lightgrey' : colorScale(getCasesHeatmap(feat, year, month)))
+      world.polygonCapColor(feat => getCasesHeatmap(feat, year, month) === -1 ? 'lightgrey' : colorScale(1 - getCasesHeatmap(feat, year, month)))
 
       world.polygonLabel(
         (d) => {
@@ -110,8 +122,8 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
       );
 
       world.onPolygonHover(hoverD => world
-        .polygonAltitude(d => d === hoverD ? 0.1 : 0.03)
-        .polygonCapColor(d => d === hoverD ? 'rgb(0, 0, 255)' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : colorScale(getCasesHeatmap(d, year, month)))
+        .polygonAltitude(d => d === hoverD ? 0.15 : 0.03)
+        .polygonCapColor(d => d === hoverD ? 'rgb(0, 0, 150)' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : colorScale(1 - getCasesHeatmap(d, year, month)))
       );
 
       world.polygonsTransitionDuration(200);
