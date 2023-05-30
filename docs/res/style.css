@@ -129,6 +129,10 @@ body {
     height: 5px;
 }
 
+#path .handle {
+    width: 30px;
+}
+
 .tick {
     font-family: comic sans ms, cursive;
 }
