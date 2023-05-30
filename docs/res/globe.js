@@ -1,10 +1,10 @@
 // create a colour scale and set manual domain.
-const colorScale = d3.scaleSequentialPow(d3.interpolateReds).exponent(2);
+const colorScale = d3.scaleSequential(d3.interpolateReds);
 
 // centre map
 const MAP_CENTER = { lat: 6.518, lng: -0.27, altitude: 1.8 };
 
-// assign url where to find flags
+// assign url where to find flag
 // const flagEndpoint = 'https://corona.lmao.ninja/assets/img/flags';
 // const extension = 'png';
 const flagEndpoint = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-dqw4w9wgxcq/master/data/flags';

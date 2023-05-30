@@ -7,12 +7,12 @@ var formatTooltipDate = d3.timeFormat("%Y - %B");
 var globeformatTooltipDate = d3.timeFormat("%Y - %m");
 
 var startDate = new Date(2020, 0, 1);
-var endDate = new Date(2022, 11, 31);
+var endDate = new Date(2023, 03, 1);
 
 var moving = false;
 var timer;
 
-var tickVals = [0, 1, 2, 3, 4].map(iter => new Date(2020 + iter, 0, 1));
+var tickVals = [0, 1, 2, 3].map(iter => new Date(2020 + iter, 0, 1));
 
 var playButton = d3.select("#play-button");
 
