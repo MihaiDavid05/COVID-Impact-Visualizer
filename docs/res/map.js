@@ -26,7 +26,10 @@ $(function () {
         color: "#0000ff"
     }).addTo(map);
 
-    const compare = L.control.compare([leftCircle, stamenLayer], [rightCircle, osmLayer]).addTo(map);
+    const compare = L.control.compare([leftCircle, stamenLayer], [rightCircle, osmLayer], {
+        sliderOrientation: 'vertical',
+        position: 'topright'
+    }).addTo(map);
 
     /*
 

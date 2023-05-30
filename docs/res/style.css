@@ -76,7 +76,7 @@ html {
     font-size: 60px;
 }
 
-.numbers-highlight {
+.numbers-highlight, .numbers-highlight-beginning {
     background-image: linear-gradient(to right, #ffc73f 0%, #fd3459 100%);
     background-clip: text;
     -webkit-background-clip: text;

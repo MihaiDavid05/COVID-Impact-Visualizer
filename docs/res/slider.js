@@ -49,16 +49,19 @@ gTime.call(sliderTime);
 d3.select("p#value-time").text(globeformatTooltipDate(sliderTime.value()));
 d3.select(".parameter-value text").attr("y", "-29");
 d3.selectAll(".tick text").style("text-anchor", "start");
+
 document.querySelector(".parameter-value path").removeAttribute("tabindex");
+d3.select(".parameter-value").attr("y", "-29");
+
 
 playButton.on("click", function () {
     var button = d3.select(this);
-    if (button.text() == "Pause") {
+    if (button.html() == '<i class="fa-solid fa-pause"></i>') {
         resetTimer();
     } else {
         moving = true;
         timer = setInterval(update, 500);
-        button.text("Pause");
+        button.html('<i class="fa-solid fa-pause"></i>');
     }
 });
 
@@ -75,5 +78,5 @@ function update() {
 function resetTimer() {
     moving = false;
     clearInterval(timer);
-    playButton.text("Play");
+    playButton.html('<i class="fa-solid fa-play"></i>');
 }
