@@ -1,48 +1,72 @@
+
 $(function () {
-    const map = L.map('flights-map').setView([51.515, -0.09], 13);
 
-    const osmLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-    }).addTo(map);
+    d3.csv("https://raw.githubusercontent.com/com-480-data-visualization/project-2023-dqw4w9wgxcq/master/data/agg_flights.csv").then(function(data) {
+        
+        // Define a map
+        const map = L.map('flights-map', {
+            minZoom: 0,
+            maxZoom: 10
+        }).setView([46.519962, 6.633597], 4);
+        
+        // Define 2 layers
+        const osmLayer1 = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+        }).addTo(map);
 
-    const stamenLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-    }).addTo(map)
+        const osmLayer2 = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+        }).addTo(map)
+        
+        // Create 2 separate panes
+        map.createPane("left")
+        map.createPane("right")
 
-    map.createPane("left")
-    map.createPane("right")
+        // var marker1 = new L.marker([39.5, -100.3], { opacity: 0.01 }); //opacity may be set to zero
+        // marker1.bindTooltip("My Label", {permanent: true, className: "my-label", offset: [0, 0] });
+        // marker1.addTo(map);
 
-    const leftCircle = L.circle([51.505, -0.09], {
-        pane: "left",
-        radius: 800,
-        color: "#ff0000"
-    }).addTo(map);
+        // var marker2 = new L.marker([50.5, -100.3], { opacity: 0.01 }); //opacity may be set to zero
+        // marker2.bindTooltip("My Label", {permanent: true, className: "my-label", offset: [0, 0] });
+        // marker2.addTo(map);
 
-    const leftCircle1 = L.circle([51.51, -0.08], {
-        pane: "left",
-        radius: 800,
-        color: "#ff0000"
-    }).addTo(map);
+        var circlesYear1 = [];
+        var circlesYear2 = [];
+        
+        function addPoints(year1, year2) {
+            data.forEach(function(row){
+                if (row.FLT_TOT_1_NORMALIZED){
+                    if (parseInt(row.YEAR) === year1) {
+                        var circle1 = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
+                            pane: "left",
+                            radius: parseFloat(row.FLT_TOT_1_NORMALIZED) * 10000,
+                            color: "#0000ff"
+                        })
+                        circle1.addTo(map);
+                        circlesYear1.push(circle1);
+                    }
+                    if (parseInt(row.YEAR) === year2) {
+                        var circle2 = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
+                            pane: "right",
+                            radius: parseFloat(row.FLT_TOT_1_NORMALIZED) * 10000,
+                            color: "#ff0000"
+                        })
+                        circle2.addTo(map);
+                        circlesYear2.push(circle2)
+                    }
+                }
+            })
+        }
+       
+        addPoints(2018, 2021)
 
-
-    const rightCircle = L.circle([51.505, -0.09], {
-        pane: "right",
-        radius: 100,
-        color: "#0000ff"
-    }).addTo(map);
-
-    const rightCircle1 = L.circle([51.51, -0.08], {
-        pane: "right",
-        radius: 100,
-        color: "#0000ff"
-    }).addTo(map);
-     // [leftCircle1, stamenLayer], [rightCircle, osmLayer]
-    const compare = L.control.compare([leftCircle, leftCircle1],  [rightCircle, rightCircle1], {
-        sliderOrientation: 'vertical',
-        position: 'topright'
-    }).addTo(map);
+        const compare = L.control.compare(circlesYear1, circlesYear2, {
+            sliderOrientation: 'vertical',
+            position: 'topright'
+        }).addTo(map);
+    })
 
     /*
 
