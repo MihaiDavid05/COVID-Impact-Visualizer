@@ -1,5 +1,5 @@
 // create a colour scale and set manual domain.
-const colorScale = d3.scaleSequential(d3.interpolateRdYlGn);
+const colorScale = d3.scaleSequentialPow(d3.interpolateReds).exponent(2);
 
 // centre map
 const MAP_CENTER = { lat: 6.518, lng: -0.27, altitude: 1.8 };
@@ -19,10 +19,12 @@ var year = parseInt(target.innerHTML.split(" ")[0])
 
 
 fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json()).then(function(countries) {
-  // TODO: Find better geojson (France and Norway and others missing)
 
-  // const flags = d3.csv('https://raw.githubusercontent.com/com-480-data-visualization/project-2023-dqw4w9wgxcq/master/data/countries_continents_codes_flags_url.csv')
-
+  // Set domain for color scale: 
+  function get_color(colorScale, value, min, max) {
+    colorScale.domain([min, max]);
+    return colorScale(value)
+  }
 
   // Set initial properties of the globe
   const world = Globe()
@@ -33,10 +35,6 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
   .polygonsData(countries.features)
   .pointOfView(MAP_CENTER, 10)(document.getElementById('cases'));
 
-  // Set domain for color scale: 
-  // TODO
-  colorScale.domain([0, 2]);
-
   // Auto-rotate
   world.controls().autoRotate = true;
   world.controls().autoRotateSpeed = 1.0;
@@ -44,7 +42,7 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
   // Get covid cases for heatmap represented at polygon level
   function getCasesHeatmap(feat, selectedYear, selectedMonth) {
     if (feat.properties.hasOwnProperty('covidCasesHeatmap')) {
-      if (feat.properties["covidCasesHeatmap"] !== null) {
+      if (feat.properties.covidCasesHeatmap !== null) {
         let key = `${selectedYear}_${selectedMonth}`
         if (key in feat.properties.covidCasesHeatmap) {
           if (feat.properties.covidCasesHeatmap[key] !== null) {
@@ -100,12 +98,20 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
       return -1
     }
   }
+
+  function getMin(feat) {
+    return feat.properties.covidCasesHeatmapMin
+  }
+
+  function getMax(feat) {
+    return feat.properties.covidCasesHeatmapMax
+  }
   
 
   // Update the globe polygons
   function updateGlobe(world, year, month) {
 
-    world.polygonCapColor(feat => getCasesHeatmap(feat, year, month) === -1 ? 'lightgrey' : colorScale(1 - getCasesHeatmap(feat, year, month)))
+    world.polygonCapColor(feat => getCasesHeatmap(feat, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(feat, year, month), getMin(feat), getMax(feat)))
 
     // TODO: Put card to the right of the mouse
     world.polygonLabel(
@@ -131,7 +137,7 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
 
     world.onPolygonHover(hoverD => world
       .polygonAltitude(d => d === hoverD ? 0.15 : 0.03)
-      .polygonCapColor(d => d === hoverD ? 'rgb(149, 216, 239)' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : colorScale(1 - getCasesHeatmap(d, year, month)))
+      .polygonCapColor(d => d === hoverD ? 'rgb(149, 216, 239)' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(d, year, month), getMin(d), getMax(d)))
     );
 
     world.polygonsTransitionDuration(200);

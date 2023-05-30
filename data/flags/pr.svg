@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Puerto Rico - Wikipedia</title>
-<script>document.documentElement.className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled vector-feature-zebra-design-disabled";(function(){var cookie=document.cookie.match(/(?:^|; )enwikimwclientprefs=([^;]+)/);if(cookie){var featureName=cookie[1];document.documentElement.className=document.documentElement.className.replace(featureName+'-enabled',featureName+'-disabled');}}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"1c690950-245e-48c6-a8f7-ac2ae8965e84","wgCSPNonce":false,
+<script>document.documentElement.className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled vector-feature-zebra-design-disabled";(function(){var cookie=document.cookie.match(/(?:^|; )enwikimwclientprefs=([^;]+)/);if(cookie){var featureName=cookie[1];document.documentElement.className=document.documentElement.className.replace(featureName+'-enabled',featureName+'-disabled');}}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"b0a6ef05-581b-4c71-a15e-438d1826db2e","wgCSPNonce":false,
 "wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Puerto_Rico","wgTitle":"Puerto Rico","wgCurRevisionId":1157517347,"wgRevisionId":1157517347,"wgArticleId":23041,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles containing Spanish-language text","Webarchive template wayback links","CS1 Spanish-language sources (es)","CS1: Julian–Gregorian uncertainty","All articles with dead external links","Articles with dead external links from May 2017","Articles with Spanish-language sources (es)","Articles incorporating a citation from the 1913 Catholic Encyclopedia with Wikisource reference","Articles with permanently dead external links","CS1 maint: bot: original URL status unknown","Articles with short description","Short description is different from Wikidata","Wikipedia indefinitely move-protected pages","Wikipedia indefinitely semi-protected pages",
 "Use dmy dates from April 2021","Articles containing Latin-language text","Articles containing Taino-language text","All articles with unsourced statements","Articles with unsourced statements from November 2021","Articles with unsourced statements from November 2016","All articles with self-published sources","Articles with self-published sources from August 2021","Articles with unsourced statements from August 2021","Articles with unsourced statements from November 2020","All articles with failed verification","Articles with failed verification from June 2021","Wikipedia articles needing clarification from October 2020","Articles with excerpts","All articles lacking reliable references","Articles lacking reliable references from February 2020","Articles with unsourced statements from March 2021","All articles that may contain original research","Articles that may contain original research from March 2021","Articles needing additional references from November 2017",
 "All articles needing additional references","Wikipedia articles in need of updating from July 2016","All Wikipedia articles in need of updating","Articles containing potentially dated statements from 2010","All articles containing potentially dated statements","Articles containing potentially dated statements from 2007","Pages using Sister project links with hidden wikidata","Pages using Sister project links with default search","Official website different in Wikidata and Wikipedia","Articles with Curlie links","Articles with FAST identifiers","Articles with ISNI identifiers","Articles with VIAF identifiers","Articles with WorldCat identifiers","Articles with BNC identifiers","Articles with BNE identifiers","Articles with BNF identifiers","Articles with BNFdata identifiers","Articles with CANTICN identifiers","Articles with GND identifiers","Articles with J9U identifiers","Articles with LCCN identifiers","Articles with NKC identifiers","Articles with NLA identifiers",
@@ -3317,13 +3317,13 @@ U.S. military installations in Puerto Rico were part of the <a href="/wiki/Unite
 <div class="geo-inline-hidden"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1156832818"><span class="plainlinks nourlexpansion"><a class="external text" href="//geohack.toolforge.org/geohack.php?pagename=Puerto_Rico&amp;params=18.2_N_66.5_W_dim:300000_region:US-PR_type:adm1st&amp;title=Commonwealth+of+Puerto+Rico"><span class="geo-nondefault"><span class="geo-dms" title="Maps, aerial photos, and other data for this location"><span class="latitude">18°12′N</span> <span class="longitude">66°30′W</span></span></span><span class="geo-multi-punct">&#xfeff; / &#xfeff;</span><span class="geo-default"><span class="vcard"><span class="geo-dec" title="Maps, aerial photos, and other data for this location">18.2°N 66.5°W</span><span style="display:none">&#xfeff; / <span class="geo">18.2; -66.5</span></span><span style="display:none">&#xfeff; (<span class="fn org">Commonwealth of Puerto Rico</span>)</span></span></span></a></span></div>
 <!-- 
 NewPP limit report
-Parsed by mw1498
-Cached time: 20230530101218
+Parsed by mw1431
+Cached time: 20230530115855
 Cache expiry: 1814400
 Reduced expiry: false
 Complications: [vary‐revision‐sha1, show‐toc]
-CPU time usage: 3.437 seconds
-Real time usage: 3.970 seconds
+CPU time usage: 3.544 seconds
+Real time usage: 4.035 seconds
 Preprocessor visited node count: 34141/1000000
 Post‐expand include size: 930521/2097152 bytes
 Template argument size: 78352/2097152 bytes
@@ -3331,37 +3331,37 @@ Highest expansion depth: 23/100
 Expensive parser function count: 130/500
 Unstrip recursion depth: 1/20
 Unstrip post‐expand size: 1051532/5000000 bytes
-Lua time usage: 2.033/10.000 seconds
-Lua memory usage: 26454517/52428800 bytes
+Lua time usage: 2.144/10.000 seconds
+Lua memory usage: 26780172/52428800 bytes
 Lua Profile:
-    ?                                                                360 ms       15.7%
-    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::callParserFunction      300 ms       13.0%
-    dataWrapper <mw.lua:672>                                         260 ms       11.3%
-    recursiveClone <mwInit.lua:41>                                   220 ms        9.6%
-    type                                                             180 ms        7.8%
-    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::getExpandedArgument      120 ms        5.2%
-    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::match      120 ms        5.2%
-    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::gsub      100 ms        4.3%
-    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::preprocess       60 ms        2.6%
-    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::sub       60 ms        2.6%
-    [others]                                                         520 ms       22.6%
+    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::callParserFunction      320 ms       14.2%
+    recursiveClone <mwInit.lua:41>                                   240 ms       10.6%
+    ?                                                                220 ms        9.7%
+    dataWrapper <mw.lua:672>                                         160 ms        7.1%
+    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::gsub      100 ms        4.4%
+    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::getExpandedArgument      100 ms        4.4%
+    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::match      100 ms        4.4%
+    gsub                                                             100 ms        4.4%
+    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::getEntityStatements       80 ms        3.5%
+    citation0 <Module:Citation/CS1:2512>                              80 ms        3.5%
+    [others]                                                         760 ms       33.6%
 Number of Wikibase entities loaded: 0/400
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00% 3333.135      1 -total
- 47.32% 1577.322      3 Template:Reflist
- 22.68%  756.010    200 Template:Cite_web
- 10.08%  335.869      1 Template:Infobox_dependency
-  9.97%  332.339      3 Template:Infobox
-  5.49%  183.022     45 Template:Cite_news
-  4.53%  150.908     26 Template:Cite_journal
-  4.04%  134.635     32 Template:Cite_book
-  3.90%  130.052     51 Template:Lang
-  3.70%  123.403      1 Template:Puerto_Rican_topics
+100.00% 3389.966      1 -total
+ 50.35% 1706.777      3 Template:Reflist
+ 24.60%  834.033    200 Template:Cite_web
+ 10.21%  346.279      3 Template:Infobox
+ 10.21%  346.150      1 Template:Infobox_dependency
+  6.24%  211.652     45 Template:Cite_news
+  5.02%  170.189     26 Template:Cite_journal
+  4.53%  153.688     51 Template:Lang
+  4.18%  141.565     32 Template:Cite_book
+  3.40%  115.274      8 Template:Nobold
 -->
 
-<!-- Saved in parser cache with key enwiki:pcache:idhash:23041-0!canonical and timestamp 20230530101214 and revision id 1157517347. Rendering was triggered because: page-view
+<!-- Saved in parser cache with key enwiki:pcache:idhash:23041-0!canonical and timestamp 20230530115851 and revision id 1157517347. Rendering was triggered because: page-view
  -->
 </div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
 <div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Puerto_Rico&amp;oldid=1157517347">https://en.wikipedia.org/w/index.php?title=Puerto_Rico&amp;oldid=1157517347</a>"</div></div>
@@ -3412,7 +3412,7 @@ additional terms may apply.  By using this site, you agree to the <a href="//fou
 </button>
 
 </div>
-<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw1452","wgBackendResponseTime":146,"wgPageParseReport":{"limitreport":{"cputime":"3.437","walltime":"3.970","ppvisitednodes":{"value":34141,"limit":1000000},"postexpandincludesize":{"value":930521,"limit":2097152},"templateargumentsize":{"value":78352,"limit":2097152},"expansiondepth":{"value":23,"limit":100},"expensivefunctioncount":{"value":130,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":1051532,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00% 3333.135      1 -total"," 47.32% 1577.322      3 Template:Reflist"," 22.68%  756.010    200 Template:Cite_web"," 10.08%  335.869      1 Template:Infobox_dependency","  9.97%  332.339      3 Template:Infobox","  5.49%  183.022     45 Template:Cite_news","  4.53%  150.908     26 Template:Cite_journal","  4.04%  134.635     32 Template:Cite_book","  3.90%  130.052     51 Template:Lang","  3.70%  123.403      1 Template:Puerto_Rican_topics"]},"scribunto":{"limitreport-timeusage":{"value":"2.033","limit":"10.000"},"limitreport-memusage":{"value":26454517,"limit":52428800},"limitreport-logs":"table#1 {\n    [\"size\"] = \"small\",\n}\ntable#1 {\n}\n","limitreport-profile":[["?","360","15.7"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::callParserFunction","300","13.0"],["dataWrapper \u003Cmw.lua:672\u003E","260","11.3"],["recursiveClone \u003CmwInit.lua:41\u003E","220","9.6"],["type","180","7.8"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::getExpandedArgument","120","5.2"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::match","120","5.2"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::gsub","100","4.3"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::preprocess","60","2.6"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::sub","60","2.6"],["[others]","520","22.6"]]},"cachereport":{"origin":"mw1498","timestamp":"20230530101218","ttl":1814400,"transientcontent":false}}});});</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw1367","wgBackendResponseTime":161,"wgPageParseReport":{"limitreport":{"cputime":"3.544","walltime":"4.035","ppvisitednodes":{"value":34141,"limit":1000000},"postexpandincludesize":{"value":930521,"limit":2097152},"templateargumentsize":{"value":78352,"limit":2097152},"expansiondepth":{"value":23,"limit":100},"expensivefunctioncount":{"value":130,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":1051532,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00% 3389.966      1 -total"," 50.35% 1706.777      3 Template:Reflist"," 24.60%  834.033    200 Template:Cite_web"," 10.21%  346.279      3 Template:Infobox"," 10.21%  346.150      1 Template:Infobox_dependency","  6.24%  211.652     45 Template:Cite_news","  5.02%  170.189     26 Template:Cite_journal","  4.53%  153.688     51 Template:Lang","  4.18%  141.565     32 Template:Cite_book","  3.40%  115.274      8 Template:Nobold"]},"scribunto":{"limitreport-timeusage":{"value":"2.144","limit":"10.000"},"limitreport-memusage":{"value":26780172,"limit":52428800},"limitreport-logs":"table#1 {\n    [\"size\"] = \"small\",\n}\ntable#1 {\n}\n","limitreport-profile":[["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::callParserFunction","320","14.2"],["recursiveClone \u003CmwInit.lua:41\u003E","240","10.6"],["?","220","9.7"],["dataWrapper \u003Cmw.lua:672\u003E","160","7.1"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::gsub","100","4.4"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::getExpandedArgument","100","4.4"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::match","100","4.4"],["gsub","100","4.4"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::getEntityStatements","80","3.5"],["citation0 \u003CModule:Citation/CS1:2512\u003E","80","3.5"],["[others]","760","33.6"]]},"cachereport":{"origin":"mw1431","timestamp":"20230530115855","ttl":1814400,"transientcontent":false}}});});</script>
 <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Puerto Rico","url":"https:\/\/en.wikipedia.org\/wiki\/Puerto_Rico","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1183","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1183","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2001-03-17T23:35:00Z","dateModified":"2023-05-29T05:01:51Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/2\/28\/Flag_of_Puerto_Rico.svg","headline":"unincorporated territory of the United States of America"}</script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Puerto Rico","url":"https:\/\/en.wikipedia.org\/wiki\/Puerto_Rico","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1183","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1183","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2001-03-17T23:35:00Z","dateModified":"2023-05-29T05:01:51Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/2\/28\/Flag_of_Puerto_Rico.svg","headline":"unincorporated territory of the United States of America"}</script>
 </body>
 </html>
