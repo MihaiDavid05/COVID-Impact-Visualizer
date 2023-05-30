@@ -20,13 +20,26 @@ $(function () {
         color: "#ff0000"
     }).addTo(map);
 
+    const leftCircle1 = L.circle([51.51, -0.08], {
+        pane: "left",
+        radius: 800,
+        color: "#ff0000"
+    }).addTo(map);
+
+
     const rightCircle = L.circle([51.505, -0.09], {
         pane: "right",
         radius: 100,
         color: "#0000ff"
     }).addTo(map);
 
-    const compare = L.control.compare([leftCircle, stamenLayer], [rightCircle, osmLayer], {
+    const rightCircle1 = L.circle([51.51, -0.08], {
+        pane: "right",
+        radius: 100,
+        color: "#0000ff"
+    }).addTo(map);
+     // [leftCircle1, stamenLayer], [rightCircle, osmLayer]
+    const compare = L.control.compare([leftCircle, leftCircle1],  [rightCircle, rightCircle1], {
         sliderOrientation: 'vertical',
         position: 'topright'
     }).addTo(map);

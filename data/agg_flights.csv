@@ -1,0 +1,634 @@
+YEAR,APT_IATA,APT_AIRPORT,APT_COUNTRY,APT_LATITUDE,APT_LONGITUDE,FLT_TOT_1
+2018,ABC,Albacete Airport,Spain,38.94850159,-1.863520026,667
+2018,ABZ,Aberdeen Airport,United Kingdom,57.20190048,-2.197779894,56336
+2018,ACE,Lanzarote Airport,Spain,28.945499,-13.6052,59533
+2018,ADB,Adnan Menderes Airport,Türkiye,38.29240036,27.15699959,84081
+2018,AES,Alesund Airport,Norway,62.5625,6.119699955,14550
+2018,AGA,Agadir-Al Massira Airport,Morocco,30.32500076,-9.413069725,16600
+2018,AGF,Agen La Garenne Airport,France,44.17470169,0.590556026,4395
+2018,AGP,Malaga Airport,Spain,36.67490005,-4.499110222,137509
+2018,AJA,Ajaccio Napoleon Bonaparte Airport,France,41.92359924,8.802920341,18019
+2018,ALC,Alicante-Elche Airport,Spain,38.28219986,-0.558156013,96561
+2018,ALF,Alta Airport,Norway,69.97609711,23.37170029,8558
+2018,AMS,Amsterdam Airport Schiphol,Netherlands,52.308601,4.76389,511321
+2018,ANE,Angers - Loire Airport,France,47.560299,-0.312222,1723
+2018,ANR,Antwerp International Airport,Belgium,51.18939972,4.460279942,15170
+2018,ANX,Andoya Airport,Norway,69.29250336,16.14419937,4339
+2018,ARN,Stockholm Arlanda Airport,Sweden,59.65190125,17.91860008,243779
+2018,ATH,Athens International Airport (Eleftherios Venizelos Airport),Greece,37.93640137,23.94449997,211384
+2018,AVN,Avignon - Provence Airport,France,43.90729904,4.901830196,6381
+2018,AYT,Antalya Airport,Türkiye,36.898701,30.800501,186131
+2018,BBU,Aurel Vlaicu International Airport (Baneasa Airport),Romania,44.50320053,26.10210037,4828
+2018,BCN,Barcelona El Prat Airport,Spain,41.2971,2.07846,335634
+2018,BDS,Brindisi - Salento Airport,Italy,40.6576,17.947001,18608
+2018,BDU,Bardufoss Airport,Norway,69.05580139,18.54039955,3666
+2018,BEG,Belgrade Nikola Tesla Airport,Serbia,44.81840134,20.3090992,66466
+2018,BER,Berlin Brandenburg Airport,Germany,52.35138889,13.49388889,101054
+2018,BES,Brest Bretagne Airport,France,48.44789886,-4.418540001,16251
+2018,BFS,Belfast International Airport,United Kingdom,54.65750122,-6.215829849,50881
+2018,BGO,Bergen Airport,Norway,60.29339981,5.218140125,85443
+2018,BGY,Il Caravaggio International Airport (Orio al Serio Airport),Italy,45.673901,9.70417,89376
+2018,BHD,George Best Belfast City Airport,United Kingdom,54.61809921,-5.872499943,36144
+2018,BHX,Birmingham Airport,United Kingdom,52.45389938,-1.748029947,110076
+2018,BIA,Bastia - Poretta Airport,France,42.55270004,9.483730316,17009
+2018,BIO,Bilbao Airport,Spain,43.30110168,-2.910609961,47168
+2018,BIQ,Biarritz Pays Basque Airport,France,43.4683333,-1.5311111,13893
+2018,BJF,Batsfjord Airport,Norway,70.60050201,29.69140053,2236
+2018,BJZ,Badajoz Airport (Talavera la Real Air Base),Spain,38.8913002,-6.82133007,1611
+2018,BLQ,Bologna Guglielmo Marconi Airport,Italy,44.5354,11.2887,71414
+2018,BMA,Stockholm Bromma Airport,Sweden,59.35440063,17.94169998,54581
+2018,BNN,Bronnoysund Airport,Norway,65.46109772,12.21749973,7162
+2018,BOD,Bordeaux-Merignac Airport,France,44.82830048,-0.715556026,69477
+2018,BOO,Bodo Airport,Norway,67.26920319,14.36530018,39327
+2018,BQH,London Biggin Hill Airport,United Kingdom,51.3307991,0.032499999,17371
+2018,BRE,Bremen Airport,Germany,53.04750061,8.786669731,31037
+2018,BRQ,Brno-Turany Airport,Czech Republic,49.15129852,16.69440079,10136
+2018,BRS,Bristol Airport,United Kingdom,51.382702,-2.71909,70137
+2018,BRU,Brussels Airport (Zaventem Airport),Belgium,50.90140152,4.48443985,229957
+2018,BSL,EuroAirport Basel-Mulhouse-Freiburg,France,47.59,7.529167,81866
+2018,BTS,M. R. Stefanik Airport,Slovakia,48.17020035,17.21269989,23906
+2018,BUD,Budapest Ferenc Liszt International Airport,Hungary,47.42976,19.261093,114474
+2018,BVA,Beauvais-Tille Airport,France,49.45439911,2.112780094,23757
+2018,BVE,Brive-Souillac Airport,France,45.039722,1.485556,3053
+2018,BVG,Berlevag Airport,Norway,70.871399,29.034201,1613
+2018,BYF,Albert - Picardie Airport,France,49.9715004,2.697659969,1034
+2018,BZG,Bydgoszcz Ignacy Jan Paderewski Airport,Poland,53.09680176,17.97769928,4168
+2018,BZR,Beziers Cap d'Agde Airport,France,43.32350159,3.353899956,6558
+2018,CAT,Cascais Municipal Aerodrome,Portugal,38.724998,-9.35523,4914
+2018,CCF,Carcassonne Airport,France,43.2159996,2.306319952,5612
+2018,CDG,Charles de Gaulle Airport (Roissy Airport),France,49.012798,2.55,488117
+2018,CEQ,Cannes - Mandelieu Airport,France,43.542,6.95348,13803
+2018,CFE,Clermont-Ferrand Auvergne Airport,France,45.7867012,3.169169903,12094
+2018,CFN,Donegal Airport,Ireland,55.0442009,-8.340999603,1877
+2018,CFR,Caen - Carpiquet Airport,France,49.1733017,-0.449999988,7146
+2018,CFU,Corfu International Airport (Ioannis Kapodistrias Int'l Airport),Greece,39.60189819,19.9116993,26096
+2018,CGN,Cologne Bonn Airport,Germany,50.86589813,7.142739773,141991
+2018,CHQ,Chania International Airport,Greece,35.53170013,24.14970016,25212
+2018,CHR,Chateauroux-Centre Marcel Dassault Airport,France,46.860278,1.721111,2710
+2018,CIA,Ciampino-G. B. Pastine International Airport,Italy,41.7994,12.5949,51702
+2018,CLY,Calvi - Sainte-Catherine Airport,France,42.5244444,8.7930556,6188
+2018,CMF,Chambery-Savoie Airport,France,45.63809967,5.88022995,6962
+2018,CMN,Mohammed V International Airport,Morocco,33.36750031,-7.589970112,88862
+2018,CPH,Copenhagen Airport,Denmark,55.61790085,12.65600014,266207
+2018,CRL,Brussels South Charleroi Airport,Belgium,50.459202,4.45382,53433
+2018,CTA,Catania-Fontanarossa Airport,Italy,37.466801,15.0664,74064
+2018,DLE,Dole-Jura Airport,France,47.042686,5.435063,2686
+2018,DNR,Dinard-Pleurtuit-Saint-Malo Airport,France,48.58769989,-2.079960108,3021
+2018,DOL,Deauville - Saint-Gatien Airport,France,49.36529922,0.154305995,3636
+2018,DRS,Dresden Airport,Germany,51.13280106,13.76720047,22188
+2018,DUB,Dublin Airport,Ireland,53.421299,-6.27007,232414
+2018,DUS,Dusseldorf Airport,Germany,51.289501,6.76678,218391
+2018,EAS,San Sebastian Airport,Spain,43.35649872,-1.790609956,5416
+2018,EBU,Saint-Etienne-Boutheon Airport,France,45.54059982,4.296390057,1796
+2018,EDI,Edinburgh Airport,United Kingdom,55.95000076,-3.372499943,129525
+2018,EFL,Cephalonia International Airport,Greece,38.12009811,20.50049973,7075
+2018,EGC,Bergerac Dordogne Perigord Airport,France,44.82529831,0.518611014,4149
+2018,EMA,East Midlands Airport,United Kingdom,52.83110046,-1.328060031,69013
+2018,ERF,Erfurt-Weimar Airport,Germany,50.97980118,10.95810032,5738
+2018,ESB,Esenboga International Airport,Türkiye,40.12810135,32.99509811,114314
+2018,ETZ,Metz-Nancy-Lorraine Airport,France,48.98210144,6.251319885,6575
+2018,EVE,Harstad/Narvik Airport,Norway,68.49130249,16.67810059,10007
+2018,EVN,Zvartnots International Airport,Armenia,40.14730072,44.39590073,23011
+2018,FAB,Farnborough Airport,United Kingdom,51.2757988,-0.776332974,29503
+2018,FAO,Faro Airport,Portugal,37.01440048,-7.965909958,59172
+2018,FCO,Leonardo da Vinci-Fiumicino Airport,Italy,41.8002778,12.2388889,307619
+2018,FDE,Forde Airport,Norway,61.39110184,5.756939888,3993
+2018,FEZ,Fes-Saiss Airport,Morocco,33.9272995,-4.97796011,10763
+2018,FLW,Flores Airport,Portugal,39.45529938,-31.13139915,1695
+2018,FMO,Munster Osnabruck International Airport,Germany,52.13460159,7.684830189,19643
+2018,FNC,Madeira Airport,Portugal,32.697899,-16.7745,24367
+2018,FNI,Nimes-Ales-Camargue-Cevennes Airport (Garons Airport),France,43.75740051,4.416349888,4451
+2018,FRA,Frankfurt Airport,Germany,50.033333,8.570556,512099
+2018,FRO,Floro Airport,Norway,61.58359909,5.024720192,7924
+2018,FSC,Figari-Sud Corse Airport,France,41.50059891,9.097780228,10815
+2018,FUE,Fuerteventura Airport,Spain,28.45269966,-13.86380005,50586
+2018,GDN,Gdansk Lech Walesa Airport,Poland,54.37760162,18.46619987,43131
+2018,GLA,Glasgow Airport,United Kingdom,55.871899,-4.43306,90623
+2018,GMZ,La Gomera Airport,Spain,28.02960014,-17.21459961,1672
+2018,GNB,Grenoble-Isere Airport,France,45.36289978,5.329370022,7370
+2018,GOT,Goteborg Landvetter Airport,Sweden,57.66279984,12.27980042,72488
+2018,GRO,Girona-Costa Brava Airport,Spain,41.90100098,2.760550022,16038
+2018,GRQ,Groningen Airport Eelde,Netherlands,53.11970139,6.579440117,11328
+2018,GRX,Federico Garcia Lorca Airport (Granada Jaen Airport),Spain,37.18870163,-3.777359962,10755
+2018,GRZ,Graz Airport,Austria,46.99110031,15.43959999,19113
+2018,GVA,Geneva Airport,Switzerland,46.23809814,6.108950138,180221
+2018,HAJ,Hannover Airport,Germany,52.46110153,9.685079575,65908
+2018,HAM,Hamburg Airport,Germany,53.63040161,9.988229752,149338
+2018,HAU,Haugesund Airport,Norway,59.34529877,5.208360195,6139
+2018,HEL,Helsinki Airport (Helsinki-Vantaa Airport),Finland,60.31719971,24.9633007,192494
+2018,HER,Heraklion International Airport (Nikos Kazantzakis Airport),Greece,35.33969879,25.18029976,59529
+2018,HFT,Hammerfest Airport,Norway,70.67970276,23.66860008,11207
+2018,HOR,Horta Airport,Portugal,38.51990128,-28.71590042,4553
+2018,HOV,Orsta-Volda Airport,Norway,62.18000031,6.074100018,4895
+2018,HVG,Honningsvag Airport,Norway,71.00969696,25.98360062,2016
+2018,IBZ,Ibiza Airport,Spain,38.8728981,1.37311995,75017
+2018,IEG,Zielona Gora Airport,Poland,52.13850021,15.7986002,885
+2018,ILD,Lleida-Alguaire Airport,Spain,41.728185,0.535023,1149
+2018,INN,Innsbruck Airport (Kranebitten Airport),Austria,47.260201,11.344,19321
+2018,ISL,Istanbul Ataturk Airport,Türkiye,40.976898,28.8146,456284
+2018,IST,Istanbul Ataturk Airport,Türkiye,41.275278,28.751944,456284
+2018,JMK,Mykonos Island National Airport,Greece,37.43510056,25.34810066,16511
+2018,JSI,Skiathos Island National Airport,Greece,39.17710114,23.50370026,4159
+2018,JTR,Santorini (Thira) National Airport,Greece,36.39920044,25.47929955,20166
+2018,KBP,Boryspil International Airport,Ukraine,50.34500122,30.8946991,97248
+2018,KGS,Kos Island International Airport,Greece,36.79330063,27.0916996,20514
+2018,KIR,Kerry Airport (Farranfore Airport),Ireland,52.18090057,-9.523779869,4493
+2018,KIV,Chisinau International Airport,Moldova,46.92770004,28.93099976,28033
+2018,KKN,Kirkenes Airport,Norway,69.72579956,29.8913002,7549
+2018,KLU,Klagenfurt Airport,Austria,46.642502,14.3377,7106
+2018,KLV,Karlovy Vary Airport,Czech Republic,50.20299911,12.91499996,1605
+2018,KRK,John Paul II International Airport Krakow-Balice,Poland,50.077702,19.7848,54944
+2018,KRS,Kristiansand Airport,Norway,58.204201,8.08537,15895
+2018,KSU,Kristiansund Airport,Norway,63.11180115,7.824520111,9906
+2018,KTW,Katowice International Airport,Poland,50.4743,19.08,37502
+2018,KUN,Kaunas International Airport,Lithuania,54.96390152,24.08480072,8830
+2018,LAI,Lannion - Cote de Granit Airport,France,48.754398,-3.47166,658
+2018,LBG,Paris-Le Bourget Airport,France,48.9693985,2.441390038,56634
+2018,LCA,Larnaca International Airport,Cyprus,34.87509918,33.62490082,64006
+2018,LCG,A Coruna Airport,Spain,43.302101,-8.37726,11542
+2018,LCJ,Lodz Wladyslaw Reymont Airport,Poland,51.72190094,19.3980999,3763
+2018,LCY,London City Airport,United Kingdom,51.505299,0.055278,80762
+2018,LDE,Tarbes-Lourdes-Pyrenees Airport,France,43.17869949,-0.006439,7150
+2018,LDY,City of Derry Airport,United Kingdom,55.0428009,-7.161109924,2729
+2018,LEH,Le Havre - Octeville Airport,France,49.53390121,0.088055998,804
+2018,LEI,Almeria Airport,Spain,36.84389877,-2.370100021,9834
+2018,LEJ,Leipzig/Halle Airport,Germany,51.423889,12.236389,74750
+2018,LEN,Leon Airport,Spain,42.5890007,-5.655560017,1356
+2018,LEY,Lelystad Airport,Netherlands,52.4603,5.52722,3155
+2018,LGG,Liege Airport,Belgium,50.63740158,5.443220139,34545
+2018,LGW,Gatwick Airport,United Kingdom,51.148102,-0.190278,283965
+2018,LHR,Heathrow Airport,United Kingdom,51.4706,-0.461941,477824
+2018,LIG,Limoges - Bellegarde Airport,France,45.8628006,1.179440022,6267
+2018,LIL,Lille Airport (Lille-Lesquin Airport),France,50.563332,3.086886,25004
+2018,LIN,Linate Airport,Italy,45.445099,9.27674,113790
+2018,LIS,Lisbon Portela Airport,Portugal,38.7813,-9.13592,217555
+2018,LJU,Ljubljana Joze Pucnik Airport (Brnik Airport),Slovenia,46.223701,14.4576,31623
+2018,LKL,Lakselv Airport,Norway,70.06880188,24.9734993,2416
+2018,LKN,Leknes Airport,Norway,68.15249634,13.6093998,6328
+2018,LME,Le Mans Arnage Airport,France,47.94860077,0.201666996,1444
+2018,LNZ,Linz Airport (Blue Danube Airport),Austria,48.2332,14.1875,12281
+2018,LPA,Gran Canaria Airport,Spain,27.93190002,-15.38659954,127865
+2018,LPX,Liepaja International Airport,Latvia,56.51750183,21.09690094,361
+2018,LRH,La Rochelle - Ile de Re Airport,France,46.17919922,-1.195279956,5101
+2018,LRT,Lorient South Brittany Airport (Lann-Bihoue Airport),France,47.76060104,-3.440000057,6031
+2018,LTN,Luton Airport,United Kingdom,51.87469864,-0.368333012,135772
+2018,LUX,Luxembourg Findel Airport,Luxembourg,49.6233333,6.2044444,74875
+2018,LUZ,Lublin Airport,Poland,51.240278,22.713611,4281
+2018,LYN,Lyon-Bron Airport,France,45.72719955,4.944270134,9986
+2018,LYR,Svalbard Airport,Norway,78.24610138,15.46560001,2153
+2018,LYS,Lyon-Saint-Exupery Airport,France,45.725556,5.081111,113434
+2018,MAD,Adolfo Suarez Madrid-Barajas Airport,Spain,40.471926,-3.56264,409676
+2018,MAH,Menorca Airport (Mahon Airport),Spain,39.86259842,4.218649864,31051
+2018,MAN,Manchester Airport,United Kingdom,53.35369873,-2.274950027,201256
+2018,MBX,Maribor Edvard Rusjan Airport,Slovenia,46.47990036,15.68610001,2231
+2018,MEH,Mehamn Airport,Norway,71.02970123,27.82670021,2407
+2018,MJF,Mosjoen Airport,Norway,65.78399658,13.21490002,3834
+2018,MJV,Murcia-San Javier Airport,Spain,37.77500153,-0.812389016,8946
+2018,MLA,Malta International Airport (Luqa Airport),Malta,35.857498,14.4775,56668
+2018,MLH,EuroAirport Basel Mulhouse Freiburg,France,47.59818,7.525496,81866
+2018,MLN,Melilla Airport,Spain,35.27980042,-2.956259966,7490
+2018,MOL,Molde Airport,Norway,62.74470139,7.262499809,6401
+2018,MPL,Montpellier-Mediterranee Airport (Frejorgues Airport),France,43.57619858,3.963010073,29433
+2018,MQN,Mo i Rana Airport,Norway,66.36389923,14.30140018,5486
+2018,MRS,Marseille Provence Airport,France,43.43927192,5.221424103,97770
+2018,MST,Maastricht Aachen Airport,Netherlands,50.911701,5.77014,9448
+2018,MUC,Munich Airport,Germany,48.353802,11.7861,410528
+2018,MXP,Milan-Malpensa A,Italy,45.6306,8.72811,194434
+2018,NAP,Naples International Airport,Italy,40.886002,14.2908,79329
+2018,NCE,Nice Cote d'Azur Airport,France,43.65840149,7.215869904,143599
+2018,NCL,Newcastle Airport,United Kingdom,55.03749847,-1.691669941,45342
+2018,NCY,Annecy - Haute-Savoie - Mont Blanc Airport,France,45.9308333,6.1063889,3141
+2018,NOC,Ireland West Airport Knock,Ireland,53.91030121,-8.818490028,6607
+2018,NTE,Nantes Atlantique Airport,France,47.15319824,-1.610730052,60996
+2018,NUE,Nuremberg Airport,Germany,49.498699,11.078056,54343
+2018,ODB,Cordoba Airport,Spain,37.84199905,-4.848879814,212
+2018,OPO,Francisco de Sa Carneiro Airport,Portugal,41.24810028,-8.681389809,93720
+2018,ORK,Cork Airport,Ireland,51.84130096,-8.491109848,24696
+2018,ORY,Orly Airport,France,48.7233333,2.3794444,232374
+2018,OSL,Oslo Airport,Norway,60.19390106,11.10039997,257474
+2018,OSR,Leos Janacek Airport,Czech Republic,49.69630051,18.11109924,7239
+2018,OST,Ostend-Bruges International Airport,Belgium,51.19889832,2.862220049,6655
+2018,OSY,Namsos Airport,Norway,64.47219849,11.57859993,2697
+2018,OTP,Henri Coanda International Airport,Romania,44.5711111,26.085,122586
+2018,OVD,Asturias Airport (Oviedo Airport),Spain,43.56359863,-6.034619808,11622
+2018,OZP,Moron Air Base,Spain,37.17490005,-5.615940094,3913
+2018,PDL,Joao Paulo II Airport,Portugal,37.74119949,-25.69790077,19859
+2018,PFO,Paphos International Airport,Cyprus,34.7179985,32.4856987,18671
+2018,PGF,Perpignan-Rivesaltes Airport,France,42.74039841,2.87067008,10267
+2018,PIS,Poitiers-Biard Airport,France,46.58769989,0.306665987,4967
+2018,PLQ,Palanga International Airport,Lithuania,55.97320175,21.09390068,4163
+2018,PMI,Palma de Mallorca Airport,Spain,39.55170059,2.738810062,220206
+2018,PNA,Pamplona Airport,Spain,42.77000046,-1.646329999,3876
+2018,POW,Portoroz Airport,Slovenia,45.47340012,13.61499977,1624
+2018,POZ,Poznan???Lawica Airport,Poland,52.42100143,16.82629967,24391
+2018,PRG,Vaclav Havel Airport Prague,Czech Republic,50.1008,14.26,151050
+2018,PSA,Pisa International Airport (Galileo Galilei Airport),Italy,43.683899,10.3927,44262
+2018,PUF,Pau Pyrenees Airport,France,43.38000107,-0.41861099,11776
+2018,PVK,Aktion National Airport,Greece,38.92549896,20.76530075,5548
+2018,PXO,Porto Santo Airport,Portugal,33.07339859,-16.35000038,2965
+2018,RAK,Marrakesh Menara Airport,Morocco,31.60689926,-8.036299706,41227
+2018,RBA,Rabat-Sale Airport,Morocco,34.051498,-6.75152,12181
+2018,RDO,Radom Airport,Poland,51.3891983,21.21330071,623
+2018,RDZ,Rodez-Marcillac Airport,France,44.40790176,2.482670069,3742
+2018,RET,Rost Airport,Norway,67.52780151,12.10330009,1245
+2018,REU,Reus Airport,Spain,41.1473999,1.167170048,8429
+2018,RGS,Burgos Airport,Spain,42.357601,-3.62076,302
+2018,RHO,Rhodes International Airport,Greece,36.40539932,28.08620071,39253
+2018,RIX,Riga International Airport,Latvia,56.92359924,23.97109985,83108
+2018,RNS,Rennes-Saint-Jacques Airport,France,48.06949997,-1.734789968,18314
+2018,ROZ,US Naval Station Rota,Spain,36.64519882,-6.349460125,4184
+2018,RRS,Roros Airport,Norway,62.57839966,11.34230042,1231
+2018,RTM,Rotterdam The Hague Airport,Netherlands,51.956902,4.43722,24915
+2018,RVK,Rorvik Airport,Norway,64.83830261,11.14610004,2334
+2018,RZE,Rzeszow-Jasionka Airport,Poland,50.11000061,22.0189991,9264
+2018,SAW,Sabiha Gokcen International Airport,Türkiye,40.89860153,29.30920029,225868
+2018,SCN,Saarbrucken Airport,Germany,49.21459961,7.109509945,9196
+2018,SCQ,Santiago de Compostela Airport,Spain,42.89630127,-8.415140152,20604
+2018,SDN,Sandane Airport,Norway,61.83000183,6.105830193,2282
+2018,SDR,Santander Airport,Spain,43.42710114,-3.820009947,9274
+2018,SIR,Sion Airport,Switzerland,46.21960068,7.326759815,6479
+2018,SJJ,Sarajevo International Airport,Bosnia and Herzegovina,43.82460022,18.3314991,12293
+2018,SKG,Thessaloniki Airport,Greece,40.5196991,22.97089958,55826
+2018,SKN,Stokmarknes Airport,Norway,68.5788269,15.03341675,6217
+2018,SKP,Skopje Alexander the Great Airport,Republic of North Macedonia,41.961601,21.621401,17836
+2018,SLM,Salamanca Airport,Spain,40.95209885,-5.501989841,3351
+2018,SMA,Santa Maria Airport,Portugal,36.97140121,-25.17060089,2820
+2018,SNN,Shannon Airport,Ireland,52.702,-8.92482,22266
+2018,SNR,Saint-Nazaire Montoir Airport,France,47.3105556,-2.1566667,2658
+2018,SOF,Sofia Airport,Bulgaria,42.69669342,23.41143608,59580
+2018,SOG,Sogndal Airport,Norway,61.156101,7.13778,5076
+2018,SOJ,Sorkjosen Airport,Norway,69.78679657,20.95940018,1746
+2018,SOU,Southampton Airport,United Kingdom,50.95029831,-1.35679996,38656
+2018,SPC,La Palma Airport,Spain,28.626499,-17.7556,21272
+2018,SQQ,Siauliai International Airport,Lithuania,55.89390182,23.39500046,2295
+2018,SSJ,Sandnessjoen Airport,Norway,65.95680237,12.46889973,3864
+2018,STN,London Stansted Airport,United Kingdom,51.88499832,0.234999999,200134
+2018,STR,Stuttgart Airport,Germany,48.68989944,9.221960068,128323
+2018,SVG,Stavanger Airport,Norway,58.87670135,5.63778019,63455
+2018,SVJ,Svolvaer Airport,Norway,68.24330139,14.66919994,4838
+2018,SVQ,Seville Airport,Spain,37.41799927,-5.893109798,50536
+2018,SXB,Strasbourg Airport,France,48.53829956,7.628230095,22056
+2018,SXF,Berlin Schonefeld Airport,Germany,52.380001,13.5225,101054
+2018,SXL,Sligo Airport,Ireland,54.28020096,-8.599209785,66
+2018,SZG,Salzburg Airport,Austria,47.79330063,13.00430012,29117
+2018,SZY,Olsztyn-Mazury Regional Airport,Poland,53.481899,20.9377,1464
+2018,SZZ,Solidarity Szczecin-Goleniow Airport,Poland,53.58470154,14.90219975,6201
+2018,TAY,Tartu Airport,Estonia,58.30749893,26.69039917,1434
+2018,TBS,Tbilisi International Airport,Georgia,41.6692009,44.95470047,37959
+2018,TFN,Tenerife-North Airport (Los Rodeos Airport),Spain,28.48270035,-16.34149933,70066
+2018,TFS,Tenerife-South Airport (Reina Sofia Airport),Spain,28.04450035,-16.57250023,68048
+2018,TGD,Podgorica Airport,Montenegro,42.359402,19.2519,14105
+2018,TIA,Tirana International Airport,Albania,41.41469955,19.72060013,25515
+2018,TLL,Tallinn Airport (Lennart Meri Tallinn Airport),Estonia,59.41329956,24.83279991,45083
+2018,TLN,Toulon-Hyeres Airport (Hyeres Le Palyvestre Airport),France,43.09730148,6.146029949,12099
+2018,TLS,Toulouse-Blagnac Airport,France,43.629101,1.36382,97154
+2018,TLV,Ben Gurion Airport,Israel,32.01139832,34.88669968,156426
+2018,TNF,Toussus-le-Noble Airport,France,48.75189972,2.106189966,9881
+2018,TNG,Tangier Ibn Battouta Airport,Morocco,35.72689819,-5.916890144,11641
+2018,TOJ,Madrid-Torrejon Airport,Spain,40.49670029,-3.445869923,1861
+2018,TOS,Tromse Airport,Norway,69.6832962,18.91889954,42218
+2018,TRD,Trondheim Airport,Norway,63.4578018,10.9239998,54628
+2018,TRN,Turin Airport (Caselle Airport),Italy,45.200802,7.64963,42380
+2018,TSF,Treviso-Sant'Angelo Airport,Italy,45.648399,12.1944,21515
+2018,TUF,Tours Val de Loire Airport,France,47.43220139,0.727605999,3034
+2018,TXL,Berlin Tegel Airport,Germany,52.5597,13.2877,185309
+2018,UIP,Quimper-Cornouaille Airport,France,47.97499847,-4.167789936,2621
+2018,VAW,Varddo Air,Norway,70.35540009,31.04490089,2226
+2018,VCE,Venice Marco Polo Airport,Italy,45.505299,12.3519,95250
+2018,VDE,El Hierro Airport,Spain,27.81480026,-17.88710022,4647
+2018,VDS,Vadso Airport,Norway,70.06529999,29.84469986,6500
+2018,VGO,Vigo-Peinador Airport,Spain,42.23180008,-8.62677002,10693
+2018,VIE,Vienna International Airport,Austria,48.11029816,16.56970024,256393
+2018,VIT,Vitoria Airport,Spain,42.88280106,-2.7244699,8677
+2018,VLC,Valencia Airport,Spain,39.4893,-0.481625,68919
+2018,VLL,Valladolid Airport,Spain,41.70610046,-4.851940155,3085
+2018,VNO,Vilnius Airport,Lithuania,54.634102,25.285801,46491
+2018,VNT,Ventspils International Airport,Latvia,57.35779953,21.5442009,14
+2018,WAT,Waterford Airport,Ireland,52.18719864,-7.086959839,393
+2018,WAW,Warsaw Chopin Airport,Poland,52.16569901,20.96710014,187235
+2018,WMI,Warsaw Modlin Airport,Poland,52.451099,20.6518,19709
+2018,WRO,Copernicus Airport Wroclaw,Poland,51.10269928,16.88579941,30942
+2018,XCR,Chalons Vatry Airport,France,48.77333333,4.206111111,3389
+2018,XRY,Jerez Airport (La Parra Airport),Spain,36.74459839,-6.060110092,15060
+2018,ZAG,Franjo Tudman Airport,Croatia,45.74290085,16.06879997,43133
+2018,ZAZ,Zaragoza Airport,Spain,41.66619873,-1.04155004,9302
+2018,ZRH,Zurich Airport,Switzerland,47.464699,8.54917,271578
+2018,ZTH,Zakynthos International Airport (Dionysios SolomosAirport),Greece,37.7509,20.8843,13138
+2021,ABC,Albacete Airport,Spain,38.94850159,-1.863520026,735
+2021,ABZ,Aberdeen Airport,United Kingdom,57.20190048,-2.197779894,27200
+2021,ACE,Lanzarote Airport,Spain,28.945499,-13.6052,37360
+2021,ADB,Adnan Menderes Airport,Türkiye,38.29240036,27.15699959,53196
+2021,AES,Alesund Airport,Norway,62.5625,6.119699955,10932
+2021,AGA,Agadir-Al Massira Airport,Morocco,30.32500076,-9.413069725,7284
+2021,AGF,Agen La Garenne Airport,France,44.17470169,0.590556026,1858
+2021,AGP,Malaga Airport,Spain,36.67490005,-4.499110222,87463
+2021,AJA,Ajaccio Napoleon Bonaparte Airport,France,41.92359924,8.802920341,16414
+2021,ALC,Alicante-Elche Airport,Spain,38.28219986,-0.558156013,51272
+2021,ALF,Alta Airport,Norway,69.97609711,23.37170029,8352
+2021,AMS,Amsterdam Airport Schiphol,Netherlands,52.308601,4.76389,279874
+2021,ANE,Angers - Loire Airport,France,47.560299,-0.312222,1621
+2021,ANR,Antwerp International Airport,Belgium,51.18939972,4.460279942,13354
+2021,ANX,Andoya Airport,Norway,69.29250336,16.14419937,3316
+2021,ARN,Stockholm Arlanda Airport,Sweden,59.65190125,17.91860008,91016
+2021,ATH,Athens International Airport (Eleftherios Venizelos Airport),Greece,37.93640137,23.94449997,153061
+2021,AVN,Avignon - Provence Airport,France,43.90729904,4.901830196,7436
+2021,AYT,Antalya Airport,Türkiye,36.898701,30.800501,133038
+2021,BBU,Aurel Vlaicu International Airport (Baneasa Airport),Romania,44.50320053,26.10210037,5925
+2021,BCN,Barcelona El Prat Airport,Spain,41.2971,2.07846,163694
+2021,BDS,Brindisi - Salento Airport,Italy,40.6576,17.947001,15607
+2021,BDU,Bardufoss Airport,Norway,69.05580139,18.54039955,3081
+2021,BEG,Belgrade Nikola Tesla Airport,Serbia,44.81840134,20.3090992,49367
+2021,BER,Berlin Brandenburg Airport,Germany,52.35138889,13.49388889,103914
+2021,BES,Brest Bretagne Airport,France,48.44789886,-4.418540001,12191
+2021,BFS,Belfast International Airport,United Kingdom,54.65750122,-6.215829849,28140
+2021,BGO,Bergen Airport,Norway,60.29339981,5.218140125,70612
+2021,BGY,Il Caravaggio International Airport (Orio al Serio Airport),Italy,45.673901,9.70417,51870
+2021,BHD,George Best Belfast City Airport,United Kingdom,54.61809921,-5.872499943,12705
+2021,BHX,Birmingham Airport,United Kingdom,52.45389938,-1.748029947,34573
+2021,BIA,Bastia - Poretta Airport,France,42.55270004,9.483730316,14977
+2021,BIO,Bilbao Airport,Spain,43.30110168,-2.910609961,23386
+2021,BIQ,Biarritz Pays Basque Airport,France,43.4683333,-1.5311111,9557
+2021,BJF,Batsfjord Airport,Norway,70.60050201,29.69140053,2264
+2021,BJZ,Badajoz Airport (Talavera la Real Air Base),Spain,38.8913002,-6.82133007,1424
+2021,BLQ,Bologna Guglielmo Marconi Airport,Italy,44.5354,11.2887,42214
+2021,BMA,Stockholm Bromma Airport,Sweden,59.35440063,17.94169998,22271
+2021,BNN,Bronnoysund Airport,Norway,65.46109772,12.21749973,6292
+2021,BOD,Bordeaux-Merignac Airport,France,44.82830048,-0.715556026,38598
+2021,BOO,Bodo Airport,Norway,67.26920319,14.36530018,33410
+2021,BQH,London Biggin Hill Airport,United Kingdom,51.3307991,0.032499999,18968
+2021,BRE,Bremen Airport,Germany,53.04750061,8.786669731,13839
+2021,BRQ,Brno-Turany Airport,Czech Republic,49.15129852,16.69440079,6096
+2021,BRS,Bristol Airport,United Kingdom,51.382702,-2.71909,25023
+2021,BRU,Brussels Airport (Zaventem Airport),Belgium,50.90140152,4.48443985,114144
+2021,BSL,EuroAirport Basel-Mulhouse-Freiburg,France,47.59,7.529167,44300
+2021,BTS,M. R. Stefanik Airport,Slovakia,48.17020035,17.21269989,10980
+2021,BUD,Budapest Ferenc Liszt International Airport,Hungary,47.42976,19.261093,54543
+2021,BVA,Beauvais-Tille Airport,France,49.45439911,2.112780094,16357
+2021,BVE,Brive-Souillac Airport,France,45.039722,1.485556,2766
+2021,BVG,Berlevag Airport,Norway,70.871399,29.034201,1623
+2021,BYF,Albert - Picardie Airport,France,49.9715004,2.697659969,999
+2021,BZG,Bydgoszcz Ignacy Jan Paderewski Airport,Poland,53.09680176,17.97769928,2135
+2021,BZR,Beziers Cap d'Agde Airport,France,43.32350159,3.353899956,4983
+2021,CAT,Cascais Municipal Aerodrome,Portugal,38.724998,-9.35523,6321
+2021,CCF,Carcassonne Airport,France,43.2159996,2.306319952,4085
+2021,CDG,Charles de Gaulle Airport (Roissy Airport),France,49.012798,2.55,256094
+2021,CEQ,Cannes - Mandelieu Airport,France,43.542,6.95348,15351
+2021,CFE,Clermont-Ferrand Auvergne Airport,France,45.7867012,3.169169903,6402
+2021,CFN,Donegal Airport,Ireland,55.0442009,-8.340999603,1396
+2021,CFR,Caen - Carpiquet Airport,France,49.1733017,-0.449999988,4439
+2021,CFU,Corfu International Airport (Ioannis Kapodistrias Int'l Airport),Greece,39.60189819,19.9116993,21012
+2021,CGN,Cologne Bonn Airport,Germany,50.86589813,7.142739773,90002
+2021,CHQ,Chania International Airport,Greece,35.53170013,24.14970016,20342
+2021,CHR,Chateauroux-Centre Marcel Dassault Airport,France,46.860278,1.721111,2722
+2021,CIA,Ciampino-G. B. Pastine International Airport,Italy,41.7994,12.5949,35420
+2021,CLY,Calvi - Sainte-Catherine Airport,France,42.5244444,8.7930556,6173
+2021,CMF,Chambery-Savoie Airport,France,45.63809967,5.88022995,4007
+2021,CMN,Mohammed V International Airport,Morocco,33.36750031,-7.589970112,46907
+2021,CPH,Copenhagen Airport,Denmark,55.61790085,12.65600014,109870
+2021,CQM,Ciudad Real Central Airport,Spain,38.85638889,-3.97,237
+2021,CRL,Brussels South Charleroi Airport,Belgium,50.459202,4.45382,33174
+2021,CTA,Catania-Fontanarossa Airport,Italy,37.466801,15.0664,50975
+2021,DLE,Dole-Jura Airport,France,47.042686,5.435063,2548
+2021,DNR,Dinard-Pleurtuit-Saint-Malo Airport,France,48.58769989,-2.079960108,1900
+2021,DOL,Deauville - Saint-Gatien Airport,France,49.36529922,0.154305995,2536
+2021,DRS,Dresden Airport,Germany,51.13280106,13.76720047,7318
+2021,DUB,Dublin Airport,Ireland,53.421299,-6.27007,91015
+2021,DUS,Dusseldorf Airport,Germany,51.289501,6.76678,82021
+2021,EAS,San Sebastian Airport,Spain,43.35649872,-1.790609956,2428
+2021,EBU,Saint-Etienne-Boutheon Airport,France,45.54059982,4.296390057,1953
+2021,EDI,Edinburgh Airport,United Kingdom,55.95000076,-3.372499943,43617
+2021,EFL,Cephalonia International Airport,Greece,38.12009811,20.50049973,4663
+2021,EGC,Bergerac Dordogne Perigord Airport,France,44.82529831,0.518611014,2523
+2021,EMA,East Midlands Airport,United Kingdom,52.83110046,-1.328060031,46886
+2021,ERF,Erfurt-Weimar Airport,Germany,50.97980118,10.95810032,3597
+2021,ESB,Esenboga International Airport,Türkiye,40.12810135,32.99509811,61389
+2021,ETZ,Metz-Nancy-Lorraine Airport,France,48.98210144,6.251319885,1807
+2021,EVE,Harstad/Narvik Airport,Norway,68.49130249,16.67810059,8800
+2021,EVN,Zvartnots International Airport,Armenia,40.14730072,44.39590073,19439
+2021,FAB,Farnborough Airport,United Kingdom,51.2757988,-0.776332974,25278
+2021,FAO,Faro Airport,Portugal,37.01440048,-7.965909958,35281
+2021,FCO,Leonardo da Vinci-Fiumicino Airport,Italy,41.8002778,12.2388889,113991
+2021,FDE,Forde Airport,Norway,61.39110184,5.756939888,2576
+2021,FEZ,Fes-Saiss Airport,Morocco,33.9272995,-4.97796011,8301
+2021,FLW,Flores Airport,Portugal,39.45529938,-31.13139915,1616
+2021,FMO,Munster Osnabruck International Airport,Germany,52.13460159,7.684830189,11977
+2021,FNC,Madeira Airport,Portugal,32.697899,-16.7745,16652
+2021,FNI,Nimes-Ales-Camargue-Cevennes Airport (Garons Airport),France,43.75740051,4.416349888,3861
+2021,FRA,Frankfurt Airport,Germany,50.033333,8.570556,261966
+2021,FRO,Floro Airport,Norway,61.58359909,5.024720192,6779
+2021,FSC,Figari-Sud Corse Airport,France,41.50059891,9.097780228,12219
+2021,FUE,Fuerteventura Airport,Spain,28.45269966,-13.86380005,32828
+2021,GDN,Gdansk Lech Walesa Airport,Poland,54.37760162,18.46619987,25444
+2021,GLA,Glasgow Airport,United Kingdom,55.871899,-4.43306,32611
+2021,GMZ,La Gomera Airport,Spain,28.02960014,-17.21459961,1975
+2021,GNB,Grenoble-Isere Airport,France,45.36289978,5.329370022,5066
+2021,GOT,Goteborg Landvetter Airport,Sweden,57.66279984,12.27980042,27233
+2021,GRO,Girona-Costa Brava Airport,Spain,41.90100098,2.760550022,7089
+2021,GRQ,Groningen Airport Eelde,Netherlands,53.11970139,6.579440117,8078
+2021,GRX,Federico Garcia Lorca Airport (Granada Jaen Airport),Spain,37.18870163,-3.777359962,6034
+2021,GRZ,Graz Airport,Austria,46.99110031,15.43959999,10545
+2021,GVA,Geneva Airport,Switzerland,46.23809814,6.108950138,91512
+2021,HAJ,Hannover Airport,Germany,52.46110153,9.685079575,31476
+2021,HAM,Hamburg Airport,Germany,53.63040161,9.988229752,63075
+2021,HAU,Haugesund Airport,Norway,59.34529877,5.208360195,4903
+2021,HEL,Helsinki Airport (Helsinki-Vantaa Airport),Finland,60.31719971,24.9633007,72296
+2021,HER,Heraklion International Airport (Nikos Kazantzakis Airport),Greece,35.33969879,25.18029976,41897
+2021,HFT,Hammerfest Airport,Norway,70.67970276,23.66860008,10488
+2021,HOR,Horta Airport,Portugal,38.51990128,-28.71590042,4391
+2021,HOV,Orsta-Volda Airport,Norway,62.18000031,6.074100018,3679
+2021,HVG,Honningsvag Airport,Norway,71.00969696,25.98360062,1985
+2021,IBZ,Ibiza Airport,Spain,38.8728981,1.37311995,59880
+2021,IEG,Zielona Gora Airport,Poland,52.13850021,15.7986002,707
+2021,ILD,Lleida-Alguaire Airport,Spain,41.728185,0.535023,4660
+2021,INN,Innsbruck Airport (Kranebitten Airport),Austria,47.260201,11.344,7236
+2021,ISL,Istanbul Ataturk Airport,Türkiye,40.976898,28.8146,34502
+2021,IST,Istanbul Ataturk Airport,Türkiye,41.275278,28.751944,34502
+2021,JMK,Mykonos Island National Airport,Greece,37.43510056,25.34810066,15974
+2021,JSI,Skiathos Island National Airport,Greece,39.17710114,23.50370026,2974
+2021,JTR,Santorini (Thira) National Airport,Greece,36.39920044,25.47929955,15842
+2021,KBP,Boryspil International Airport,Ukraine,50.34500122,30.8946991,75817
+2021,KGS,Kos Island International Airport,Greece,36.79330063,27.0916996,14193
+2021,KIR,Kerry Airport (Farranfore Airport),Ireland,52.18090057,-9.523779869,2856
+2021,KIV,Chisinau International Airport,Moldova,46.92770004,28.93099976,16799
+2021,KKN,Kirkenes Airport,Norway,69.72579956,29.8913002,7049
+2021,KLU,Klagenfurt Airport,Austria,46.642502,14.3377,3974
+2021,KLV,Karlovy Vary Airport,Czech Republic,50.20299911,12.91499996,1830
+2021,KRK,John Paul II International Airport Krakow-Balice,Poland,50.077702,19.7848,32925
+2021,KRS,Kristiansand Airport,Norway,58.204201,8.08537,8629
+2021,KSU,Kristiansund Airport,Norway,63.11180115,7.824520111,8096
+2021,KTW,Katowice International Airport,Poland,50.4743,19.08,24570
+2021,KUN,Kaunas International Airport,Lithuania,54.96390152,24.08480072,6606
+2021,LAI,Lannion - Cote de Granit Airport,France,48.754398,-3.47166,593
+2021,LBG,Paris-Le Bourget Airport,France,48.9693985,2.441390038,51902
+2021,LCA,Larnaca International Airport,Cyprus,34.87509918,33.62490082,38018
+2021,LCG,A Coruna Airport,Spain,43.302101,-8.37726,6434
+2021,LCJ,Lodz Wladyslaw Reymont Airport,Poland,51.72190094,19.3980999,3076
+2021,LCY,London City Airport,United Kingdom,51.505299,0.055278,14483
+2021,LDE,Tarbes-Lourdes-Pyrenees Airport,France,43.17869949,-0.006439,4870
+2021,LDY,City of Derry Airport,United Kingdom,55.0428009,-7.161109924,2461
+2021,LEH,Le Havre - Octeville Airport,France,49.53390121,0.088055998,847
+2021,LEI,Almeria Airport,Spain,36.84389877,-2.370100021,4770
+2021,LEJ,Leipzig/Halle Airport,Germany,51.423889,12.236389,73903
+2021,LEN,Leon Airport,Spain,42.5890007,-5.655560017,855
+2021,LEY,Lelystad Airport,Netherlands,52.4603,5.52722,2024
+2021,LGG,Liege Airport,Belgium,50.63740158,5.443220139,41908
+2021,LGW,Gatwick Airport,United Kingdom,51.148102,-0.190278,55843
+2021,LHR,Heathrow Airport,United Kingdom,51.4706,-0.461941,195340
+2021,LIG,Limoges - Bellegarde Airport,France,45.8628006,1.179440022,4673
+2021,LIL,Lille Airport (Lille-Lesquin Airport),France,50.563332,3.086886,15022
+2021,LIN,Linate Airport,Italy,45.445099,9.27674,66642
+2021,LIS,Lisbon Portela Airport,Portugal,38.7813,-9.13592,115380
+2021,LJU,Ljubljana Joze Pucnik Airport (Brnik Airport),Slovenia,46.223701,14.4576,12975
+2021,LKL,Lakselv Airport,Norway,70.06880188,24.9734993,2407
+2021,LKN,Leknes Airport,Norway,68.15249634,13.6093998,4345
+2021,LME,Le Mans Arnage Airport,France,47.94860077,0.201666996,1314
+2021,LNZ,Linz Airport (Blue Danube Airport),Austria,48.2332,14.1875,8570
+2021,LPA,Gran Canaria Airport,Spain,27.93190002,-15.38659954,81541
+2021,LPX,Liepaja International Airport,Latvia,56.51750183,21.09690094,717
+2021,LRH,La Rochelle - Ile de Re Airport,France,46.17919922,-1.195279956,3641
+2021,LRT,Lorient South Brittany Airport (Lann-Bihoue Airport),France,47.76060104,-3.440000057,4147
+2021,LTN,Luton Airport,United Kingdom,51.87469864,-0.368333012,61424
+2021,LUX,Luxembourg Findel Airport,Luxembourg,49.6233333,6.2044444,47684
+2021,LUZ,Lublin Airport,Poland,51.240278,22.713611,1825
+2021,LYN,Lyon-Bron Airport,France,45.72719955,4.944270134,9896
+2021,LYR,Svalbard Airport,Norway,78.24610138,15.46560001,1397
+2021,LYS,Lyon-Saint-Exupery Airport,France,45.725556,5.081111,54765
+2021,MAD,Adolfo Suarez Madrid-Barajas Airport,Spain,40.471926,-3.56264,217547
+2021,MAH,Menorca Airport (Mahon Airport),Spain,39.86259842,4.218649864,25902
+2021,MAN,Manchester Airport,United Kingdom,53.35369873,-2.274950027,66648
+2021,MBX,Maribor Edvard Rusjan Airport,Slovenia,46.47990036,15.68610001,1962
+2021,MEH,Mehamn Airport,Norway,71.02970123,27.82670021,2550
+2021,MJF,Mosjoen Airport,Norway,65.78399658,13.21490002,3902
+2021,MJV,Murcia-San Javier Airport,Spain,37.77500153,-0.812389016,319
+2021,MLA,Malta International Airport (Luqa Airport),Malta,35.857498,14.4775,32499
+2021,MLH,EuroAirport Basel Mulhouse Freiburg,France,47.59818,7.525496,44300
+2021,MLN,Melilla Airport,Spain,35.27980042,-2.956259966,7574
+2021,MOL,Molde Airport,Norway,62.74470139,7.262499809,4095
+2021,MPL,Montpellier-Mediterranee Airport (Frejorgues Airport),France,43.57619858,3.963010073,21819
+2021,MQN,Mo i Rana Airport,Norway,66.36389923,14.30140018,4627
+2021,MRS,Marseille Provence Airport,France,43.43927192,5.221424103,59699
+2021,MST,Maastricht Aachen Airport,Netherlands,50.911701,5.77014,8897
+2021,MUC,Munich Airport,Germany,48.353802,11.7861,150437
+2021,MXP,Milan-Malpensa A,Italy,45.6306,8.72811,118460
+2021,NAP,Naples International Airport,Italy,40.886002,14.2908,46280
+2021,NCE,Nice Cote d'Azur Airport,France,43.65840149,7.215869904,94252
+2021,NCL,Newcastle Airport,United Kingdom,55.03749847,-1.691669941,16289
+2021,NCY,Annecy - Haute-Savoie - Mont Blanc Airport,France,45.9308333,6.1063889,3834
+2021,NOC,Ireland West Airport Knock,Ireland,53.91030121,-8.818490028,1678
+2021,NTE,Nantes Atlantique Airport,France,47.15319824,-1.610730052,30446
+2021,NUE,Nuremberg Airport,Germany,49.498699,11.078056,20578
+2021,ODB,Cordoba Airport,Spain,37.84199905,-4.848879814,477
+2021,OPO,Francisco de Sa Carneiro Airport,Portugal,41.24810028,-8.681389809,53942
+2021,ORK,Cork Airport,Ireland,51.84130096,-8.491109848,8153
+2021,ORY,Orly Airport,France,48.7233333,2.3794444,120598
+2021,OSL,Oslo Airport,Norway,60.19390106,11.10039997,123783
+2021,OSR,Leos Janacek Airport,Czech Republic,49.69630051,18.11109924,6609
+2021,OST,Ostend-Bruges International Airport,Belgium,51.19889832,2.862220049,6800
+2021,OSY,Namsos Airport,Norway,64.47219849,11.57859993,2338
+2021,OTP,Henri Coanda International Airport,Romania,44.5711111,26.085,71712
+2021,OVD,Asturias Airport (Oviedo Airport),Spain,43.56359863,-6.034619808,7532
+2021,OZP,Moron Air Base,Spain,37.17490005,-5.615940094,4949
+2021,PDL,Joao Paulo II Airport,Portugal,37.74119949,-25.69790077,17063
+2021,PFO,Paphos International Airport,Cyprus,34.7179985,32.4856987,13611
+2021,PGF,Perpignan-Rivesaltes Airport,France,42.74039841,2.87067008,10107
+2021,PIS,Poitiers-Biard Airport,France,46.58769989,0.306665987,4254
+2021,PLQ,Palanga International Airport,Lithuania,55.97320175,21.09390068,1666
+2021,PMI,Palma de Mallorca Airport,Spain,39.55170059,2.738810062,140536
+2021,PMO,Falcone-Borsellino Airport (Punta Raisi Airport),Italy,38.175999,13.091,40985
+2021,PNA,Pamplona Airport,Spain,42.77000046,-1.646329999,2654
+2021,POW,Portoroz Airport,Slovenia,45.47340012,13.61499977,2027
+2021,POZ,Poznan???Lawica Airport,Poland,52.42100143,16.82629967,13847
+2021,PRG,Vaclav Havel Airport Prague,Czech Republic,50.1008,14.26,56540
+2021,PSA,Pisa International Airport (Galileo Galilei Airport),Italy,43.683899,10.3927,25329
+2021,PUF,Pau Pyrenees Airport,France,43.38000107,-0.41861099,6741
+2021,PVK,Aktion National Airport,Greece,38.92549896,20.76530075,4594
+2021,PXO,Porto Santo Airport,Portugal,33.07339859,-16.35000038,2276
+2021,RAK,Marrakesh Menara Airport,Morocco,31.60689926,-8.036299706,17093
+2021,RBA,Rabat-Sale Airport,Morocco,34.051498,-6.75152,8962
+2021,RDO,Radom Airport,Poland,51.3891983,21.21330071,0
+2021,RDZ,Rodez-Marcillac Airport,France,44.40790176,2.482670069,2994
+2021,RET,Rost Airport,Norway,67.52780151,12.10330009,1270
+2021,REU,Reus Airport,Spain,41.1473999,1.167170048,3754
+2021,RGS,Burgos Airport,Spain,42.357601,-3.62076,1866
+2021,RHO,Rhodes International Airport,Greece,36.40539932,28.08620071,28967
+2021,RIX,Riga International Airport,Latvia,56.92359924,23.97109985,38285
+2021,RMU,Region de Murcia International Airport,Spain,37.803,-1.125,3257
+2021,RNS,Rennes-Saint-Jacques Airport,France,48.06949997,-1.734789968,10592
+2021,ROZ,US Naval Station Rota,Spain,36.64519882,-6.349460125,4914
+2021,RRS,Roros Airport,Norway,62.57839966,11.34230042,1338
+2021,RTM,Rotterdam The Hague Airport,Netherlands,51.956902,4.43722,14863
+2021,RVK,Rorvik Airport,Norway,64.83830261,11.14610004,2299
+2021,RZE,Rzeszow-Jasionka Airport,Poland,50.11000061,22.0189991,4268
+2021,SAW,Sabiha Gokcen International Airport,Türkiye,40.89860153,29.30920029,178024
+2021,SCN,Saarbrucken Airport,Germany,49.21459961,7.109509945,4148
+2021,SCQ,Santiago de Compostela Airport,Spain,42.89630127,-8.415140152,13836
+2021,SDN,Sandane Airport,Norway,61.83000183,6.105830193,1938
+2021,SDR,Santander Airport,Spain,43.42710114,-3.820009947,5668
+2021,SIR,Sion Airport,Switzerland,46.21960068,7.326759815,6407
+2021,SJJ,Sarajevo International Airport,Bosnia and Herzegovina,43.82460022,18.3314991,10681
+2021,SKG,Thessaloniki Airport,Greece,40.5196991,22.97089958,37890
+2021,SKN,Stokmarknes Airport,Norway,68.5788269,15.03341675,4445
+2021,SKP,Skopje Alexander the Great Airport,Republic of North Macedonia,41.961601,21.621401,13327
+2021,SLM,Salamanca Airport,Spain,40.95209885,-5.501989841,3035
+2021,SMA,Santa Maria Airport,Portugal,36.97140121,-25.17060089,2488
+2021,SNN,Shannon Airport,Ireland,52.702,-8.92482,10494
+2021,SNR,Saint-Nazaire Montoir Airport,France,47.3105556,-2.1566667,2513
+2021,SOF,Sofia Airport,Bulgaria,42.69669342,23.41143608,39888
+2021,SOG,Sogndal Airport,Norway,61.156101,7.13778,4690
+2021,SOJ,Sorkjosen Airport,Norway,69.78679657,20.95940018,1711
+2021,SOU,Southampton Airport,United Kingdom,50.95029831,-1.35679996,11131
+2021,SPC,La Palma Airport,Spain,28.626499,-17.7556,13184
+2021,SQQ,Siauliai International Airport,Lithuania,55.89390182,23.39500046,2794
+2021,SSJ,Sandnessjoen Airport,Norway,65.95680237,12.46889973,3481
+2021,STN,London Stansted Airport,United Kingdom,51.88499832,0.234999999,92542
+2021,STR,Stuttgart Airport,Germany,48.68989944,9.221960068,51284
+2021,SVG,Stavanger Airport,Norway,58.87670135,5.63778019,44480
+2021,SVJ,Svolvaer Airport,Norway,68.24330139,14.66919994,3661
+2021,SVQ,Seville Airport,Spain,37.41799927,-5.893109798,34715
+2021,SXB,Strasbourg Airport,France,48.53829956,7.628230095,10331
+2021,SXF,Berlin Schonefeld Airport,Germany,52.380001,13.5225,103914
+2021,SXL,Sligo Airport,Ireland,54.28020096,-8.599209785,86
+2021,SZG,Salzburg Airport,Austria,47.79330063,13.00430012,14538
+2021,SZY,Olsztyn-Mazury Regional Airport,Poland,53.481899,20.9377,934
+2021,SZZ,Solidarity Szczecin-Goleniow Airport,Poland,53.58470154,14.90219975,3243
+2021,TAY,Tartu Airport,Estonia,58.30749893,26.69039917,932
+2021,TBS,Tbilisi International Airport,Georgia,41.6692009,44.95470047,21280
+2021,TFN,Tenerife-North Airport (Los Rodeos Airport),Spain,28.48270035,-16.34149933,52015
+2021,TFS,Tenerife-South Airport (Reina Sofia Airport),Spain,28.04450035,-16.57250023,37361
+2021,TGD,Podgorica Airport,Montenegro,42.359402,19.2519,8232
+2021,TIA,Tirana International Airport,Albania,41.41469955,19.72060013,26190
+2021,TLL,Tallinn Airport (Lennart Meri Tallinn Airport),Estonia,59.41329956,24.83279991,22877
+2021,TLN,Toulon-Hyeres Airport (Hyeres Le Palyvestre Airport),France,43.09730148,6.146029949,10285
+2021,TLS,Toulouse-Blagnac Airport,France,43.629101,1.36382,47745
+2021,TLV,Ben Gurion Airport,Israel,32.01139832,34.88669968,74950
+2021,TNF,Toussus-le-Noble Airport,France,48.75189972,2.106189966,13049
+2021,TNG,Tangier Ibn Battouta Airport,Morocco,35.72689819,-5.916890144,10602
+2021,TOJ,Madrid-Torrejon Airport,Spain,40.49670029,-3.445869923,1523
+2021,TOS,Tromse Airport,Norway,69.6832962,18.91889954,36949
+2021,TRD,Trondheim Airport,Norway,63.4578018,10.9239998,39255
+2021,TRN,Turin Airport (Caselle Airport),Italy,45.200802,7.64963,21766
+2021,TSF,Treviso-Sant'Angelo Airport,Italy,45.648399,12.1944,10410
+2021,TUF,Tours Val de Loire Airport,France,47.43220139,0.727605999,3319
+2021,UIP,Quimper-Cornouaille Airport,France,47.97499847,-4.167789936,1950
+2021,URO,Rouen Airport,France,49.38420105,1.174800038,2950
+2021,VAW,Varddo Air,Norway,70.35540009,31.04490089,2178
+2021,VCE,Venice Marco Polo Airport,Italy,45.505299,12.3519,39156
+2021,VDE,El Hierro Airport,Spain,27.81480026,-17.88710022,4494
+2021,VDS,Vadso Airport,Norway,70.06529999,29.84469986,6315
+2021,VGO,Vigo-Peinador Airport,Spain,42.23180008,-8.62677002,6894
+2021,VIE,Vienna International Airport,Austria,48.11029816,16.56970024,127842
+2021,VIT,Vitoria Airport,Spain,42.88280106,-2.7244699,10242
+2021,VLC,Valencia Airport,Spain,39.4893,-0.481625,44048
+2021,VLL,Valladolid Airport,Spain,41.70610046,-4.851940155,2646
+2021,VNO,Vilnius Airport,Lithuania,54.634102,25.285801,23714
+2021,VNT,Ventspils International Airport,Latvia,57.35779953,21.5442009,23
+2021,WAT,Waterford Airport,Ireland,52.18719864,-7.086959839,734
+2021,WAW,Warsaw Chopin Airport,Poland,52.16569901,20.96710014,94666
+2021,WMI,Warsaw Modlin Airport,Poland,52.451099,20.6518,13085
+2021,WRO,Copernicus Airport Wroclaw,Poland,51.10269928,16.88579941,17399
+2021,XCR,Chalons Vatry Airport,France,48.77333333,4.206111111,3899
+2021,XRY,Jerez Airport (La Parra Airport),Spain,36.74459839,-6.060110092,12642
+2021,ZAG,Franjo Tudman Airport,Croatia,45.74290085,16.06879997,28952
+2021,ZAZ,Zaragoza Airport,Spain,41.66619873,-1.04155004,8305
+2021,ZRH,Zurich Airport,Switzerland,47.464699,8.54917,125694
+2021,ZTH,Zakynthos International Airport (Dionysios SolomosAirport),Greece,37.7509,20.8843,9371
