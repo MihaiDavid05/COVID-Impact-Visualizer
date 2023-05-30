@@ -16,6 +16,11 @@ var tickVals = [0, 1, 2, 3].map(iter => new Date(2020 + iter, 0, 1));
 
 var playButton = d3.select("#play-button");
 
+d3.xml("res/maple_illustration.svg")
+  .then(data => {
+    console.log(data)
+  });
+
 var sliderTime = d3
     .sliderBottom()
     .min(startDate)
@@ -28,6 +33,7 @@ var sliderTime = d3
     .displayFormat(formatTooltipDate)
     .default(startDate)
     .handle(d3.symbol().type(d3.symbolCircle).size(200)())
+    // .handle(d3.xml("covid-line.svg"))
     .on("drag", function (val) {
         resetTimer();
     })
@@ -49,6 +55,7 @@ gTime.call(sliderTime);
 d3.select("p#value-time").text(globeformatTooltipDate(sliderTime.value()));
 d3.select(".parameter-value text").attr("y", "-29");
 d3.selectAll(".tick text").style("text-anchor", "start");
+d3.selectAll(".tick text").attr("x", "-10");
 
 document.querySelector(".parameter-value path").removeAttribute("tabindex");
 d3.select(".parameter-value").attr("y", "-29");

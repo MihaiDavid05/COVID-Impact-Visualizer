@@ -24,37 +24,40 @@ $(function () {
         map.createPane("left")
         map.createPane("right")
 
-        // var marker1 = new L.marker([39.5, -100.3], { opacity: 0.01 }); //opacity may be set to zero
-        // marker1.bindTooltip("My Label", {permanent: true, className: "my-label", offset: [0, 0] });
-        // marker1.addTo(map);
-
-        // var marker2 = new L.marker([50.5, -100.3], { opacity: 0.01 }); //opacity may be set to zero
-        // marker2.bindTooltip("My Label", {permanent: true, className: "my-label", offset: [0, 0] });
-        // marker2.addTo(map);
-
+        // Initialize data for the 2 panes
         var circlesYear1 = [];
         var circlesYear2 = [];
         
         function addPoints(year1, year2) {
             data.forEach(function(row){
-                if (row.FLT_TOT_1_NORMALIZED){
+                // verify for NaN
+                if (row.FLT_TOT_1_ORIG && row.FLT_TOT_1_NORMALIZED){
+                    // Select data for the left pane
                     if (parseInt(row.YEAR) === year1) {
+                        // Create circle
                         var circle1 = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
                             pane: "left",
-                            radius: parseFloat(row.FLT_TOT_1_NORMALIZED) * 10000,
+                            // radius: parseFloat(row.FLT_TOT_1_NORMALIZED) * 150000,
+                            radius: parseFloat(row.FLT_TOT_1_ORIG) / 3,
                             color: "#0000ff"
                         })
+                        // Add circle to panes data and map
                         circle1.addTo(map);
                         circlesYear1.push(circle1);
                     }
                     if (parseInt(row.YEAR) === year2) {
+                        // Select data for the right pane
                         var circle2 = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
                             pane: "right",
-                            radius: parseFloat(row.FLT_TOT_1_NORMALIZED) * 10000,
+                            // radius: parseFloat(row.FLT_TOT_1_NORMALIZED) * 150000,
+                            radius: parseFloat(row.FLT_TOT_1_ORIG) / 3,
                             color: "#ff0000"
                         })
+                        // Add circle to panes data and map
                         circle2.addTo(map);
                         circlesYear2.push(circle2)
+
+
                     }
                 }
             })

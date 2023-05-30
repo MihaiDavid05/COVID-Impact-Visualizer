@@ -103,11 +103,34 @@ body {
 
 .parameter-value text {
     fill: #aaa;
+    font-family: comic sans ms, cursive;
 }
 
 .slider text {
     font-size: 12px;
     color: #aaa;
+}
+
+/* Change the track line color to red */
+.slider .track-inset{
+    stroke: #f5be47;
+}
+
+.slider .track{
+    stroke: #bbb;
+}
+
+.slider .track-fill{
+    stroke: #f03030;
+}
+
+/* Change the track line height */
+.slider .track-overlay {
+    height: 5px;
+}
+
+.tick {
+    font-family: comic sans ms, cursive;
 }
 
 .slider {
@@ -139,6 +162,7 @@ body {
 
 #value-time {
     color: #aaa;
+    font-family: comic sans ms, cursive;
 }
 
 #chart-div {
