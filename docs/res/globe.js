@@ -1,6 +1,5 @@
 // create a colour scale and set manual domain.
 const colorScale = d3.scaleSequential(d3.interpolateRdYlGn);
-colorScale.domain([0, 1]);
 
 // centre map
 const MAP_CENTER = { lat: 6.518, lng: -0.27, altitude: 1.8 };
@@ -27,19 +26,21 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
     .polygonsData(countries.features)
     .pointOfView(MAP_CENTER, 10)(document.getElementById('cases'));
 
-    // Auto-rotate
-    // world.controls().autoRotate = true;
-    // world.controls().autoRotateSpeed = 1.8;
+    // Set domain for color scale: 
+    // TODO
+    colorScale.domain([0, 2]);
 
-    // Function for choosing the covid cases represented at polygon level
-    function getCases(feat, selectedYear, selectedMonth) {
-      
-      // Get covid cases data for a particular feature
-      if (feat.properties.hasOwnProperty('covidCases')) {
-        if (feat.properties.covidCases !== null) {
+    // Auto-rotate
+    world.controls().autoRotate = true;
+    world.controls().autoRotateSpeed = 1.0;
+
+    // Function to get covid cases for heatmap represented at polygon level
+    function getCasesHeatmap(feat, selectedYear, selectedMonth) {
+      if (feat.properties.hasOwnProperty('covidCasesHeatmap')) {
+        if (feat.properties.covidCasesHeatmap !== null) {
           let key = `${selectedYear}_${selectedMonth}`
-          if (key in feat.properties.covidCases) {
-            return feat.properties.covidCases[key]
+          if (key in feat.properties.covidCasesHeatmap) {
+            return feat.properties.covidCasesHeatmap[key]
           } else {
             return -1
           }
@@ -49,9 +50,43 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
       }
     }
 
+    // Function to get new covid cases represented at polygon level
+    function getCasesNew(feat, selectedYear, selectedMonth) {
+      if (feat.properties.hasOwnProperty('covidCasesNew')) {
+        if (feat.properties.covidCasesNew !== null) {
+          let key = `${selectedYear}_${selectedMonth}`
+          if (key in feat.properties.covidCasesNew) {
+            return feat.properties.covidCasesNew[key]
+          } else {
+            return -1
+          }
+        }
+      } else {
+        return -1
+      }
+    }
+
+    // Function to get new covid deaths represented at polygon level
+    function getDeathsNew(feat, selectedYear, selectedMonth) {
+      if (feat.properties.hasOwnProperty('covidDeathsNew')) {
+        if (feat.properties.covidDeathsNew !== null) {
+          let key = `${selectedYear}_${selectedMonth}`
+          if (key in feat.properties.covidDeathsNew) {
+            return feat.properties.covidDeathsNew[key]
+          } else {
+            return -1
+          }
+        }
+      } else {
+        return -1
+      }
+    }
+    
+
     // Function to update the globe polygons
     function updateGlobe(world, year, month) {
-      world.polygonCapColor(feat => getCases(feat, year, month) === -1 ? 'lightgrey' : colorScale(1 - getCases(feat, year, month)))
+
+      world.polygonCapColor(feat => getCasesHeatmap(feat, year, month) === -1 ? 'lightgrey' : colorScale(getCasesHeatmap(feat, year, month)))
 
       world.polygonLabel(
         (d) => {
@@ -64,10 +99,9 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
                     <div class="card-spacer"></div>
                       <hr />
                       <div class="card-spacer"></div>
-                      <span style="color:black"><b>Total deaths:</b> ${getCases(d, year, month) === -1 ? 'No Data available' : getCases(d, year, month)} </span><br />
+                      <span style="color:black"><b>Monthly deaths:</b> ${getDeathsNew(d, year, month) === -1 ? 'No Data available' : getDeathsNew(d, year, month)} </span><br />
                       <div class="card-spacer"></div>  
-                      <span style="color:black"><b>Total vaccinations:</b> ${getCases(d, year, month) === -1 ? 'No Data available' : getCases(d, year, month)}</span><br />
-                      <span style="color:black"><b>Total recovered: </b>${getCases(d, year, month) === -1 ? 'No Data available' : getCases(d, year, month)} </span>             
+                      <span style="color:black"><b>Monthly cases:</b> ${getCasesNew(d, year, month) === -1 ? 'No Data available' : getCasesNew(d, year, month)}</span><br />
                       <hr />
                     </div>
                     </div>
@@ -77,39 +111,7 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
 
       world.onPolygonHover(hoverD => world
         .polygonAltitude(d => d === hoverD ? 0.1 : 0.03)
-        .polygonCapColor(d => d === hoverD ? 'rgb(0, 0, 255)' : getCases(d, year, month) === -1 ? 'lightgrey' : colorScale(1 - getCases(d, year, month)))
-      );
-
-      world.polygonsTransitionDuration(200);
-
-      // // Set other attributes of globe
-      world.polygonCapColor(feat => getCases(feat, year, month) === -1 ? 'lightgrey' : colorScale(1 - getCases(feat, year, month)))
-
-      world.polygonLabel(
-        (d) => {
-          const flagName = d.properties.ISO_A2.toLowerCase();
-          return `
-                    <div class="card">
-                    <img class="card-img" src="${flagEndpoint}/${flagName}.png" alt="flag" />
-                    <div class="container">
-                    <span class="card-title", style="color:black">${d.properties.NAME}</span> <br />
-                    <div class="card-spacer"></div>
-                      <hr />
-                      <div class="card-spacer"></div>
-                      <span style="color:black"><b>Total deaths:</b> ${getCases(d, year, month) === -1 ? 'No Data available' : getCases(d, year, month)} </span><br />
-                      <div class="card-spacer"></div>  
-                      <span style="color:black"><b>Total vaccinations:</b> ${getCases(d, year, month) === -1 ? 'No Data available' : getCases(d, year, month)}</span><br />
-                      <span style="color:black"><b>Total recovered: </b>${getCases(d, year, month) === -1 ? 'No Data available' : getCases(d, year, month)} </span>             
-                      <hr />
-                    </div>
-                    </div>
-                `
-        }
-      );
-
-      world.onPolygonHover(hoverD => world
-        .polygonAltitude(d => d === hoverD ? 0.1 : 0.03)
-        .polygonCapColor(d => d === hoverD ? 'rgb(0, 0, 255)' : getCases(d, year, month) === -1 ? 'lightgrey' : colorScale(1 - getCases(d, year, month)))
+        .polygonCapColor(d => d === hoverD ? 'rgb(0, 0, 255)' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : colorScale(getCasesHeatmap(d, year, month)))
       );
 
       world.polygonsTransitionDuration(200);
@@ -120,19 +122,15 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
     
     // Create an observer instance that updates the month and the year variables
     var observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
+      mutations.forEach(function(m) {
         month = parseInt(target.innerHTML.split(" ")[2])
         year = parseInt(target.innerHTML.split(" ")[0])
-        console.log(year, month)
         updateGlobe(world, year, month)
       });    
     });
 
-    // configuration of the observer:
-    var config = { attributes: true, childList: true, characterData: true };
-
     // Pass in the target node, as well as the observer options for getting the current year and month
-    observer.observe(target, config);
+    observer.observe(target, { attributes: true, childList: true, characterData: true });
 
     // Can stop observing if we want
     // observer.disconnect();
