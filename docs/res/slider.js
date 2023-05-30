@@ -47,13 +47,16 @@ var gTime = d3
 gTime.call(sliderTime); 
 
 // Change handle
-d3.xml("https://raw.githubusercontent.com/com-480-data-visualization/project-2023-dqw4w9wgxcq/master/docs/res/covid-line.svg")
+d3.xml("https://raw.githubusercontent.com/com-480-data-visualization/project-2023-dqw4w9wgxcq/master/docs/res/slider-handle.svg")
   .then(data => {
-    var svgElement = data.documentElement;
-    var handlePath = d3.select(svgElement).select("path").attr("d");
-    d3.select(".parameter-value path").attr("d", handlePath);
-    d3.select(".parameter-value path").attr("transform", "translate(-10 -10) scale(1.5 1.5)");
-    d3.select(".parameter-value path").attr("fill", "black");
+    // var svgElement = data.documentElement;
+    // var handlePath = d3.select(svgElement).select("path").attr("d");
+    // d3.select(".parameter-value path").attr("d", handlePath);
+    // d3.select(".parameter-value path").attr("transform", "translate(-10 -10) scale(0.1 0.1)");
+    d3.select(".parameter-value path").attr("d", d3.symbol().type(d3.symbolCircle).size(200)());
+    d3.select(".parameter-value path").attr("fill", "white");
+    
+
   });
 
 
