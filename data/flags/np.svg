@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<title>Wikimedia Error</title>
-<style>
-* { margin: 0; padding: 0; }
-body { background: #fff; font: 15px/1.6 sans-serif; color: #333; }
-.content { margin: 7% auto 0; padding: 2em 1em 1em; max-width: 640px; }
-.footer { clear: both; margin-top: 14%; border-top: 1px solid #e5e5e5; background: #f9f9f9; padding: 2em 0; font-size: 0.8em; text-align: center; }
-img { float: left; margin: 0 2em 2em 0; }
-a img { border: 0; }
-h1 { margin-top: 1em; font-size: 1.2em; }
-.content-text { overflow: hidden; overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; }
-p { margin: 0.7em 0 1em 0; }
-a { color: #0645ad; text-decoration: none; }
-a:hover { text-decoration: underline; }
-code { font-family: sans-serif; }
-.text-muted { color: #777; }
-</style>
-<div class="content" role="main">
-<a href="https://www.wikimedia.org"><img src="https://www.wikimedia.org/static/images/wmf-logo.png" srcset="https://www.wikimedia.org/static/images/wmf-logo-2x.png 2x" alt="Wikimedia" width="135" height="101">
-</a>
-<h1>Error</h1>
-<div class="content-text">
-<p>Our servers are currently under maintenance or experiencing a technical problem.
-
-Please <a href="" title="Reload this page" onclick="window.location.reload(false); return false">try again</a> in a few&nbsp;minutes.</p>
-
-<p>See the error message at the bottom of this page for more&nbsp;information.</p>
-</div>
-</div>
-<div class="footer"><p>If you report this error to the Wikimedia System Administrators, please include the details below.</p><p class="text-muted"><code>Request from 34.73.105.54 via cp1076 cp1076, Varnish XID 303942056<br>Upstream caches: cp1076 int<br>Error: 403, Forbidden. Please comply with the User-Agent policy: https://meta.wikimedia.org/wiki/User-Agent_policy at Tue, 30 May 2023 07:55:23 GMT</code></p>
-</div>
-</html>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" width="726" height="885" viewBox="-17.582 -4.664 71.571 87.246">
+<title>Flag of Nepal</title>
+<!-- Coding according to the official construction in &quot;Constitution of the Kingdom of Nepal, Article 5, Schedule 1&quot;, adopted in November 1990 -->
+<use xlink:href="#a" stroke="#003893" stroke-width="5.165"/><path id="a" d="M -15,37.5735931288 h 60 L -15,0 v 80 h 60 L -15,20 z" fill="#DC143C"/><g fill="#fff"><path d="M -11.9502769431,23.4834957055 A 12.8400974233,12.8400974233 0 0,0 11.9502769431,23.4834957055 A 11.9502769431 11.9502769431 0 0,1 -11.9502769431,23.4834957055"/><g transform="translate(0 29.045) scale(5.56106)"><circle r="1"/><g id="d"><g id="c"><path id="b" d="M 0.195090322016,-0.980785280403 L 0,-1.388784109750 L -0.195090322016,-0.980785280403" transform="rotate(11.25)"/><use xlink:href="#b" transform="rotate(22.5)"/><use xlink:href="#b" transform="rotate(45)"/></g><use xlink:href="#c" transform="rotate(67.5)"/></g><use xlink:href="#d" transform="scale(-1 1)"/></g><g transform="matrix(8.1434 0 0 8.1434 0 58.787)"><circle r="1"/><g id="g"><g id="f"><path id="e" d="M 0.258819045103,0.965925826289 L 0,1.576749285537 L -0.258819045103,0.965925826289"/><use xlink:href="#e" transform="rotate(180)"/></g><use xlink:href="#f" transform="rotate(90)"/></g><use xlink:href="#g" transform="rotate(30)"/><use xlink:href="#g" transform="rotate(60)"/></g></g>
+</svg>

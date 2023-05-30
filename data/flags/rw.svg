@@ -1,34 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<title>Wikimedia Error</title>
-<style>
-* { margin: 0; padding: 0; }
-body { background: #fff; font: 15px/1.6 sans-serif; color: #333; }
-.content { margin: 7% auto 0; padding: 2em 1em 1em; max-width: 640px; }
-.footer { clear: both; margin-top: 14%; border-top: 1px solid #e5e5e5; background: #f9f9f9; padding: 2em 0; font-size: 0.8em; text-align: center; }
-img { float: left; margin: 0 2em 2em 0; }
-a img { border: 0; }
-h1 { margin-top: 1em; font-size: 1.2em; }
-.content-text { overflow: hidden; overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; }
-p { margin: 0.7em 0 1em 0; }
-a { color: #0645ad; text-decoration: none; }
-a:hover { text-decoration: underline; }
-code { font-family: sans-serif; }
-.text-muted { color: #777; }
-</style>
-<div class="content" role="main">
-<a href="https://www.wikimedia.org"><img src="https://www.wikimedia.org/static/images/wmf-logo.png" srcset="https://www.wikimedia.org/static/images/wmf-logo-2x.png 2x" alt="Wikimedia" width="135" height="101">
-</a>
-<h1>Error</h1>
-<div class="content-text">
-<p>Our servers are currently under maintenance or experiencing a technical problem.
-
-Please <a href="" title="Reload this page" onclick="window.location.reload(false); return false">try again</a> in a few&nbsp;minutes.</p>
-
-<p>See the error message at the bottom of this page for more&nbsp;information.</p>
-</div>
-</div>
-<div class="footer"><p>If you report this error to the Wikimedia System Administrators, please include the details below.</p><p class="text-muted"><code>Request from 34.73.105.54 via cp1076 cp1076, Varnish XID 305289218<br>Upstream caches: cp1076 int<br>Error: 403, Forbidden. Please comply with the User-Agent policy: https://meta.wikimedia.org/wiki/User-Agent_policy at Tue, 30 May 2023 07:55:25 GMT</code></p>
-</div>
-</html>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 1560 1040">
+	<title>Flag of Rwanda</title>
+	<path fill="#fad201" d="m0 0h1560v1040H0z"/>
+	<path fill="#00a3e0" d="m0 0h1560v520H0z"/>
+	<path fill="#20603d" d="m0 780h1560v260H0z"/>
+	<g transform="translate(1280,272)">
+		<path fill="#e5be01" d="m0-168L6.79-51.56l36.69-110.72L19.9-48.04 84-145.49 31.66-41.25l87.13-77.54-77.54 87.13L145.49-84 48.04-19.9l114.24-23.58L51.56-6.79 168 0 51.56 6.79l110.72 36.69L48.04 19.9 145.49 84 41.25 31.66l77.54 87.13-87.13-77.54L84 145.49 19.9 48.04l23.58 114.24L6.79 51.56 0 168-6.79 51.56-43.48 162.28-19.9 48.04-84 145.49-31.66 41.25l-87.13 77.54 77.54-87.13L-145.49 84l97.45-64.1-114.24 23.58L-51.56 6.79-168 0-51.56-6.79-162.28-43.48-48.04-19.9-145.49-84-41.25-31.66l-77.54-87.13 87.13 77.54L-84-145.49l64.1 97.45-23.58-114.24L-6.79-51.56z"/>
+		<circle fill="none" stroke="#00a3e0" r="49" stroke-width="6"/>
+	</g>
+</svg>

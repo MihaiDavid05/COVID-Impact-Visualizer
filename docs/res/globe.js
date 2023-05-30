@@ -5,7 +5,10 @@ const colorScale = d3.scaleSequential(d3.interpolateRdYlGn);
 const MAP_CENTER = { lat: 6.518, lng: -0.27, altitude: 1.8 };
 
 // assign url where to find flags
-const flagEndpoint = 'https://corona.lmao.ninja/assets/img/flags';
+// const flagEndpoint = 'https://corona.lmao.ninja/assets/img/flags';
+// const extension = 'png';
+const flagEndpoint = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-dqw4w9wgxcq/master/data/flags';
+const extension = 'svg';
 
 // Get paragraph that shows the slider position
 var target = document.querySelector('p#value-time');
@@ -41,7 +44,7 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
   // Get covid cases for heatmap represented at polygon level
   function getCasesHeatmap(feat, selectedYear, selectedMonth) {
     if (feat.properties.hasOwnProperty('covidCasesHeatmap')) {
-      if (feat.properties.covidCasesHeatmap !== null) {
+      if (feat.properties["covidCasesHeatmap"] !== null) {
         let key = `${selectedYear}_${selectedMonth}`
         if (key in feat.properties.covidCasesHeatmap) {
           if (feat.properties.covidCasesHeatmap[key] !== null) {
@@ -105,22 +108,21 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
     world.polygonCapColor(feat => getCasesHeatmap(feat, year, month) === -1 ? 'lightgrey' : colorScale(1 - getCasesHeatmap(feat, year, month)))
 
     // TODO: Put card to the right of the mouse
-    // <img class="card-img" src="${flagEndpoint}/${flagName}.png" alt="flag" />
     world.polygonLabel(
       (d) => {
         const flagName = d.properties.ISO_A2.toLowerCase();
+        const labelX = +100
+        const labelY = -200
         return `
-                  <div class="card">
-                  <img class="card-img" src="data/flags/${flagName}.svg" alt="flag" />
+                  <div class="card" style="left: ${labelX}px; top: ${labelY}px;">
+                  <img class="card-img" src="${flagEndpoint}/${flagName}.${extension}" alt="flag" height="100" width="50" />
                   <div class="container">
                   <span class="card-title", style="color:black">${d.properties.NAME}</span> <br />
                   <div class="card-spacer"></div>
-                    <hr />
                     <div class="card-spacer"></div>
-                    <span style="color:black"><b>Monthly deaths:</b> ${getDeathsNew(d, year, month) === -1 ? 'No Data available' : getDeathsNew(d, year, month)} </span><br />
+                    <span style="color:black"><b>Monthly deaths:</b> ${getDeathsNew(d, year, month) === -1 ? 'No Data available' : getDeathsNew(d, year, month)} </span>
                     <div class="card-spacer"></div>  
-                    <span style="color:black"><b>Monthly cases:</b> ${getCasesNew(d, year, month) === -1 ? 'No Data available' : getCasesNew(d, year, month)}</span><br />
-                    <hr />
+                    <span style="color:black"><b>Monthly cases:</b> ${getCasesNew(d, year, month) === -1 ? 'No Data available' : getCasesNew(d, year, month)}</span>
                   </div>
                   </div>
               `
