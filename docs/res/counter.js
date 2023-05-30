@@ -1,9 +1,9 @@
 $(function() {
     function count($this){
-        var current = parseInt($this.html(), 10);
+        var current = parseInt($this.html().replaceAll(",",""), 10);
         const step = Math.floor($this.data('count') / 100)
-        current = current + step
-        $this.html(current.toString(10));
+        current = current + step;
+        $this.html(current.toLocaleString("en-US"));
         if(current > $this.data('count')){
             $this.html($this.data('count').toLocaleString("en-US"));
         } else {
