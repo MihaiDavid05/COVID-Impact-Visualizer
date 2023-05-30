@@ -18,8 +18,7 @@ var year = parseInt(target.innerHTML.split(" ")[0])
 fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json()).then(function(countries) {
   // TODO: Find better geojson (France and Norway and others missing)
 
-  // TODO: Load flags data
-  const flags = d3.csv('https://raw.githubusercontent.com/com-480-data-visualization/project-2023-dqw4w9wgxcq/master/data/countries_continents_codes_flags_url.csv')
+  // const flags = d3.csv('https://raw.githubusercontent.com/com-480-data-visualization/project-2023-dqw4w9wgxcq/master/data/countries_continents_codes_flags_url.csv')
 
 
   // Set initial properties of the globe
@@ -106,12 +105,13 @@ fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json(
     world.polygonCapColor(feat => getCasesHeatmap(feat, year, month) === -1 ? 'lightgrey' : colorScale(1 - getCasesHeatmap(feat, year, month)))
 
     // TODO: Put card to the right of the mouse
+    // <img class="card-img" src="${flagEndpoint}/${flagName}.png" alt="flag" />
     world.polygonLabel(
       (d) => {
         const flagName = d.properties.ISO_A2.toLowerCase();
         return `
                   <div class="card">
-                  <img class="card-img" src="${flagEndpoint}/${flagName}.png" alt="flag" />
+                  <img class="card-img" src="data/flags/${flagName}.svg" alt="flag" />
                   <div class="container">
                   <span class="card-title", style="color:black">${d.properties.NAME}</span> <br />
                   <div class="card-spacer"></div>
