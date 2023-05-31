@@ -36,13 +36,79 @@ $(function () {
         var circlesYear1 = [];
         var circlesYear2 = [];
 
-        // TODO: make this async
         function addPoints(year1, year2) {
             data.forEach(function(row) {
                 // verify for NaN
                 if (row.FLT_TOT_1_ORIG && row.FLT_TOT_1_NORMALIZED){
                     function popupContent() {
-                        
+                        if (!d3.select('#chart-div-' + row.APT_IATA).empty()) {
+                            marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
+                            return
+                        }
+                        // Create a new chart instance
+                        d3.select('#charts').append('canvas').attr('class', 'chart-div').attr('id', 'chart-div-' + row.APT_IATA)
+                        // Dummy data
+                        var chartData = {
+                            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                            datasets: [{
+                                label: '2018',
+                                data: [8, 13, 7, 9, 4, 6, 8, 10, 12, 15, 17, 20],
+                                fill: false,
+                                borderColor: "#0000ff",
+                                tension: 0.1
+                            }, {
+                                label: '2019',
+                                data: [5, 10, 5, 7, 3, 5, 7, 9, 11, 13, 16, 19],
+                                fill: false,
+                                borderColor: "#ff00ff",
+                                tension: 0.1
+                            }, {
+                                label: '2020',
+                                data: [3, 6, 2, 4, 1, 2, 4, 6, 8, 10, 12, 15],
+                                fill: false,
+                                borderColor: "#00ff00",
+                                tension: 0.1
+                            }, {
+                                label: '2021',
+                                data: [2, 4, 1, 3, 1, 2, 3, 5, 6, 8, 10, 12],
+                                fill: false,
+                                borderColor: "#ff0000",
+                                tension: 0.1
+                            }]
+                        }
+                        const ctx = document.getElementById('chart-div-' + row.APT_IATA).getContext('2d');
+                        const myChart = new Chart(ctx, {
+                            type: 'line',
+                            data: chartData,
+                            options: {
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                        text: row.APT_AIRPORT // Replace with your desired title
+                                    }
+                                },
+                                legend: { display: false },
+                                scales: {
+                                    x: {
+                                        stacked: true,
+                                        ticks: {
+                                            beginAtZero: true,
+                                            callback: function (value, index, values) {
+                                                return this.getLabelForValue(value);
+                                            }
+                                        }
+                                    },
+                                    y: {
+                                        stacked: false,
+                                        ticks: {
+                                            callback: function (value, index, values) {
+                                                return value % 10 === 0 ? value + " flights" : '';
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        });
                     }                    
                     // Select data for the left pane
                     if (parseInt(row.YEAR) === year1) {
@@ -55,148 +121,11 @@ $(function () {
                         })
                         // Add circle to panes data and map
                         const marker = circle1.addTo(map) // TODO: add smaller circle for binding
-                            // marker.once('click', function () {
-                            //     // Create a new chart instance
-                            //     d3.select('#charts').append('canvas').attr('class', 'chart-div').attr('id', 'chart-div-' + row.APT_IATA)
-                            //     // Dummy data
-                            //     var chartData = {
-                            //         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                            //         datasets: [{
-                            //             label: '2018',
-                            //             data: [8, 13, 7, 9, 4, 6, 8, 10, 12, 15, 17, 20],
-                            //             fill: false,
-                            //             borderColor: "#0000ff",
-                            //             tension: 0.1
-                            //         }, {
-                            //             label: '2019',
-                            //             data: [5, 10, 5, 7, 3, 5, 7, 9, 11, 13, 16, 19],
-                            //             fill: false,
-                            //             borderColor: "#ff00ff",
-                            //             tension: 0.1
-                            //         }, {
-                            //             label: '2020',
-                            //             data: [3, 6, 2, 4, 1, 2, 4, 6, 8, 10, 12, 15],
-                            //             fill: false,
-                            //             borderColor: "#00ff00",
-                            //             tension: 0.1
-                            //         }, {
-                            //             label: '2021',
-                            //             data: [2, 4, 1, 3, 1, 2, 3, 5, 6, 8, 10, 12],
-                            //             fill: false,
-                            //             borderColor: "#ff0000",
-                            //             tension: 0.1
-                            //         }]
-                            //     }
-                            //     const ctx = document.getElementById('chart-div-' + row.APT_IATA).getContext('2d');
-                            //     const myChart = new Chart(ctx, {
-                            //         type: 'line',
-                            //         data: chartData,
-                            //         options: {
-                            //             plugins: {
-                            //                 title: {
-                            //                     display: true,
-                            //                     text: row.APT_AIRPORT // Replace with your desired title
-                            //                 }
-                            //             },
-                            //             legend: { display: false },
-                            //             scales: {
-                            //                 x: {
-                            //                     stacked: true,
-                            //                     ticks: {
-                            //                         beginAtZero: true,
-                            //                         callback: function (value, index, values) {
-                            //                             return this.getLabelForValue(value);
-                            //                         }
-                            //                     }
-                            //                 },
-                            //                 y: {
-                            //                     stacked: false,
-                            //                     ticks: {
-                            //                         callback: function (value, index, values) {
-                            //                             return value % 10 === 0 ? value + " flights" : '';
-                            //                         }
-                            //                     }
-                            //                 }
-                            //             }
-                            //         }
-                            //     });
-                            //     marker.bindPopup((document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 }))
-                            // })
-                            marker.once('click', function () {
-                                    if (!d3.select('#chart-div-' + row.APT_IATA).empty()) {
-                                        marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
-                                        return
-                                    }
-                                    // Create a new chart instance
-                                    d3.select('#charts').append('canvas').attr('class', 'chart-div').attr('id', 'chart-div-' + row.APT_IATA)
-                                    // Dummy data
-                                    var chartData = {
-                                        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                                        datasets: [{
-                                            label: '2018',
-                                            data: [8, 13, 7, 9, 4, 6, 8, 10, 12, 15, 17, 20],
-                                            fill: false,
-                                            borderColor: "#0000ff",
-                                            tension: 0.1
-                                        }, {
-                                            label: '2019',
-                                            data: [5, 10, 5, 7, 3, 5, 7, 9, 11, 13, 16, 19],
-                                            fill: false,
-                                            borderColor: "#ff00ff",
-                                            tension: 0.1
-                                        }, {
-                                            label: '2020',
-                                            data: [3, 6, 2, 4, 1, 2, 4, 6, 8, 10, 12, 15],
-                                            fill: false,
-                                            borderColor: "#00ff00",
-                                            tension: 0.1
-                                        }, {
-                                            label: '2021',
-                                            data: [2, 4, 1, 3, 1, 2, 3, 5, 6, 8, 10, 12],
-                                            fill: false,
-                                            borderColor: "#ff0000",
-                                            tension: 0.1
-                                        }]
-                                    }
-                                    const ctx = document.getElementById('chart-div-' + row.APT_IATA).getContext('2d');
-                                    const myChart = new Chart(ctx, {
-                                        type: 'line',
-                                        data: chartData,
-                                        options: {
-                                            plugins: {
-                                                title: {
-                                                    display: true,
-                                                    text: row.APT_AIRPORT // Replace with your desired title
-                                                }
-                                            },
-                                            legend: { display: false },
-                                            scales: {
-                                                x: {
-                                                    stacked: true,
-                                                    ticks: {
-                                                        beginAtZero: true,
-                                                        callback: function (value, index, values) {
-                                                            return this.getLabelForValue(value);
-                                                        }
-                                                    }
-                                                },
-                                                y: {
-                                                    stacked: false,
-                                                    ticks: {
-                                                        callback: function (value, index, values) {
-                                                            return value % 10 === 0 ? value + " flights" : '';
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    });
-                                    marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
-                                })
-                                .bindPopup("Loading", { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
-                            // .bindPopup(document.getElementById('chart-div-' + row.APT_IATA))
-                            // .openPopup()
-                            // .closePopup();
+                        marker.once('click', function () {
+                            popupContent();
+                            marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
+                        })
+                        .bindPopup("Loading", { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
                         circlesYear1.push(circle1);
                     } else if (parseInt(row.YEAR) === year2) {
                         // Select data for the right pane
@@ -209,80 +138,10 @@ $(function () {
                         // Add circle to panes data and map
                         const marker = circle2.addTo(map) // TODO: add smaller circle for binding
                         marker.once('click', function () {
-                            if (!d3.select('#chart-div-' + row.APT_IATA).empty()) {
-                                marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
-                                return
-                            }
-                            // Create a new chart instance
-                            d3.select('#charts').append('canvas').attr('class', 'chart-div').attr('id', 'chart-div-' + row.APT_IATA)
-                            // Dummy data
-                            var chartData = {
-                                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                                datasets: [{
-                                    label: '2018',
-                                    data: [8, 13, 7, 9, 4, 6, 8, 10, 12, 15, 17, 20],
-                                    fill: false,
-                                    borderColor: "#0000ff",
-                                    tension: 0.1
-                                }, {
-                                    label: '2019',
-                                    data: [5, 10, 5, 7, 3, 5, 7, 9, 11, 13, 16, 19],
-                                    fill: false,
-                                    borderColor: "#ff00ff",
-                                    tension: 0.1
-                                }, {
-                                    label: '2020',
-                                    data: [3, 6, 2, 4, 1, 2, 4, 6, 8, 10, 12, 15],
-                                    fill: false,
-                                    borderColor: "#00ff00",
-                                    tension: 0.1
-                                }, {
-                                    label: '2021',
-                                    data: [2, 4, 1, 3, 1, 2, 3, 5, 6, 8, 10, 12],
-                                    fill: false,
-                                    borderColor: "#ff0000",
-                                    tension: 0.1
-                                }]
-                            }
-                            const ctx = document.getElementById('chart-div-' + row.APT_IATA).getContext('2d');
-                            const myChart = new Chart(ctx, {
-                                type: 'line',
-                                data: chartData,
-                                options: {
-                                    plugins: {
-                                        title: {
-                                            display: true,
-                                            text: row.APT_AIRPORT // Replace with your desired title
-                                        }
-                                    },
-                                    legend: { display: false },
-                                    scales: {
-                                        x: {
-                                            stacked: true,
-                                            ticks: {
-                                                beginAtZero: true,
-                                                callback: function (value, index, values) {
-                                                    return this.getLabelForValue(value);
-                                                }
-                                            }
-                                        },
-                                        y: {
-                                            stacked: false,
-                                            ticks: {
-                                                callback: function (value, index, values) {
-                                                    return value % 10 === 0 ? value + " flights" : '';
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            });
+                            popupContent();
                             marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
                         })
                         .bindPopup("Loading", { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
-                            // .on('click', popupContent)
-                            // .openPopup()
-                            // .closePopup();
                         circlesYear2.push(circle2)
                     }
                 }
@@ -294,16 +153,4 @@ $(function () {
             position: 'topright'
         }).addTo(map);
     })
-
-    /*
-    document.getElementById('chart-div').style.display = "initial";
-    L.marker([51.5, -0.09]).addTo(map)
-        .bindPopup(document.getElementById('chart-div'), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
-        .openPopup()
-        .closePopup();
-    L.marker([31.5, -0.09]).addTo(map)
-        .bindPopup(document.getElementById('chart-div'), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
-        .openPopup()
-        .closePopup();
-    */
 });
