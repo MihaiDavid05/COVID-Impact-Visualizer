@@ -8,6 +8,15 @@ $(function () {
             minZoom: 0,
             maxZoom: 10
         }).setView([46.519962, 6.633597], 4);
+
+        map.on('click', function() {
+            if (map.scrollWheelZoom.enabled()) {
+              map.scrollWheelZoom.disable();
+              }
+              else {
+              map.scrollWheelZoom.enable();
+              }
+            });
         
         // Define 2 layers
         const osmLayer1 = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
