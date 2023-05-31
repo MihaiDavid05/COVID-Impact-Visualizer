@@ -288,22 +288,7 @@ $(function () {
                 }
             })
         }
-
-        function fetchData() {
-            return new Promise((resolve, reject) => {
-                addPoints(2018, 2021)
-            });
-        }
-        async function getData() {
-            try {
-                const data = await fetchData();
-                console.log(data);
-            } catch (error) {
-                console.error(error);
-            }
-        }
-        getData();
-
+        addPoints(2018, 2021)
         const compare = L.control.compare(circlesYear1, circlesYear2, {
             sliderOrientation: 'vertical',
             position: 'topright'
