@@ -37,7 +37,7 @@ $(function () {
     function get_color(colorScale, value, min, max) {
       colorScale.domain([min, max]);
       return colorScale(value)
-    } 
+    }   
 
     // Set initial properties of the globe
     const world = Globe()
@@ -51,15 +51,22 @@ $(function () {
     // Auto-rotate
     world.controls().autoRotate = true;
     world.controls().autoRotateSpeed = 1.0;
-
-    // world.controls().enableZoom = false;
-    d3.select(".scene-container canvas").on('dblclick', function () {
-        if (world.controls().enableZoom){
-          world.controls().enableZoom = false;
-        } else {
-          world.controls().enableZoom = true
-        }
+ 
+    window.addEventListener('resize', (event) => {
+      world.width([event.target.innerWidth -100])
+      world.height([event.target.innerHeight])
     });
+
+    window.dispatchEvent(new Event('resize'))
+
+    // // world.controls().enableZoom = false;
+    // d3.select(".scene-container canvas").on('dblclick', function () {
+    //     if (world.controls().enableZoom){
+    //       world.controls().enableZoom = false;
+    //     } else {
+    //       world.controls().enableZoom = true
+    //     }
+    // });
 
     // Get covid cases for heatmap represented at polygon level
     function getCasesHeatmap(feat, selectedYear, selectedMonth) {
