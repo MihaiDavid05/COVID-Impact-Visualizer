@@ -20,6 +20,7 @@ html {
 
 .first-section {
     margin-top: 60px;
+    margin-bottom: 30px;
 }
 
 .dark-section {
@@ -161,6 +162,14 @@ body {
     font-family: comic sans ms, cursive;
 }
 
+#info {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    width: 100%;
+    color: #696969;
+    font-style: italic;
+}
 .chart-div {
     width: 300px;
     height: 300px;
