@@ -2,32 +2,33 @@ var margin = { top: 50, right: 50, bottom: 0, left: 50 },
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-
-function getMonthName(monthNumber) {
-    const date = new Date();
-    date.setMonth(monthNumber - 1);
-    
-    return date.toLocaleString('en-US', { month: 'long' });
+const months = {
+    '01': 'January',
+    '02': 'February',
+    '03': 'March',
+    '04': 'April',
+    '05': 'May',
+    '06': 'June',
+    '07': 'July',
+    '08': 'August',
+    '09': 'September',
+    '10': 'October',
+    '11': 'November',
+    '12': 'December'
     }
-function getMonthName(monthNumber) {
-  const date = new Date();
-  date.setMonth(monthNumber - 1);
-
-  return date.toLocaleString('en-US', { month: 'long' });
-}
 
 var formatTickDate = d3.timeFormat("%Y");
 var formatTooltipDate = d3.timeFormat("%Y - %B");
 
-var globeformatTooltipDate = d3.timeFormat("%Y - %m");
+// var globeformatTooltipDate = d3.timeFormat("%Y - %m");
 
-// var globeformatTooltipDate = (val) => {
-//     var x = d3.timeFormat("%Y - %m")(val);
-//     var month = x.split(" ")[2]
-//     console.log(month)
-//     var year = x.split(" ")[0]
-//     return `Hover on countries to see COVID cases and deaths during ${getMonthName(month)} ${year}`
-// }
+var globeformatTooltipDate = (val) => {
+    var x = d3.timeFormat("%Y - %m")(val);
+    var month = x.split(" ")[2]
+    var year = x.split(" ")[0]
+    console.log(month, year)
+    return `Hover on countries to see COVID cases and deaths during ${months[month]} ${year}`
+}
 
 var startDate = new Date(2020, 0, 1);
 var endDate = new Date(2023, 03, 1);

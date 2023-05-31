@@ -9,12 +9,27 @@ $(function () {
   const flagEndpoint = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-dqw4w9wgxcq/master/data/flags';
   const extension = 'svg';
 
+  const months = {
+    January: '01',
+    February: '02',
+    March: '03',
+    April: '04',
+    May: '05',
+    June: '06',
+    July: '07',
+    August: '08',
+    September: '09',
+    October: '10',
+    November: '11',
+    December: '12',
+  }
+
   // Get paragraph that shows the slider position
   var target = document.querySelector('p#value-time');
 
   // Define month and year variables
-  var month  = parseInt(target.innerHTML.split(" ")[2]);
-  var year = parseInt(target.innerHTML.split(" ")[0])
+  var month  = parseInt(months[target.innerHTML.split(" ")[10]]);
+  var year = parseInt(target.innerHTML.split(" ")[11])
 
   fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json()).then(function(countries) {
 
@@ -32,6 +47,8 @@ $(function () {
     .polygonStrokeColor(() => 'green')
     .polygonsData(countries.features)
     .pointOfView(MAP_CENTER, 10)(document.getElementById('cases'));
+
+    // d3.select(".scene-container canvas").call(zoom).on("wheel.zoom", null);
 
 
     // function resizeCanvas() {
@@ -170,18 +187,15 @@ $(function () {
     
     // Show initial state of the globe
     updateGlobe(world, year, month)
-
-    function getMonthFromString(mon){
-      return new Date(Date.parse(mon +" 1, 2012")).getMonth()+1
-   }
     
     // Create an observer instance that updates the month and the year variables
     var observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(m) {
-        // month = parseInt(getMonthFromString(target.innerHTML.split(" ")[-2]))
-        // year = parseInt(target.innerHTML.split(" ")[-1])
-        month = parseInt(target.innerHTML.split(" ")[2])
-        year = parseInt(target.innerHTML.split(" ")[0])
+      mutations.forEach(function() {
+        month = parseInt(months[target.innerHTML.split(" ")[10]])
+        year = parseInt(target.innerHTML.split(" ")[11])
+
+        // month = parseInt(target.innerHTML.split(" ")[2])
+        // year = parseInt(target.innerHTML.split(" ")[0])
 
         updateGlobe(world, year, month)
       });    
