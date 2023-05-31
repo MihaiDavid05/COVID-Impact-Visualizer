@@ -18,7 +18,7 @@ $(function () {
 
   fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json()).then(function(countries) {
 
-    // Set domain for color scale: 
+    // Set domain for color scale and get color: 
     function get_color(colorScale, value, min, max) {
       colorScale.domain([min, max]);
       return colorScale(value)
@@ -127,12 +127,16 @@ $(function () {
     function getMax(feat) {
       return feat.properties.covidCasesHeatmapMax
     }
+
+    function getMaxOverall(feat) {
+      return feat.properties.covidCasesHeatmapMaxOverall
+    }
     
 
     // Update the globe polygons
     function updateGlobe(world, year, month) {
 
-      world.polygonCapColor(feat => getCasesHeatmap(feat, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(feat, year, month), getMin(feat), getMax(feat)))
+      world.polygonCapColor(feat => getCasesHeatmap(feat, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(feat, year, month), 0, getMaxOverall(feat)))
 
       // TODO: Put card to the right of the mouse
       world.polygonLabel(
@@ -144,12 +148,12 @@ $(function () {
                     <div class="card" style="left: ${labelX}px; top: ${labelY}px;">
                     <img class="card-img" src="${flagEndpoint}/${flagName}.${extension}" alt="flag" height="100" width="50" />
                     <div class="container">
-                    <span class="card-title", style="color:black">${d.properties.NAME}</span> <br />
+                    <span class="card-title", style="color:black; font-family: comic sans ms, cursive;">${d.properties.NAME}</span> <br />
                     <div class="card-spacer"></div>
                       <div class="card-spacer"></div>
-                      <span style="color:black"><b>Monthly deaths:</b> ${getDeathsNew(d, year, month) === -1 ? 'No Data available' : getDeathsNew(d, year, month)} </span>
+                      <span style="color:black; font-family: comic sans ms, cursive"><b>Monthly deaths:</b> ${getDeathsNew(d, year, month) === -1 ? 'No Data available' : getDeathsNew(d, year, month).toLocaleString("en-US")} </span>
                       <div class="card-spacer"></div>  
-                      <span style="color:black"><b>Monthly cases:</b> ${getCasesNew(d, year, month) === -1 ? 'No Data available' : getCasesNew(d, year, month)}</span>
+                      <span style="color:black; font-family: comic sans ms, cursive;"><b>Monthly cases:</b> ${getCasesNew(d, year, month) === -1 ? 'No Data available' : getCasesNew(d, year, month).toLocaleString("en-US")}</span>
                     </div>
                     </div>
                 `
@@ -158,7 +162,7 @@ $(function () {
 
       world.onPolygonHover(hoverD => world
         .polygonAltitude(d => d === hoverD ? 0.15 : 0.03)
-        .polygonCapColor(d => d === hoverD ? 'rgb(149, 216, 239)' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(d, year, month), getMin(d), getMax(d)))
+        .polygonCapColor(d => d === hoverD ? 'rgb(149, 216, 239)' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(d, year, month), 0, getMaxOverall(d)))
       );
 
       world.polygonsTransitionDuration(200);
@@ -166,12 +170,19 @@ $(function () {
     
     // Show initial state of the globe
     updateGlobe(world, year, month)
+
+    function getMonthFromString(mon){
+      return new Date(Date.parse(mon +" 1, 2012")).getMonth()+1
+   }
     
     // Create an observer instance that updates the month and the year variables
     var observer = new MutationObserver(function(mutations) {
       mutations.forEach(function(m) {
+        // month = parseInt(getMonthFromString(target.innerHTML.split(" ")[-2]))
+        // year = parseInt(target.innerHTML.split(" ")[-1])
         month = parseInt(target.innerHTML.split(" ")[2])
         year = parseInt(target.innerHTML.split(" ")[0])
+
         updateGlobe(world, year, month)
       });    
     });
@@ -179,8 +190,6 @@ $(function () {
     // Pass in the target node, as well as the observer options for getting the current year and month
     observer.observe(target, { attributes: true, childList: true, characterData: true });
 
-    // Can stop observing if we want
-    // observer.disconnect();
   })
 
 });
