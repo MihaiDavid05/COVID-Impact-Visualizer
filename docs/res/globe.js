@@ -48,34 +48,11 @@ $(function () {
     .polygonsData(countries.features)
     .pointOfView(MAP_CENTER, 10)(document.getElementById('cases'));
 
-    // d3.select(".scene-container canvas").call(zoom).on("wheel.zoom", null);
-
-
-    // function resizeCanvas() {
-    //   var parentWidth = document.getElementsByClassName('scene-container')[0].clientWidth;
-    //   var parentHeight = document.getElementsByClassName('scene-container')[0].clientHeight;
-  
-    //   document.querySelector('.scene-container :nth-child(3)').width = parentWidth / 2;
-    //   document.querySelector('.scene-container :nth-child(3)').height = parentHeight / 2;
-    // }
-  
-    // // Event listener for dynamic resizing
-    // window.addEventListener('resize', resizeCanvas);
-
-    // // Initial resize
-    // resizeCanvas();
-
-    // window.dispatchEvent(new Event('resize'));
-
-    // d3.select(".scene-container canvas").on('resize', function (){
-    //   d3.select(".scene-container canvas").attr("style", "display: block; touch-action: none; width: 500px; height: 650px;")
-    // })
-    // d3.select(".scene-container canvas").attr("width", "600px")
-    // d3.select(".scene-container canvas").attr("height", "400px");
-
     // Auto-rotate
     world.controls().autoRotate = true;
     world.controls().autoRotateSpeed = 1.0;
+    // TODO: Here
+    world.controls().enableZoom = false;
 
     // Get covid cases for heatmap represented at polygon level
     function getCasesHeatmap(feat, selectedYear, selectedMonth) {
@@ -187,16 +164,13 @@ $(function () {
     
     // Show initial state of the globe
     updateGlobe(world, year, month)
+
     
     // Create an observer instance that updates the month and the year variables
     var observer = new MutationObserver(function(mutations) {
       mutations.forEach(function() {
         month = parseInt(months[target.innerHTML.split(" ")[10]])
         year = parseInt(target.innerHTML.split(" ")[11])
-
-        // month = parseInt(target.innerHTML.split(" ")[2])
-        // year = parseInt(target.innerHTML.split(" ")[0])
-
         updateGlobe(world, year, month)
       });    
     });
