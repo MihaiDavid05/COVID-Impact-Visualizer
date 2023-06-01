@@ -62,8 +62,13 @@ html {
     font-weight: 600;
     text-decoration: none;
 }
-.covid-menu a:hover {
+
+.covid-menu a:hover, .scrolled .covid-menu a:hover {
     color: #e54765;
+}
+
+.scrolled .covid-menu a {
+    color: #111;
 }
 
 .navbar-toggler {
@@ -72,10 +77,6 @@ html {
 
 .scrolled .navbar-toggler {
     border-color: #111 !important;
-}
-
-.scrolled .covid-menu a {
-    color: #111;
 }
 
 .summary-numbers {
