@@ -40,6 +40,7 @@ $(function () {
             data.forEach(function(row) {
                 // verify for NaN
                 if (row.FLT_TOT_1_ORIG && row.FLT_TOT_1_NORMALIZED){
+
                     function popupContent() {
                         if (!d3.select('#chart-div-' + row.APT_IATA).empty()) {
                             marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
@@ -112,31 +113,53 @@ $(function () {
                     }                    
                     // Select data for the left pane
                     if (parseInt(row.YEAR) === year1) {
+                        const radiusValue = parseFloat(row.FLT_TOT_1_ORIG) / 3
                         // Create circle
                         var circle1 = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
                             pane: "left",
-                            // radius: parseFloat(row.FLT_TOT_1_NORMALIZED) * 150000,
-                            radius: parseFloat(row.FLT_TOT_1_ORIG) / 3,
+                            radius: radiusValue,
                             color: "#0000ff"
+                        }).addTo(map)   
+
+                        var circle1Virtual = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
+                            pane: "left",
+                            radius: radiusValue / 5.5,
+                            color: "#fafafa",
+                            fill: true,
+                            stroke: true,
+                            opacity: 0.3
                         })
+
                         // Add circle to panes data and map
-                        const marker = circle1.addTo(map) // TODO: add smaller circle for binding
+                        const marker = circle1Virtual.addTo(map) // TODO: add smaller circle for binding
                         marker.once('click', function () {
                             popupContent();
                             marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
                         })
                         .bindPopup("Loading", { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
                         circlesYear1.push(circle1);
+
                     } else if (parseInt(row.YEAR) === year2) {
+                        const radiusValue = parseFloat(row.FLT_TOT_1_ORIG) / 3
                         // Select data for the right pane
                         var circle2 = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
                             pane: "right",
-                            // radius: parseFloat(row.FLT_TOT_1_NORMALIZED) * 150000,
-                            radius: parseFloat(row.FLT_TOT_1_ORIG) / 3,
+                            radius: radiusValue,
                             color: "#ff0000"
+                        }).addTo(map)
+
+                        var circle2Virtual = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
+                            pane: "right",
+                            radius: radiusValue / 5.5,
+                            color: "#fafafa",
+                            fill: true,
+                            stroke: true,
+                            opacity: 0.3
+
                         })
+
                         // Add circle to panes data and map
-                        const marker = circle2.addTo(map) // TODO: add smaller circle for binding
+                        const marker = circle2Virtual.addTo(map) // TODO: add smaller circle for binding
                         marker.once('click', function () {
                             popupContent();
                             marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
