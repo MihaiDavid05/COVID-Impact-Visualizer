@@ -84,7 +84,7 @@ $(function () {
                                 plugins: {
                                     title: {
                                         display: true,
-                                        text: row.APT_AIRPORT // Replace with your desired title
+                                        text: row.APT_AIRPORT
                                     }
                                 },
                                 legend: { display: false },
@@ -147,7 +147,7 @@ $(function () {
                 }
             })
         }
-        addPoints(2018, 2021)
+        addPoints(2019, 2021)
         const compare = L.control.compare(circlesYear1, circlesYear2, {
             sliderOrientation: 'vertical',
             position: 'topright'

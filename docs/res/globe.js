@@ -59,14 +59,13 @@ $(function () {
 
     window.dispatchEvent(new Event('resize'))
 
-    // // world.controls().enableZoom = false;
-    // d3.select(".scene-container canvas").on('dblclick', function () {
-    //     if (world.controls().enableZoom){
-    //       world.controls().enableZoom = false;
-    //     } else {
-    //       world.controls().enableZoom = true
-    //     }
-    // });
+    d3.select(".scene-container canvas").on('dblclick', function () {
+        if (world.controls().enableZoom){
+          world.controls().enableZoom = false;
+        } else {
+          world.controls().enableZoom = true
+        }
+    });
 
     // Get covid cases for heatmap represented at polygon level
     function getCasesHeatmap(feat, selectedYear, selectedMonth) {
