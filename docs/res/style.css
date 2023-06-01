@@ -10,10 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.navbar-covid {
-    background-color: transparent !important;
-}
-
 .section {
     width: 100%;
 }
@@ -38,6 +34,10 @@ html {
     color: #111;
 }
 
+.navbar-covid {
+    background-color: #13142d !important;
+}
+
 .scrolled {
     background-color: #fff !important;
     transition: background-color 150ms linear;
@@ -45,22 +45,36 @@ html {
     box-shadow: 0px 2px 4px -4px rgba(0, 0, 0, 0.5);
 }
 
+.toggle-icon {
+    color: #fff;
+}
+
+.scrolled .toggle-icon {
+    color: #111;
+}
+
 #flights-map {
     height: 600px;
 }
 
-.covid-menu li {
-    display: inline !important;
-    margin-right: 7px;
-}
-
-.covid-menu li a {
+.covid-menu a {
     color: #fff;
     font-weight: 600;
     text-decoration: none;
 }
+.covid-menu a:hover {
+    color: #e54765;
+}
 
-.scrolled .covid-menu li a {
+.navbar-toggler {
+    border-color: #fff !important;
+}
+
+.scrolled .navbar-toggler {
+    border-color: #111 !important;
+}
+
+.scrolled .covid-menu a {
     color: #111;
 }
 
