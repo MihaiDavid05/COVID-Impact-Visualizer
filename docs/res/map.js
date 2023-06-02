@@ -89,6 +89,10 @@ $(function () {
                                 tension: 0.1
                             }]
                         }
+
+                        var delayBetweenPoints = 10;
+                        var started = {};
+
                         const ctx = document.getElementById('chart-div-' + row.APT_IATA).getContext('2d');
                         const myChart = new Chart(ctx, {
                             type: 'line',
@@ -167,7 +171,7 @@ $(function () {
 
                     var circleVirtual2021 = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
                         pane: "right",
-                        radius: radiusValue2019 / 5,
+                        radius: radiusValue2021 / 5,
                         color: "#fafafa",
                         fill: true,
                         stroke: true,

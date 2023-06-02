@@ -127,14 +127,6 @@ $(function () {
       }
     }
 
-    function getMin(feat) {
-      return feat.properties.covidCasesHeatmapMin
-    }
-
-    function getMax(feat) {
-      return feat.properties.covidCasesHeatmapMax
-    }
-
     function getMaxOverall(feat) {
       return feat.properties.covidCasesHeatmapMaxOverall
     }
