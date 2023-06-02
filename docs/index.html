@@ -5,9 +5,7 @@
     <title>COVID-19 Impact Through Data</title>
     <link rel="icon" type="image/x-icon" href="res/covid_logo.png">
     <link rel="stylesheet" href="res/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
-        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -42,11 +40,11 @@
             <a class="navbar-brand" href="#">
                 <img src="res/covid_logo.png" width="30" height="30" alt="COVID Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars toggle-icon"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto covid-menu">
+                <div class="navbar-nav ml-auto covid-menu">
                     <a class="nav-item nav-link" href="#">Summary</a>
                     <a class="nav-item nav-link" href="#covid">Cases</a>
                     <a class="nav-item nav-link" href="#employment">Employment</a>
@@ -57,18 +55,98 @@
     </nav>
 
     <div class="section dark-section first-section">
-        <div class="container pt-2 pb-2">
-            <div id="summary"></div>
-            <div class="row">
-                <div class="col-12 text-center summary-numbers numbers-large">
-                    Cases <span class="numbers-highlight-beginning" style="visibility: hidden">761127897</span>
-                </div>
-                <div class="col-12 text-center summary-numbers numbers-medium">
-                    Deaths <span class="numbers-highlight-beginning" style="visibility: hidden">6883785</span>
-                </div>
-            </div>
+        <div id="summary"></div>
 
-        </div>
+        <div class="container-fluid historytimeline">
+            <div class="container">
+              <!--first section-->
+              <div class="row align-items-center how-it-works">
+                <div class="col-2 text-center bottom">
+                  <div class="circle">1</div>
+                </div>
+                <div class="col-9 col-lg-6">
+                  <h5>December, 2019</h5>
+                  <p class="text-justify">A cluster of patients in China’s Hubei Province, in the city of <span class="gradient-highlight">Wuhan</span>, begin to experience the symptoms of an atypical <span class="gradient-highlight">pneumonia-like</span> illness that does not respond well to standard treatments. The virus was traced back to a seafood market in the city. The outbreak <span class="gradient-highlight">raised concerns</span> about a potential epidemic, leading to the start of <span class="gradient-highlight">investigations and containment efforts</span>.</p>
+                  <img src="res/timeline/wuhan.jpg" alt="Wuhan city" class="rounded timeline-img mb-2" />
+                </div>
+              </div>
+              <!--path between 1-2-->
+              <div class="row timeline">
+                <div class="col-2">
+                  <div class="corner top-right"></div>
+                </div>
+                <div class="col-8">
+                  <hr/>
+                </div>
+                <div class="col-2">
+                  <div class="corner left-bottom"></div>
+                </div>
+              </div>
+              <!--second section-->
+              <div class="row align-items-center justify-content-end how-it-works">
+                <div class="col-9 col-lg-6 text-right">
+                  <h5>January, 2020</h5>
+                  <p class="text-justify">The novel coronavirus had spread <span class="gradient-highlight">beyond China</span>, reaching other countries in Asia and starting to emerge in other parts of the world. The World Health Organization (WHO) declared the outbreak a <span class="gradient-highlight">Public Health Emergency of International Concern</span>. Measures such as <span class="gradient-highlight">travel restrictions and quarantine protocols</span> were implemented globally to limit the virus's spread.</p>
+                  <img src="res/timeline/hospital.jpg" alt="Hospital PPE" class="rounded timeline-img mb-2" />
+                </div>
+                <div class="col-2 text-center full-right">
+                  <div class="circle">2</div>
+                </div>
+              </div>
+              <!--path between 2-3-->
+              <div class="row timeline">
+                <div class="col-2">
+                  <div class="corner right-bottom"></div>
+                </div>
+                <div class="col-8">
+                  <hr/>
+                </div>
+                <div class="col-2">
+                  <div class="corner top-left"></div>
+                </div>
+              </div>
+              <!--third section-->
+              <div class="row align-items-center how-it-works">
+                <div class="col-2 text-center full-left">
+                  <div class="circle">3</div>
+                </div>
+                <div class="col-9 col-lg-6">
+                  <h5>February, 2020</h5>
+                  <p class="text-justify">COVID-19 continued to <span class="gradient-highlight">spread rapidly across the globe</span>. Outbreaks were reported in several <span class="gradient-highlight">European</span> countries, and cases surged in <span class="gradient-highlight">South Korea and Iran</span>. The WHO emphasized the importance of preparedness and urged countries to take decisive actions to prevent further transmission. Governments started implementing <span class="gradient-highlight">lockdowns, social distancing measures, and mass testing</span> to slow down the virus's progression.</p>
+                  <img src="res/timeline/masks.jpg" alt="People wearning masks" class="rounded timeline-img mb-2" />
+                </div>
+              </div>
+              <!--path between 3-4-->
+              <div class="row timeline">
+                <div class="col-2">
+                  <div class="corner top-right"></div>
+                </div>
+                <div class="col-8">
+                  <hr/>
+                </div>
+                <div class="col-2">
+                  <div class="corner left-bottom"></div>
+                </div>
+              </div>
+              <!--forth section-->
+              <div class="row align-items-center justify-content-end how-it-works">
+                <div class="col-9 col-lg-6 text-right">
+                  <h5>March, 2020 - May, 2023</h5>
+                  <p class="text-justify">March 2020 marked a turning point in the pandemic. COVID-19 was declared a <span class="gradient-highlight">global pandemic</span> by the WHO, as the number of cases and deaths rose exponentially. Countries worldwide implemented <span class="gradient-highlight">strict lockdowns, shutting down businesses, schools, and public spaces</span> to curb the virus's transmission. Health systems were overwhelmed, and the global economy suffered severe setbacks.</p>
+                  <img src="res/timeline/empty.jpg" alt="NYC empty streets" class="rounded timeline-img mb-2" />
+                  <p class="text-justify">In May 2023, after more than three years, different waves of infections, changing measures, and extensive vaccination efforts, <span class="gradient-highlight">COVID-19 remains a global concern</span> with millions of people affected, both in terms of recovery and unfortunately, death. It emphasizes the ongoing need for caution and adherence to preventive measures. <span class="gradient-highlight">Total number of cases and deaths worldwide</span>, as of May 2023:</p>
+                  
+                  <div class="text-left font-weight-bold h1">
+                    <p>Cases: <span class="gradient-highlight counter" data-final="689726653" data-start="189726653" data-step="9726653">689,726,653</span></p>
+                    <p>Deaths: <span class="gradient-highlight counter" data-final="6885437" data-start="1885437" data-step="85437">6,885,437</span></p>
+                  </div>
+                </div>
+                <div class="col-2 text-center top">
+                  <div class="circle">2</div>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
 
     <div class="section dark-section">
@@ -89,22 +167,30 @@
     <div class="section light-section">
         <div class="container pt-2 pb-2 text-center">
             <div id="employment"></div>
-
-            <div class="row pt-4 pb-4">
-                <div class="col-5 text-center infographic" data-repeat="40" data-highlight="3" data-newline="10">
-                    <i class="fa-solid fa-person h1"></i>
+            <div class="row my-2">
+                <div class="col-12 col-md-6 my-auto">
+                    <img src="res/timeline/employment.jpeg" class="timeline-img rounded" style="max-height:220px;">
                 </div>
-                <div class="col-5 text-center employment-text h2 my-auto">
-                    <span class="numbers-highlight">3 in 40</span> employees lost their job in the <span
-                        class="numbers-highlight">United States</span>
+                <div class="col-12 col-md-6 text-justify mt-2 mt-md-0">
+                    COVID-19 had a major impact on employment worldwide. Many people <span class="gradient-highlight">lost their jobs</span> and had their <span class="gradient-highlight">working hours reduced</span>. It affected businesses of all sizes, from small local ones to large multinational companies. The pandemic created <span class="gradient-highlight">economic uncertainty</span>, causing businesses to make tough decisions to stay afloat. The labor market experienced significant disruptions as countries implemented restrictions and lockdowns to control the virus's spread. ILOSTAT data unveils the <span class="gradient-highlight">staggering impact</span> of COVID-19 on employment, with significant losses in full-time jobs and working hours in various countries.
                 </div>
             </div>
-            <div class="row mt-2 p-2 justify-content-between">
-                <div class="col-5 text-center summary-numbers employment-text h2 my-auto">
-                    <span class="numbers-highlight">In China</span>, on every 50 working hours, <span
-                        class="numbers-highlight">13 hours</span> were lost.
+
+            <div class="row pb-4 mt-4">
+                <div class="col-md-6 col-12 text-center infographic" data-repeat="40" data-highlight="4" data-newline="10">
+                    <i class="fa-solid fa-person h1"></i>
                 </div>
-                <div class="col-5 text-center infographic" data-repeat="50" data-highlight="13" data-newline="10">
+                <div class="col-md-6 col-12 text-center employment-text h2 my-auto">
+                    <span class="gradient-highlight">4 in 40</span> employees lost their job in the <span
+                        class="gradient-highlight">United States</span>.
+                </div>
+            </div>
+            <div class="row mt-2 pb-4">
+                <div class="col-md-6 col-12 order-2 order-md-1 text-center summary-numbers employment-text h2 my-auto">
+                    In the <span class="gradient-highlight">EU</span>, on every 45 working hours, <span
+                        class="gradient-highlight">4 hours</span> were lost.
+                </div>
+                <div class="col-md-6 col-12 order-1 order-md-2 text-center infographic" data-repeat="45" data-highlight="4" data-newline="9">
                     <i class="fa-solid fa-clock h4"></i>
                 </div>
             </div>
@@ -116,16 +202,16 @@
         <div id="flights-map"></div>
         <div id="charts"></div>
     </div>
-    </div>
 
-    <!-- TODO: Add short about and our photos -->
+    <!-- TODO: Add short about and our photos
+    * number of cases taken from worldometers on Jun 1st
+    * infographics, estimation with last quarter of 2019 as a baseline
+    -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
         integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"
-        integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js" integrity="sha512-igl8WEUuas9k5dtnhKqyyld6TzzRjvMqLC79jkgT3z02FvJyHAuUtyemm/P/jYSne1xwFI06ezQxEwweaiV7VA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script src='res/slider.js'></script>
     <script src="res/globe.js"></script>
