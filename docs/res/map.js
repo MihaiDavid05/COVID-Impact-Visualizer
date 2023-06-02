@@ -47,7 +47,7 @@ $(function () {
                             return
                         }
                         // Create a new chart instance
-                        d3.select('#charts').append('div').attr('style', 'width: 400px; height: 300px;').append('canvas').attr('class', 'chart-div').attr('id', 'chart-div-' + row.APT_IATA)
+                        d3.select('#charts').attr('style', 'height: 0px; overflow: hidden').append('div').attr('style', 'width: 400px; height: 300px;').append('canvas').attr('class', 'chart-div').attr('id', 'chart-div-' + row.APT_IATA)
                         // Dummy data
                         var chartData = {
                             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -58,7 +58,7 @@ $(function () {
                                     return pattern.test(val);
                                 }).map(function(val) { return row[val] }),
                                 fill: false,
-                                borderColor: "#e3dd2b",
+                                borderColor: "#38c4d6",
                                 tension: 0.1
                             }, {
                                 label: '2019',
@@ -99,10 +99,16 @@ $(function () {
                                 plugins: {
                                     title: {
                                         display: true,
-                                        text: row.APT_AIRPORT
+                                        text: `Total number of flights at ${row.APT_AIRPORT}`
                                     }
                                 },
-                                legend: { display: false },
+                                legend: { 
+                                    labels:{
+                                        font:{
+                                            family: "'Inter', sans-serif"
+                                        }
+                                    },
+                                    display: false },
                                 scales: {
                                     x: {
                                         stacked: true,
