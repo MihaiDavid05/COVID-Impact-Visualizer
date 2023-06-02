@@ -79,11 +79,6 @@ html {
     border-color: #111 !important;
 }
 
-.summary-numbers {
-    font-weight: 700;
-    color: #fff;
-}
-
 .numbers-large {
     font-size: 70px;
 }
@@ -92,7 +87,7 @@ html {
     font-size: 60px;
 }
 
-.numbers-highlight, .numbers-highlight-beginning {
+.gradient-highlight {
     background-image: linear-gradient(to right, #ffc73f 0%, #fd3459 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -111,10 +106,6 @@ html {
 .employment-text {
     font-weight: 700 !important;
     color: #111 !important;
-}
-
-body {
-    max-width: 2000px;
 }
 
 .parameter-value text {
@@ -207,3 +198,110 @@ body {
     width:1000px;
     font-size:20px;
 }
+
+/* Timeline */
+
+.circle {
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 50%;
+    background-color: #e54765;
+    color: transparent;
+    max-height: 50px;
+    z-index: 2;
+    transition: all .2s ease-in-out;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+  
+  .how-it-works.row {
+    display: flex;
+  }
+  .how-it-works.row .col-2 {
+    display: inline-flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+  }
+  .how-it-works.row .col-2::after {
+    content: "";
+    position: absolute;
+    border-left: 3px solid #e54765;
+    z-index: 1;
+  }
+  .how-it-works.row .col-2.bottom::after {
+    height: 50%;
+    left: 50%;
+    top: 50%;
+  }
+  .how-it-works.row .col-2.full-right::after {
+    height: 100%;
+    left: calc(50% - 3px);
+  }
+  .how-it-works.row .col-2.full-left::after {
+    height: 100%;
+    left: 50%;
+  }
+  .how-it-works.row .col-2.top::after {
+    height: 50%;
+    left: calc(50% - 3px);
+    top: 0;
+  }
+  
+  .timeline div {
+    padding: 0;
+    height: 40px;
+  }
+  .timeline hr {
+    border-top: 3px solid #e54765;
+    margin: 0;
+    top: 17px;
+    position: relative;
+  }
+  .timeline .col-2 {
+    display: flex;
+    overflow: hidden;
+  }
+  .timeline .corner {
+    border: 3px solid #e54765;
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+  }
+  .timeline .top-right {
+    left: 50%;
+    top: -50%;
+  }
+  .timeline .left-bottom {
+    left: -50%;
+    top: calc(50% - 3px);
+  }
+  .timeline .top-left {
+    left: -50%;
+    top: -50%;
+  }
+  .timeline .right-bottom {
+    left: 50%;
+    top: calc(50% - 3px);
+  }
+
+  .historytimeline h5 {
+    color: #e54765;
+    font-weight: 600;
+  }
+
+  .timeline-img {
+    transition: all .2s ease-in-out;
+    filter: grayscale(70%);
+    object-fit: cover;
+    width: 100%;
+    max-height: 170px;
+  }
+
+  .timeline-img:hover {
+    filter: none;
+    transform: scale(1.02);
+  }
+
