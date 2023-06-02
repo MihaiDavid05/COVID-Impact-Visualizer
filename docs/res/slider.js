@@ -26,7 +26,7 @@ var globeformatTooltipDate = (val) => {
     var x = d3.timeFormat("%Y - %m")(val);
     var month = x.split(" ")[2]
     var year = x.split(" ")[0]
-    return `Hover on countries to see COVID cases and deaths during ${months[month]} ${year}`
+    return `Hover on countries to see new COVID cases and deaths during ${months[month]} ${year}`
 }
 
 var startDate = new Date(2020, 0, 1);

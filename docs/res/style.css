@@ -110,7 +110,7 @@ html {
 
 .parameter-value text {
     fill: #aaa;
-    font-family: 'Comic Neue', cursive;
+    font-family:  'Inter', sans-serif;
 }
 
 .slider text {
@@ -137,7 +137,7 @@ html {
 }
 
 .tick {
-    font-family: 'Comic Neue', cursive;
+    font-family:  'Inter', sans-serif;
 }
 
 .slider {
@@ -165,7 +165,7 @@ html {
 
 #value-time {
     color: #aaa;
-    font-family: 'Comic Neue', cursive;
+    font-family:  'Inter', sans-serif;
 }
 
 #info {

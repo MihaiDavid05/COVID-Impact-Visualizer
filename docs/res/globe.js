@@ -155,12 +155,12 @@ $(function () {
                     <div class="card" style="left: ${labelX}px; top: ${labelY}px;">
                     <img class="card-img" src="${flagEndpoint}/${flagName}.${extension}" alt="flag" height="100" width="50" />
                     <div class="container">
-                    <span class="card-title", style="color:black; font-family: comic sans ms, cursive;">${d.properties.NAME}</span> <br />
+                    <span class="card-title", style="color:black; font-family:  'Inter', sans-serif;">${d.properties.NAME}</span> <br />
                     <div class="card-spacer"></div>
                       <div class="card-spacer"></div>
-                      <span style="color:black; font-family: comic sans ms, cursive"><b>Monthly deaths:</b> ${getDeathsNew(d, year, month) === -1 ? 'No Data available' : getDeathsNew(d, year, month).toLocaleString("en-US")} </span>
+                      <span style="color:black; font-family:  'Inter', sans-serif;"><b>New monthly deaths:</b> ${getDeathsNew(d, year, month) === -1 ? 'No Data available' : getDeathsNew(d, year, month).toLocaleString("en-US")} </span>
                       <div class="card-spacer"></div>  
-                      <span style="color:black; font-family: comic sans ms, cursive;"><b>Monthly cases:</b> ${getCasesNew(d, year, month) === -1 ? 'No Data available' : getCasesNew(d, year, month).toLocaleString("en-US")}</span>
+                      <span style="color:black; font-family:  'Inter', sans-serif;"><b>New monthly cases:</b> ${getCasesNew(d, year, month) === -1 ? 'No Data available' : getCasesNew(d, year, month).toLocaleString("en-US")}</span>
                     </div>
                     </div>
                 `
