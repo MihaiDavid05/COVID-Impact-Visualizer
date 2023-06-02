@@ -14,24 +14,33 @@ $(function () {
     let start = parseInt(counter.data("start"));
     counter.html(start);
   });
-});
 
-$(window).scroll(function() {
-  let scroll = $(this);
-  $(".counter").each(function() {
-    let counter = $(this);
-    let hT = counter.offset().top,
-      hH = counter.outerHeight(),
-      wH = $(window).height(),
-      wS = scroll.scrollTop();
-    if (wS > (hT+hH-wH)) {
-      if (!counter.data("done")) {
-        counter.data("done", 1);
-        let final_num = parseInt(counter.data("final"));
-        let start = parseInt(counter.data("start"));
-        let step = parseInt(counter.data("step"));
-        setTimeout(function(){countStep(counter, final_num, start, step)}, 20);
-      }
-    }
+  countHandler();
+  $(window).scroll(function() {
+    countHandler();
   });
 });
+
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+function countHandler() {
+  $(".counter").each(function() {
+    let counter = $(this);
+    if (counter.data("done"))
+      return
+
+    if (counter.isInViewport()) {
+      counter.data("done", 1);
+      let final_num = parseInt(counter.data("final"));
+      let start = parseInt(counter.data("start"));
+      let step = parseInt(counter.data("step"));
+      countStep(counter, final_num, start, step);
+    }
+  });
+}

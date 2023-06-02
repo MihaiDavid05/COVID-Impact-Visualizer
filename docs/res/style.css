@@ -302,6 +302,16 @@ html {
 
   .timeline-img:hover {
     filter: none;
-    transform: scale(1.02);
+    transform: scale(1.0);
   }
 
+
+/* Infographics */
+
+.infographic i {
+    transition: all .15s ease-in-out;
+}
+
+.infographic i:hover {
+    transform: scale(1.1);
+}
