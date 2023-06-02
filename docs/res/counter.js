@@ -21,14 +21,6 @@ $(function () {
   });
 });
 
-$.fn.isInViewport = function() {
-  var elementTop = $(this).offset().top;
-  var elementBottom = elementTop + $(this).outerHeight();
-  var viewportTop = $(window).scrollTop();
-  var viewportBottom = viewportTop + $(window).height();
-  return elementBottom > viewportTop && elementTop < viewportBottom;
-};
-
 function countHandler() {
   $(".counter").each(function() {
     let counter = $(this);

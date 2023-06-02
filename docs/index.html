@@ -4,25 +4,20 @@
     <meta charset="utf-8">
     <title>COVID-19 Impact Through Data</title>
     <link rel="icon" type="image/x-icon" href="res/covid_logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="res/style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css"
-        integrity="sha512-KJRB1wUfcipHY35z9dEE+Jqd+pGCuQ2JMZmQPAjwPjXuzz9oL1pZm2cd79vyUgHQxvb9sFQ6f05DIz0IqcG1Jw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet-compare/dist/leaflet-compare.css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" ></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet-compare/dist/leaflet-compare.css" />
-    <script src="https://unpkg.com/leaflet-compare/dist/leaflet-compare.js"></script>
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.0.0/d3.js"></script>
     <script src="//unpkg.com/d3"></script>
     <script src="//unpkg.com/globe.gl"></script>
@@ -198,9 +193,28 @@
         </div>
     </div>
 
-    <div class="section">
+    <div class="dark-section">
         <div id="flights"></div>
-        <div id="flights-map"></div>
+
+        <div class="container">
+          <div class="row my-2 py-3">
+            <div class="col-12 col-md-6 text-justify">
+              The COVID-19 pandemic had a profound impact on <span class="gradient-highlight">travel and flights</span> worldwide. International travel restrictions, lockdown measures, and fear of the virus led to a significant decrease in air travel demand. Airlines were forced to <span class="gradient-highlight">cancel flights</span>, reduce their operations, and even suspend services temporarily. The aviation industry faced severe financial losses, with many airlines filing for bankruptcy or requiring government bailouts to survive. The data provided by Eurocontrol on the number of flights at European airports clearly illustrates the extent of the impact. A visualization below showcases airports as circles, where the <span class="gradient-highlight">size of each circle represents the number of flights in the years 2019 and 2020</span>. The comparative overview vividly demonstrates the <span class="gradient-highlight">dramatic decline in air traffic</span> during the pandemic.            </div>
+            <div class="col-12 col-md-6 my-md-auto mt-2">
+                <img src="res/timeline/airport.jpg" class="timeline-img rounded" style="max-height:240px;">
+            </div>
+          </div>
+          <div class="row pt-3 pb-1">
+            <div class="col-6 text-left h2 gradient-highlight font-weight-bold">2019</div>
+            <div class="col-6 text-right h2 gradient-highlight font-weight-bold">2020</div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="col-12 px-0 pb-4">
+            <div id="flights-map" class="rounded"></div>
+          </div>
+        </div>
         <div id="charts"></div>
     </div>
 
@@ -209,17 +223,30 @@
     * infographics, estimation with last quarter of 2019 as a baseline
     -->
 
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
         integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap bundle -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js" integrity="sha512-igl8WEUuas9k5dtnhKqyyld6TzzRjvMqLC79jkgT3z02FvJyHAuUtyemm/P/jYSne1xwFI06ezQxEwweaiV7VA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-    <script src='res/slider.js'></script>
-    <script src="res/globe.js"></script>
-    <script src="res/map.js"></script>
-    <script src="res/scroll.js"></script>
-    <script src="res/employment.js"></script>
+    <!-- Leaflet and Leaflet compare for flights map-->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" ></script>
+    <script src="https://unpkg.com/leaflet-compare/dist/leaflet-compare.js"></script>
+
+    <!-- Utils with navbar scrolling change, element in viewport script -->
+    <script src="res/utils.js"></script>
+
     <script src="res/counter.js"></script>
+    <script src="res/employment.js"></script>
+
+    <!-- Flights map, load data first -->
+    <script src="res/data/flights_data.js"></script>
+    <script src="res/flights.js"></script>
+
+    <script src="res/slider.js"></script>
+    <script src="res/globe.js"></script>
+    
 </body>
 
 </html>
