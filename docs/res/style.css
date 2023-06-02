@@ -119,7 +119,7 @@ body {
 
 .parameter-value text {
     fill: #aaa;
-    font-family: comic sans ms, cursive;
+    font-family: 'Comic Neue', cursive;
 }
 
 .slider text {
@@ -146,7 +146,7 @@ body {
 }
 
 .tick {
-    font-family: comic sans ms, cursive;
+    font-family: 'Comic Neue', cursive;
 }
 
 .slider {
@@ -174,7 +174,7 @@ body {
 
 #value-time {
     color: #aaa;
-    font-family: comic sans ms, cursive;
+    font-family: 'Comic Neue', cursive;
 }
 
 #info {
@@ -186,8 +186,6 @@ body {
     font-style: italic;
 }
 .chart-div {
-    width: 300px;
-    height: 300px;
     display: none;
 }
 

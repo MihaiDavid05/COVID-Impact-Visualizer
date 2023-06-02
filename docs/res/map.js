@@ -47,7 +47,7 @@ $(function () {
                             return
                         }
                         // Create a new chart instance
-                        d3.select('#charts').append('canvas').attr('class', 'chart-div').attr('id', 'chart-div-' + row.APT_IATA)
+                        d3.select('#charts').append('div').attr('style', 'width: 400px; height: 300px;').append('canvas').attr('class', 'chart-div').attr('id', 'chart-div-' + row.APT_IATA)
                         // Dummy data
                         var chartData = {
                             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -81,6 +81,8 @@ $(function () {
                         const myChart = new Chart(ctx, {
                             type: 'line',
                             data: chartData,
+                            responsive: true,
+                            maintainAspectRatio: false,
                             options: {
                                 plugins: {
                                     title: {
@@ -121,18 +123,27 @@ $(function () {
                             color: "#0000ff"
                         }).addTo(map)   
 
-                        var circle1Virtual = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
-                            pane: "left",
-                            radius: radiusValue / 5.5,
-                            color: "#fafafa",
-                            fill: true,
-                            stroke: true,
-                            opacity: 0.3
+                        // var circle1Virtual = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
+                        //     pane: "left",
+                        //     radius: radiusValue / 5,
+                        //     color: "#fafafa",
+                        //     fill: true,
+                        //     stroke: true,
+                        //     opacity: 0.3
+                        // })
+                        var circle1Virtual = L.marker([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
+                            // pane: "left",
+                            // radius: radiusValue / 5,
+                            // color: "#fafafa",
+                            // fill: true,
+                            // stroke: true,
+                            // opacity: 0.3
                         })
 
                         // Add circle to panes data and map
                         const marker = circle1Virtual.addTo(map) // TODO: add smaller circle for binding
                         marker.once('click', function () {
+                            console.log("Clicked")
                             popupContent();
                             marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
                         })
@@ -148,19 +159,27 @@ $(function () {
                             color: "#ff0000"
                         }).addTo(map)
 
-                        var circle2Virtual = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
-                            pane: "right",
-                            radius: radiusValue / 5.5,
-                            color: "#fafafa",
-                            fill: true,
-                            stroke: true,
-                            opacity: 0.3
-
+                        // var circle2Virtual = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
+                        //     pane: "right",
+                        //     radius: radiusValue / 5,
+                        //     color: "#fafafa",
+                        //     fill: true,
+                        //     stroke: true,
+                        //     opacity: 0.3
+                        // })
+                        var circle2Virtual = L.marker([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
+                            // pane: "right",
+                            // radius: radiusValue / 5,
+                            // color: "#fafafa",
+                            // fill: true,
+                            // stroke: true,
+                            // opacity: 0.3
                         })
 
                         // Add circle to panes data and map
                         const marker = circle2Virtual.addTo(map) // TODO: add smaller circle for binding
                         marker.once('click', function () {
+                            console.log("Clicked")
                             popupContent();
                             marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
                         })
