@@ -48,5 +48,5 @@ function highlightIth(infographic, current, total) {
     current++;
     console.log(current);
     if (current < total)
-        setTimeout(function(){highlightIth(infographic, current, total)}, 300);
+        setTimeout(function(){highlightIth(infographic, current, total)}, 400);
 }
