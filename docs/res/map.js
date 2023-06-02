@@ -1,7 +1,7 @@
 
 $(function () {
 
-    d3.csv("https://raw.githubusercontent.com/com-480-data-visualization/project-2023-dqw4w9wgxcq/master/data/agg_flights.csv").then(function(data) {
+    d3.csv("https://raw.githubusercontent.com/com-480-data-visualization/project-2023-dqw4w9wgxcq/master/data/all_agg_flights.csv").then(function(data) {
         // Define a map
         const map = L.map('flights-map', {
             minZoom: 0,
@@ -33,17 +33,17 @@ $(function () {
         map.createPane("right")
 
         // Initialize data for the 2 panes
-        var circlesYear1 = [];
-        var circlesYear2 = [];
+        var circles2019 = [];
+        var circles2021 = [];
 
-        function addPoints(year1, year2) {
+        function addPoints() {
             data.forEach(function(row) {
+                const columns = Object.keys(row)
+                row[columns.filter(function(val) { const pattern = /FLT_TOT_1_2018_[0-9]+/; return pattern.test(val); } )]
                 // verify for NaN
-                if (row.FLT_TOT_1_ORIG && row.FLT_TOT_1_NORMALIZED){
-
+                if (row.FLT_TOT_1_ORIG_2019 && row.FLT_TOT_1_ORIG_2021){
                     function popupContent() {
                         if (!d3.select('#chart-div-' + row.APT_IATA).empty()) {
-                            marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
                             return
                         }
                         // Create a new chart instance
@@ -53,27 +53,39 @@ $(function () {
                             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
                             datasets: [{
                                 label: '2018',
-                                data: [8, 13, 7, 9, 4, 6, 8, 10, 12, 15, 17, 20],
+                                data: columns.filter(function(val) {
+                                    const pattern = /FLT_TOT_1_2018_[0-9]+/
+                                    return pattern.test(val);
+                                }).map(function(val) { return row[val] }),
                                 fill: false,
-                                borderColor: "#0000ff",
+                                borderColor: "#e3dd2b",
                                 tension: 0.1
                             }, {
                                 label: '2019',
-                                data: [5, 10, 5, 7, 3, 5, 7, 9, 11, 13, 16, 19],
+                                data: columns.filter(function(val) {
+                                    const pattern = /FLT_TOT_1_2019_[0-9]+/
+                                    return pattern.test(val);
+                                }).map(function(val) { return row[val] }),
                                 fill: false,
-                                borderColor: "#ff00ff",
+                                borderColor: "#a0c746",
                                 tension: 0.1
                             }, {
                                 label: '2020',
-                                data: [3, 6, 2, 4, 1, 2, 4, 6, 8, 10, 12, 15],
+                                data: columns.filter(function(val) {
+                                    const pattern = /FLT_TOT_1_2020_[0-9]+/
+                                    return pattern.test(val);
+                                }).map(function(val) { return row[val] }),
                                 fill: false,
-                                borderColor: "#00ff00",
+                                borderColor: "#e68d39",
                                 tension: 0.1
                             }, {
                                 label: '2021',
-                                data: [2, 4, 1, 3, 1, 2, 3, 5, 6, 8, 10, 12],
+                                data: columns.filter(function(val) {
+                                    const pattern = /FLT_TOT_1_2021_[0-9]+/
+                                    return pattern.test(val);
+                                }).map(function(val) { return row[val] }),
                                 fill: false,
-                                borderColor: "#ff0000",
+                                borderColor: "#bf4e32",
                                 tension: 0.1
                             }]
                         }
@@ -112,85 +124,65 @@ $(function () {
                                 }
                             }
                         });
-                    }                    
-                    // Select data for the left pane
-                    if (parseInt(row.YEAR) === year1) {
-                        const radiusValue = parseFloat(row.FLT_TOT_1_ORIG) / 3
-                        // Create circle
-                        var circle1 = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
-                            pane: "left",
-                            radius: radiusValue,
-                            color: "#0000ff"
-                        }).addTo(map)   
-
-                        // var circle1Virtual = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
-                        //     pane: "left",
-                        //     radius: radiusValue / 5,
-                        //     color: "#fafafa",
-                        //     fill: true,
-                        //     stroke: true,
-                        //     opacity: 0.3
-                        // })
-                        var circle1Virtual = L.marker([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
-                            // pane: "left",
-                            // radius: radiusValue / 5,
-                            // color: "#fafafa",
-                            // fill: true,
-                            // stroke: true,
-                            // opacity: 0.3
-                        })
-
-                        // Add circle to panes data and map
-                        const marker = circle1Virtual.addTo(map) // TODO: add smaller circle for binding
-                        marker.once('click', function () {
-                            console.log("Clicked")
-                            popupContent();
-                            marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
-                        })
-                        .bindPopup("Loading", { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
-                        circlesYear1.push(circle1);
-
-                    } else if (parseInt(row.YEAR) === year2) {
-                        const radiusValue = parseFloat(row.FLT_TOT_1_ORIG) / 3
-                        // Select data for the right pane
-                        var circle2 = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
-                            pane: "right",
-                            radius: radiusValue,
-                            color: "#ff0000"
-                        }).addTo(map)
-
-                        // var circle2Virtual = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
-                        //     pane: "right",
-                        //     radius: radiusValue / 5,
-                        //     color: "#fafafa",
-                        //     fill: true,
-                        //     stroke: true,
-                        //     opacity: 0.3
-                        // })
-                        var circle2Virtual = L.marker([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
-                            // pane: "right",
-                            // radius: radiusValue / 5,
-                            // color: "#fafafa",
-                            // fill: true,
-                            // stroke: true,
-                            // opacity: 0.3
-                        })
-
-                        // Add circle to panes data and map
-                        const marker = circle2Virtual.addTo(map) // TODO: add smaller circle for binding
-                        marker.once('click', function () {
-                            console.log("Clicked")
-                            popupContent();
-                            marker.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
-                        })
-                        .bindPopup("Loading", { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
-                        circlesYear2.push(circle2)
                     }
+                    const radiusValue2019 = parseFloat(row.FLT_TOT_1_ORIG_2019) / 3
+                    // Create circle
+                    var circle2019 = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
+                        pane: "left",
+                        radius: radiusValue2019,
+                        color: "#a0c746"
+                    }).addTo(map)   
+
+                    var circleVirtual2019 = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
+                        pane: "left",
+                        radius: radiusValue2019 / 5,
+                        color: "#fafafa",
+                        fill: true,
+                        stroke: true,
+                        opacity: 0
+                    })
+
+                    // Add circle to panes data and map
+                    const marker2019 = circleVirtual2019.addTo(map) // TODO: add smaller circle for binding
+                    marker2019.once('click', function () {
+                        console.log("Clicked")
+                        popupContent();
+                        marker2019.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
+                    })
+                    .bindPopup("Loading", { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
+                    circles2019.push(circle2019);
+                    const radiusValue2021 = parseFloat(row.FLT_TOT_1_ORIG_2021) / 3
+                    // Select data for the right pane
+                    var circle2021 = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
+                        pane: "right",
+                        radius: radiusValue2021,
+                        color: "#bf4e32"
+                    }).addTo(map)
+
+                    var circleVirtual2021 = L.circle([parseFloat(row.APT_LATITUDE), parseFloat(row.APT_LONGITUDE)], {
+                        pane: "right",
+                        radius: radiusValue2019 / 5,
+                        color: "#fafafa",
+                        fill: true,
+                        stroke: true,
+                        opacity: 0
+                    })
+
+                    // Add circle to panes data and map
+                    const marker2021 = circleVirtual2021.addTo(map) // TODO: add smaller circle for binding
+                    marker2021.once('click', function () {
+                        console.log("Clicked")
+                        popupContent();
+                        marker2021.setPopupContent(document.getElementById('chart-div-' + row.APT_IATA), { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
+                    })
+                    .bindPopup("Loading", { maxHeight: 300, maxWidth: 400, minHeight: 300, minWidth: 400 })
+                    circles2021.push(circle2021)
+
                 }
             })
         }
-        addPoints(2019, 2021)
-        const compare = L.control.compare(circlesYear1, circlesYear2, {
+        addPoints()
+        const compare = L.control.compare(circles2019, circles2021, {
             sliderOrientation: 'vertical',
             position: 'topright'
         }).addTo(map);
