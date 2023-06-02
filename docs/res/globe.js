@@ -28,8 +28,8 @@ $(function () {
   var target = document.querySelector('p#value-time');
 
   // Define month and year variables
-  var month  = parseInt(months[target.innerHTML.split(" ")[10]]);
-  var year = parseInt(target.innerHTML.split(" ")[11])
+  var month  = parseInt(months[target.innerHTML.split(" ")[11]]);
+  var year = parseInt(target.innerHTML.split(" ")[12])
 
   fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json()).then(function(countries) {
 
@@ -174,8 +174,8 @@ $(function () {
     // Create an observer instance that updates the month and the year variables
     var observer = new MutationObserver(function(mutations) {
       mutations.forEach(function() {
-        month = parseInt(months[target.innerHTML.split(" ")[10]])
-        year = parseInt(target.innerHTML.split(" ")[11])
+        month = parseInt(months[target.innerHTML.split(" ")[11]])
+        year = parseInt(target.innerHTML.split(" ")[12])
         updateGlobe(world, year, month)
       });    
     });
