@@ -54,7 +54,8 @@ html {
 }
 
 #flights-map {
-    height: 75vh;
+    height: 70vh;
+    max-height: 600px;
 }
 
 .covid-menu a {
@@ -312,4 +313,18 @@ html {
 
 .infographic i:hover {
     transform: scale(1.1);
+}
+
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    box-shadow: 0 1px 1px rgba(0,0,0,.2) !important;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 5px !important;
+    font-family: 'Figtree', sans-serif !important;
+}
+
+#chart {
+    background-color: #fbf8f4;
 }

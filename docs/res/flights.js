@@ -1,6 +1,8 @@
-const YEAR_LEFT = 2019;
-const YEAR_RIGHT = 2020;
+const YEAR_LEFT = "2019";
+const YEAR_RIGHT = "2020";
 const SCALE_DOWN_FACTOR = 4;
+const YEARS_AVAILABLE = ["2018", "2019", "2020", "2021"]
+const COLORS_PER_YEAR = ["#3066BE", "#13142d", "#e54765", "#CFEE9E"]
 
 let total_left_col = "FLT_TOT_1_ORIG_"+YEAR_LEFT
 let total_right_col = "FLT_TOT_1_ORIG_"+YEAR_RIGHT
@@ -9,15 +11,87 @@ function validate(e) {
     return e.APT_LATITUDE && e.APT_LONGITUDE && e[total_left_col] && e[total_right_col];
 }
 
+function plotData(i) {
+    const data = flights_data[i];
+    const chartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        datasets: []
+    }
+
+    YEARS_AVAILABLE.forEach((year, i) => {
+        year_data = []
+        for (let month = 1; month <= 12; month++) {
+            const field = "FLT_TOT_1_" + year + "_" + month;
+            year_data.push(data[field]);
+        }
+
+        const obj_data = {
+            label: year,
+            data: year_data,
+            fill: false,
+            borderColor: COLORS_PER_YEAR[i],
+            tension: 0.1
+        }
+        chartData.datasets.push(obj_data);
+    });
+
+    $("#chart").empty();
+    const canvas = $("<canvas/>");
+    $("#chart").append(canvas);
+    const ctx = canvas[0].getContext('2d');
+    const myChart = new Chart(ctx, 
+        {
+            type: "line",
+            data: chartData,
+            responsive: true,
+            maintainAspectRatio: false,
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: `Total number of flights at ${data.APT_AIRPORT}`
+                    }
+                },
+                legend: { 
+                    labels:{
+                        font:{
+                            family: "'Figtree', sans-serif"
+                        }
+                    },
+                    display: false },
+                scales: {
+                    x: {
+                        stacked: true,
+                        ticks: {
+                            beginAtZero: true,
+                            callback: function (value, index, values) {
+                                return this.getLabelForValue(value);
+                            }
+                        }
+                    },
+                    y: {
+                        stacked: false,
+                        ticks: {
+                            callback: function (value, index, values) {
+                                return value % 10 === 0 ? value + " flights" : "";
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    
+}
+
 $(function() {
     const map = L.map('flights-map', {
         minZoom: 4,
         maxZoom: 12,
-        scrollWheelZoom: false
+        //scrollWheelZoom: false
     }).setView([46.519962, 6.633597], 4);
 
-    map.on('focus', function() { map.scrollWheelZoom.enable(); });
-    map.on('blur', function() { map.scrollWheelZoom.disable(); });
+    //map.on('focus', function() { map.scrollWheelZoom.enable(); });
+    //map.on('blur', function() { map.scrollWheelZoom.disable(); });
 
     const osmLayerLeft = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: ''
@@ -41,7 +115,7 @@ $(function() {
     let leftAirports = []
     let rightAirports = []
 
-    flights_data.forEach(e => {
+    flights_data.forEach((e, i) => {
         if (!validate(e))
             return;
         
@@ -52,6 +126,9 @@ $(function() {
             stroke: false,
             fillOpacity: 0.4
         }).addTo(map);
+        leftCircle.on("click", function(e) {
+            plotData(i);
+        });
         leftAirports.push(leftCircle);
 
         const rightCircle = L.circle([e.APT_LATITUDE, e.APT_LONGITUDE], {
@@ -61,10 +138,16 @@ $(function() {
             stroke: false,
             fillOpacity: 0.6
         }).addTo(map);
+        rightCircle.on("click", function(e) {
+            plotData(i);
+        });
         rightAirports.push(rightCircle);
     });
 
     leftAirports.push(osmLayerLeft);
     rightAirports.push(osmLayerRight);
     const compare = L.control.compare(leftAirports, rightAirports).addTo(map);
+
+    // Plot data for London airport
+    plotData(159);
 });

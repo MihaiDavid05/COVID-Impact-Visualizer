@@ -38,7 +38,6 @@ function highlightIth(infographic, current, total) {
     node.addClass('highlight-icon');
 
     current++;
-    console.log(current);
     if (current < total)
         setTimeout(function(){highlightIth(infographic, current, total)}, 1000);
 }

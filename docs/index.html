@@ -11,23 +11,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-compare/dist/leaflet-compare.css" />
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.0.0/d3.js"></script>
-    <script src="//unpkg.com/d3"></script>
-    <script src="//unpkg.com/globe.gl"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://unpkg.com/d3-simple-slider"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -199,7 +192,7 @@
         <div class="container">
           <div class="row my-2 py-3">
             <div class="col-12 col-md-6 text-justify">
-              The COVID-19 pandemic had a profound impact on <span class="gradient-highlight">travel and flights</span> worldwide. International travel restrictions, lockdown measures, and fear of the virus led to a significant decrease in air travel demand. Airlines were forced to <span class="gradient-highlight">cancel flights</span>, reduce their operations, and even suspend services temporarily. The aviation industry faced severe financial losses, with many airlines filing for bankruptcy or requiring government bailouts to survive. The data provided by Eurocontrol on the number of flights at European airports clearly illustrates the extent of the impact. A visualization below showcases airports as circles, where the <span class="gradient-highlight">size of each circle represents the number of flights in the years 2019 and 2020</span>. The comparative overview vividly demonstrates the <span class="gradient-highlight">dramatic decline in air traffic</span> during the pandemic.            </div>
+              The COVID-19 pandemic had a profound impact on <span class="gradient-highlight">travel and flights</span> worldwide. International travel restrictions, lockdown measures, and fear of the virus led to a significant decrease in air travel demand. Airlines were forced to <span class="gradient-highlight">cancel flights</span>, reduce their operations, and even suspend services temporarily. The aviation industry faced severe financial losses, with many airlines filing for bankruptcy or requiring government bailouts to survive. The data provided by Eurocontrol on the number of flights at European airports clearly illustrates the extent of the impact. A visualization below showcases airports as circles, where the <span class="gradient-highlight">size of each circle represents the number of flights (traffic) in the years 2019 and 2020</span>. The comparative overview vividly demonstrates the <span class="gradient-highlight">dramatic decline in air traffic</span> during the pandemic.</div>
             <div class="col-12 col-md-6 my-md-auto mt-2">
                 <img src="res/timeline/airport.jpg" class="timeline-img rounded" style="max-height:240px;">
             </div>
@@ -211,11 +204,17 @@
         </div>
 
         <div class="container">
-          <div class="col-12 px-0 pb-4">
-            <div id="flights-map" class="rounded"></div>
+          <div class="row">
+            <div class="col-12 px-0 pb-4">
+              <div id="flights-map" class="rounded"></div>
+            </div>
+
+            <!-- Hidden plot -->
+            <div class="col-6 px-0 mt-3 mx-auto d-none">
+              <div id="chart" class="rounded p-2"></div>
+            </div>
           </div>
         </div>
-        <div id="charts"></div>
     </div>
 
     <!-- TODO: Add short about and our photos
@@ -231,8 +230,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js" integrity="sha512-igl8WEUuas9k5dtnhKqyyld6TzzRjvMqLC79jkgT3z02FvJyHAuUtyemm/P/jYSne1xwFI06ezQxEwweaiV7VA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <!-- Leaflet and Leaflet compare for flights map-->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/leaflet-compare/dist/leaflet-compare.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.0.0/d3.js"></script>
+    <script src="//unpkg.com/d3"></script>
+    <script src="//unpkg.com/globe.gl"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/d3-simple-slider"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
 
     <!-- Utils with navbar scrolling change, element in viewport script -->
     <script src="res/utils.js"></script>
