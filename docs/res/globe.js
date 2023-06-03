@@ -43,7 +43,7 @@ $(function () {
     const world = Globe()
     .backgroundColor('#13142d')
     .polygonAltitude(0.03)
-    .polygonSideColor(() => 'rgba(0, 50, 50, 0.5)')
+    .polygonSideColor(() => 'red')
     .polygonStrokeColor(() => 'green')
     .polygonsData(countries.features)
     .pointOfView(MAP_CENTER, 10)(document.getElementById('cases'));
@@ -51,13 +51,14 @@ $(function () {
     // Auto-rotate
     world.controls().autoRotate = true;
     world.controls().autoRotateSpeed = 1.0;
- 
-    window.addEventListener('resize', (event) => {
-      world.width([event.target.innerWidth -100])
-      world.height([event.target.innerHeight])
-    });
 
-    window.dispatchEvent(new Event('resize'))
+
+    world.width([$('#cases').width()]);
+    world.height([$('#cases').height()]);
+    $(window).on("resize", function() {
+      world.width([$('#cases').width()]);
+      world.height([$('#cases').height()]);
+    });
 
     d3.select(".scene-container canvas").on('dblclick', function () {
         if (world.controls().enableZoom){
@@ -147,12 +148,12 @@ $(function () {
                     <div class="card" style="left: ${labelX}px; top: ${labelY}px;">
                     <img class="card-img" src="${flagEndpoint}/${flagName}.${extension}" alt="flag" height="100" width="50" />
                     <div class="container">
-                    <span class="card-title", style="color:black; font-family:  'Inter', sans-serif;">${d.properties.NAME}</span> <br />
+                    <span class="card-title", style="color:black; font-family:  'Figree', sans-serif;">${d.properties.NAME}</span> <br />
                     <div class="card-spacer"></div>
                       <div class="card-spacer"></div>
-                      <span style="color:black; font-family:  'Inter', sans-serif;"><b>New monthly deaths:</b> ${getDeathsNew(d, year, month) === -1 ? 'No Data available' : getDeathsNew(d, year, month).toLocaleString("en-US")} </span>
+                      <span style="color:black; font-family:  'Figree', sans-serif;"><b>New monthly deaths:</b> ${getDeathsNew(d, year, month) === -1 ? 'No Data available' : getDeathsNew(d, year, month).toLocaleString("en-US")} </span>
                       <div class="card-spacer"></div>  
-                      <span style="color:black; font-family:  'Inter', sans-serif;"><b>New monthly cases:</b> ${getCasesNew(d, year, month) === -1 ? 'No Data available' : getCasesNew(d, year, month).toLocaleString("en-US")}</span>
+                      <span style="color:black; font-family:  'Figree', sans-serif;"><b>New monthly cases:</b> ${getCasesNew(d, year, month) === -1 ? 'No Data available' : getCasesNew(d, year, month).toLocaleString("en-US")}</span>
                     </div>
                     </div>
                 `

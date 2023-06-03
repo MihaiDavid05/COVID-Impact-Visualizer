@@ -328,3 +328,8 @@ html {
 #chart {
     background-color: #fbf8f4;
 }
+
+#cases {
+    height: 60vh;
+}
+
