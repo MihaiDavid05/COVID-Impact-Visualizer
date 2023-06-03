@@ -3,7 +3,7 @@ $(function () {
   const colorScale = d3.scaleSequentialPow(d3.interpolateReds).exponent(1 / 4);
 
   // centre map
-  const MAP_CENTER = { lat: 6.518, lng: -0.27, altitude: 1.8 };
+  const MAP_CENTER = { lat: 6.518, lng: -0.27, altitude: 2.0 };
 
   const months = {
     January: '01',
@@ -24,8 +24,8 @@ $(function () {
   var target = document.querySelector('p#value-time');
 
   // Define month and year variables
-  var month  = parseInt(months[target.innerHTML.split(" ")[11]]);
-  var year = parseInt(target.innerHTML.split(" ")[12])
+  var month  = parseInt(months[target.innerHTML.split(" ")[0]]);
+  var year = parseInt(target.innerHTML.split(" ")[1])
 
   fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json()).then(function(countries) {
 
@@ -194,8 +194,8 @@ $(function () {
     // Create an observer instance that updates the month and the year variables
     var observer = new MutationObserver(function(mutations) {
       mutations.forEach(function() {
-        month = parseInt(months[target.innerHTML.split(" ")[11]])
-        year = parseInt(target.innerHTML.split(" ")[12])
+        month = parseInt(months[target.innerHTML.split(" ")[0]])
+        year = parseInt(target.innerHTML.split(" ")[1])
         updateGlobe(world, year, month)
       });    
     });

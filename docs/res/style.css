@@ -110,13 +110,13 @@ html {
 }
 
 .parameter-value text {
-    fill: #aaa;
-    font-family:  'Inter', sans-serif;
+    fill: #fff;
+    font-family:  'Figtree', sans-serif;
 }
 
 .slider text {
-    font-size: 12px;
-    color: #aaa;
+    font-size: 20px;
+    color: #fff;
 }
 
 /* Change the track line color to red */
@@ -125,11 +125,12 @@ html {
 }
 
 .slider .track{
-    stroke: #bbb;
+    /*stroke: #bbb;*/
+    stroke: #fff;
 }
 
 .slider .track-fill{
-    stroke: #f03030;
+    stroke: #e54765;
 }
 
 /* Change the track line height */
@@ -137,8 +138,14 @@ html {
     height: 5px;
 }
 
-.tick {
-    font-family:  'Inter', sans-serif;
+.tick text {
+    font-family:  'Figree', sans-serif;
+    fill: #fff !important;
+    font-size: 20px;
+}
+
+.tick line {
+    stroke: #fff !important;
 }
 
 .slider {
@@ -146,56 +153,27 @@ html {
 }
 
 #play-button {
-    background: #f03030;
-    padding-right: 23px;
+    background: #e54765;
     border-radius: 3px;
     border: none;
-    color: white;
-    margin: 0;
-    padding: 0 10px;
-    width: 60px;
     cursor: pointer;
-    height: 30px;
-    margin-bottom: 30px;
-    margin-right: 20px;
 }
 
 #play-button:hover {
-    background-color: #696969;
+    background-color: #fff;
+}
+
+#play-button i {
+    color: #fff !important;
+}
+
+#play-button:hover > i {
+    color: #e54765 !important;
 }
 
 #value-time {
-    color: #aaa;
-    font-family:  'Inter', sans-serif;
-}
-
-#info {
-    display: flex;
-    justify-content: center;
-    align-self: flex-end;
-    width: 100%;
-    color: #696969;
-    font-style: italic;
-}
-.chart-div {
-    display: none;
-}
-
-#div-slider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#slider {
-    display: flex;
-    align-items: center;
-}
-
-.my-label {
-    position: absolute;
-    width:1000px;
-    font-size:20px;
+    color: #fff;
+    font-family:  'Figree', sans-serif;
 }
 
 /* Timeline */
