@@ -217,16 +217,25 @@
 
         <div class="container">
           <div class="row">
-            <div class="col-12 px-0 pb-4">
+            <div class="col-12 pb-4">
               <div id="flights-map" class="rounded"></div>
-            </div>
-
-            <!-- Hidden plot -->
-            <div class="col-6 px-0 mt-3 mx-auto d-none">
-              <div id="chart" class="rounded p-2"></div>
             </div>
           </div>
         </div>
+    </div>
+
+    <button href="#chart-modal" class="btn btn-settings" data-backdrop="true" data-toggle="modal">Open Modal</button>
+    <div class="modal fade" tabindex="-1" role="dialog" id="chart-modal">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content shadow-sm border-0">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right:20px;">
+              <span aria-hidden="true"><i class="fa-solid fa-circle-xmark"></i></span>
+            </button>
+            <div id="chart" class="rounded p-2"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- TODO: Add short about and our photos
@@ -238,6 +247,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
         integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Bootstrap bundle -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js" integrity="sha512-igl8WEUuas9k5dtnhKqyyld6TzzRjvMqLC79jkgT3z02FvJyHAuUtyemm/P/jYSne1xwFI06ezQxEwweaiV7VA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     

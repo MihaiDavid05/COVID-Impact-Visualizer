@@ -3,6 +3,12 @@ $(function () {
         var $nav = $(".navbar-covid");
         $nav.toggleClass('scrolled', $(this).scrollTop() > 5);
     });
+
+    let modal = $("#myModal");
+    modal.draggable({
+        handle: ".dragable-touch",
+    });
+    modal.resizable();
 });
 
 $.fn.isInViewport = function() {

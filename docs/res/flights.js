@@ -84,6 +84,14 @@ function plotData(i) {
 }
 
 $(function() {
+    flights_data.sort(function(a, b) {
+        const keyA = a[total_left_col],
+              keyB = b[total_left_col];
+        if (keyA < keyB) return 1;
+        if (keyA > keyB) return -1;
+        return 0;
+    });
+    
     const map = L.map('flights-map', {
         minZoom: 4,
         maxZoom: 12,
@@ -128,6 +136,7 @@ $(function() {
         }).addTo(map);
         leftCircle.on("click", function(e) {
             plotData(i);
+            $('#chart-modal').modal('show');
         });
         leftAirports.push(leftCircle);
 
@@ -140,6 +149,7 @@ $(function() {
         }).addTo(map);
         rightCircle.on("click", function(e) {
             plotData(i);
+            $('#chart-modal').modal('show');
         });
         rightAirports.push(rightCircle);
     });
@@ -147,7 +157,4 @@ $(function() {
     leftAirports.push(osmLayerLeft);
     rightAirports.push(osmLayerRight);
     const compare = L.control.compare(leftAirports, rightAirports).addTo(map);
-
-    // Plot data for London airport
-    plotData(159);
 });
