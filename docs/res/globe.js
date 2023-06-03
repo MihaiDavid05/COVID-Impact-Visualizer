@@ -1,13 +1,9 @@
 $(function () {
   // create a colour scale and set manual domain.
-  const colorScale = d3.scaleSequentialPow(d3.interpolateYlOrRd).exponent(1 / 4);
+  const colorScale = d3.scaleSequentialPow(d3.interpolateReds).exponent(1 / 4);
 
   // centre map
   const MAP_CENTER = { lat: 6.518, lng: -0.27, altitude: 1.8 };
-
-  // assign url where to find flag
-  const flagEndpoint = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-dqw4w9wgxcq/master/data/flags';
-  const extension = 'svg';
 
   const months = {
     January: '01',
@@ -43,8 +39,9 @@ $(function () {
     const world = Globe()
     .backgroundColor('#13142d')
     .polygonAltitude(0.03)
-    .polygonSideColor(() => 'red')
-    .polygonStrokeColor(() => 'green')
+    .polygonsTransitionDuration(300)
+    .polygonSideColor(() => 'transparent')
+    .polygonStrokeColor(() => '#13142d')
     .polygonsData(countries.features)
     .pointOfView(MAP_CENTER, 10)(document.getElementById('cases'));
 
@@ -60,12 +57,11 @@ $(function () {
       world.height([$('#cases').height()]);
     });
 
-    d3.select(".scene-container canvas").on('dblclick', function () {
-        if (world.controls().enableZoom){
-          world.controls().enableZoom = false;
-        } else {
-          world.controls().enableZoom = true
-        }
+    // Disable zoom by default
+    world.controls().enableZoom = false;
+
+    $("#cases").on("dblclick", function() {
+      world.controls().enableZoom = !world.controls().enableZoom;
     });
 
     // Get covid cases for heatmap represented at polygon level
@@ -141,28 +137,24 @@ $(function () {
       // TODO: Put card to the right of the mouse
       world.polygonLabel(
         (d) => {
-          const flagName = d.properties.ISO_A2.toLowerCase();
-          const labelX = +100
-          const labelY = -200
+          const iso_a2 = d.properties.ISO_A2.toUpperCase();
+          const flag_emoji = iso_a2.replace(/./g, char => String.fromCodePoint(char.charCodeAt(0)+127397));
+          const countryName = d.properties.NAME;
+          const newCasesStr = getCasesNew(d, year, month) === -1 ? 'No Data available' : getCasesNew(d, year, month).toLocaleString("en-US")
+          const newDeathsStr = getDeathsNew(d, year, month) === -1 ? 'No Data available' : getDeathsNew(d, year, month).toLocaleString("en-US")
           return `
-                    <div class="card" style="left: ${labelX}px; top: ${labelY}px;">
-                    <img class="card-img" src="${flagEndpoint}/${flagName}.${extension}" alt="flag" height="100" width="50" />
-                    <div class="container">
-                    <span class="card-title", style="color:black; font-family:  'Figree', sans-serif;">${d.properties.NAME}</span> <br />
-                    <div class="card-spacer"></div>
-                      <div class="card-spacer"></div>
-                      <span style="color:black; font-family:  'Figree', sans-serif;"><b>New monthly deaths:</b> ${getDeathsNew(d, year, month) === -1 ? 'No Data available' : getDeathsNew(d, year, month).toLocaleString("en-US")} </span>
-                      <div class="card-spacer"></div>  
-                      <span style="color:black; font-family:  'Figree', sans-serif;"><b>New monthly cases:</b> ${getCasesNew(d, year, month) === -1 ? 'No Data available' : getCasesNew(d, year, month).toLocaleString("en-US")}</span>
-                    </div>
-                    </div>
+                  <div class="globe-info-card rounded border p-2 shadow-sm">
+                    <span class="h5"><span class="font-weight-bold">${countryName}</span> ${flag_emoji}</span><br/>
+                    New monthly cases: ${newCasesStr}<br/>
+                    New monthly deaths: ${newDeathsStr}
+                  </div>
                 `
         }
       );
 
       world.onPolygonHover(hoverD => world
-        .polygonAltitude(d => d === hoverD ? 0.15 : 0.03)
-        .polygonCapColor(d => d === hoverD ? 'rgb(149, 216, 239)' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(d, year, month), 0, getMaxOverall(d)))
+        .polygonAltitude(d => d === hoverD ? 0.05 : 0.03)
+        .polygonCapColor(d => d === hoverD ? '#e54765' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(d, year, month), 0, getMaxOverall(d)))
       );
 
       world.polygonsTransitionDuration(200);

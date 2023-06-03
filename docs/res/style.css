@@ -330,6 +330,11 @@ html {
 }
 
 #cases {
-    height: 60vh;
+    height: 70vh;
 }
 
+.globe-info-card {
+    font-family: 'Figtree', sans-serif !important;
+    background-color: #fff;
+    color: #111;
+}
