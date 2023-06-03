@@ -134,6 +134,24 @@ $(function () {
       // return 0.012908317845049266
       return feat.properties.covidHeatmapNewCasesMaxOverall
     }
+
+    function nFormatter(num, digits) {
+      const lookup = [
+        { value: 1, symbol: "" },
+        { value: 1e3, symbol: "k" },
+        { value: 1e6, symbol: "M" },
+        { value: 1e9, symbol: "G" },
+        { value: 1e12, symbol: "T" },
+        { value: 1e15, symbol: "P" },
+        { value: 1e18, symbol: "E" }
+      ];
+      const rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+      var item = lookup.slice().reverse().find(function(item) {
+        return num >= item.value;
+      });
+      return item ? (num / item.value).toFixed(digits).replace(rx, "$1") + item.symbol : "0";
+    }
+    
     
 
     // Update the globe polygons
@@ -149,11 +167,13 @@ $(function () {
           const countryName = d.properties.NAME;
           const newCasesStr = getCasesNew(d, year, month) === -1 ? 'No Data available' : getCasesNew(d, year, month).toLocaleString("en-US")
           const newDeathsStr = getDeathsNew(d, year, month) === -1 ? 'No Data available' : getDeathsNew(d, year, month).toLocaleString("en-US")
+          const population = d.properties.POP_EST
           return `
                   <div class="globe-info-card rounded border p-2 shadow-sm">
                     <span class="h5"><span class="font-weight-bold">${countryName}</span> ${flag_emoji}</span><br/>
                     New monthly cases: ${newCasesStr}<br/>
-                    New monthly deaths: ${newDeathsStr}
+                    New monthly deaths: ${newDeathsStr}<br/>
+                    Est. population: ${nFormatter(population, 2)}
                   </div>
                 `
         }
@@ -161,7 +181,7 @@ $(function () {
 
       world.onPolygonHover(hoverD => world
         .polygonAltitude(d => d === hoverD ? 0.05 : 0.03)
-        .polygonCapColor(d => d === hoverD ? '#e54765' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(d, year, month), getMin(feat), getMax(d)))
+        .polygonCapColor(d => d === hoverD ? '#e54765' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(d, year, month), getMin(d), getMax(d)))
       );
 
       world.polygonsTransitionDuration(200);
