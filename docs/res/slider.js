@@ -62,8 +62,9 @@ var sliderTime = d3
 var gTime = d3
     .select("div#slider-time")
     .append("svg")
-    .attr("width", 1000)
-    .attr("height", 92)
+    //.attr("width", 1000)
+    //.attr("height", 92)
+    .attr("viewBox", `0 0 1000 92`)
     .append("g")
     .attr("transform", "translate(40,30)");
 
@@ -74,6 +75,7 @@ d3.select(".parameter-value text").attr("y", "-29");
 d3.select(".parameter-value text").attr("x", "5");
 d3.select(".parameter-value path").attr("fill", "white");
 d3.selectAll(".tick text").style("text-anchor", "start");
+d3.selectAll(".tick text").style("font-size", "2em");
 d3.selectAll(".tick text").attr("x", "-10");
 document.querySelector(".parameter-value path").removeAttribute("tabindex");
 d3.select(".parameter-value").attr("y", "-29");
