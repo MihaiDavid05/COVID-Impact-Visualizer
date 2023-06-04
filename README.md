@@ -24,7 +24,7 @@
 
 ## 🎬 Screencast
 
-[Screencast video](todo)
+[Screencast video](https://www.youtube.com/watch?v=qjn__BGkVL0)
 
 ## 📖 Process book
 
