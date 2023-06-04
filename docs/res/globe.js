@@ -1,6 +1,6 @@
 $(function () {
   // create a colour scale and set manual domain.
-  const colorScale = d3.scaleSequentialPow(d3.interpolateReds).exponent(1 / 4);
+  const colorScale = d3.scaleSequentialPow(d3.interpolateReds).exponent(0.5);
 
   // centre map
   const MAP_CENTER = { lat: 6.518, lng: -0.27, altitude: 2.0 };
@@ -124,15 +124,11 @@ $(function () {
       }
     }
 
-    function getMin(feat) {
-      return feat.properties.covidHeatmapNewCasesMin
+    function getMin(feat, year, month) {
+      return feat.properties[`covidHeatmapNewCasesMin_${year}_${month}`]
     }
-    function getMax(feat) {
-      return feat.properties.covidHeatmapNewCasesMax
-    }
-    function getMaxOverall(feat) {
-      // return 0.012908317845049266
-      return feat.properties.covidHeatmapNewCasesMaxOverall
+    function getMax(feat, year, month) {
+      return feat.properties[`covidHeatmapNewCasesMax_${year}_${month}`]
     }
 
     function nFormatter(num, digits) {
@@ -157,7 +153,7 @@ $(function () {
     // Update the globe polygons
     function updateGlobe(world, year, month) {
 
-      world.polygonCapColor(feat => getCasesHeatmap(feat, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(feat, year, month), getMin(feat), getMax(feat)))
+      world.polygonCapColor(feat => getCasesHeatmap(feat, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(feat, year, month), getMin(feat, year, month), getMax(feat, year, month)))
 
       // TODO: Put card to the right of the mouse
       world.polygonLabel(
@@ -181,7 +177,7 @@ $(function () {
 
       world.onPolygonHover(hoverD => world
         .polygonAltitude(d => d === hoverD ? 0.05 : 0.03)
-        .polygonCapColor(d => d === hoverD ? '#e54765' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(d, year, month), getMin(d), getMax(d)))
+        .polygonCapColor(d => d === hoverD ? '#e54765' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(d, year, month), getMin(d, year, month), getMax(d, year, month)))
       );
 
       world.polygonsTransitionDuration(200);
