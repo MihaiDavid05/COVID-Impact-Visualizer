@@ -54,16 +54,16 @@ project-2023-dqw4w9wgxcq
 │   ├── README.md
 │   ├── index.html
 │   └── res
-│       ├── counter.js
-│       ├── covid_logo.png
 │       ├── data
+│       |   ├── covid_logo.png
+│       │   ├── cases_data.geojson
 │       │   └── flights_data.js
+│       ├── counter.js
 │       ├── employment.js
 │       ├── flights.js
 │       ├── globe.js
-│       ├── ne_110m_admin_0_countries_covid_cases.geojson
 │       ├── slider.js
-│       ├── style.css
+│       ├── utils.js
 │       ├── timeline
 │       │   ├── airport.jpg
 │       │   ├── employment.jpeg
@@ -71,11 +71,11 @@ project-2023-dqw4w9wgxcq
 │       │   ├── hospital.jpg
 │       │   ├── masks.jpg
 │       │   └── wuhan.jpg
-│       └── utils.js
+│       └── style.css
 ├── milestone-1.md
 ├── milestone-2.md
 ├── milestone-3.md
-├── process_book.md
+├── process_book.pdf
 └── screenshots
     ├── cases.png
     ├── employment.png
