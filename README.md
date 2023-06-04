@@ -1,4 +1,4 @@
-# Project of Data Visualization (COM-480)
+# 🦠 Project of Data Visualization (COM-480)
 
 | Student's name           | SCIPER |
 | ------------------------ | ------ |
@@ -8,29 +8,29 @@
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
-## Milestones
+## 🎒 Milestones
 
-### Milestone 1
+### 📘 Milestone 1
 
 [Milestone 1 report](milestone-1.md)
 
-### Milestone 2
+### 📙 Milestone 2
 
 [Milestone 2 report](milestone-2.md)
 
-### Milestone 3
+### 📗 Milestone 3
 
 [Milestone 3 report](milestone-3.md)
 
-## Screencast
+## 🎬 Screencast
 
 [Screencast video](todo)
 
-## Process book
+## 📖 Process book
 
 [Process book](todo)
 
-## Code
+## 🚀 Code
 
 ```
 git clone https://github.com/com-480-data-visualization/project-2023-dqw4w9wgxcq.git
@@ -40,7 +40,7 @@ python -m http-server
 # open a browser and visit the website (e.g., http://127.0.0.1:8000)
 ```
 
-### Project Structure
+### 📁 Project Structure
 
 ```
 project-2023-dqw4w9wgxcq
