@@ -124,9 +124,11 @@ $(function () {
       }
     }
 
+    // Get minimum number for color domain
     function getMin(feat, year, month) {
       return feat.properties[`covidHeatmapNewCasesMin_${year}_${month}`]
     }
+    // Get maximum number for color domain
     function getMax(feat, year, month) {
       return feat.properties[`covidHeatmapNewCasesMax_${year}_${month}`]
     }
@@ -155,7 +157,6 @@ $(function () {
 
       world.polygonCapColor(feat => getCasesHeatmap(feat, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(feat, year, month), getMin(feat, year, month), getMax(feat, year, month)))
 
-      // TODO: Put card to the right of the mouse
       world.polygonLabel(
         (d) => {
           const iso_a2 = d.properties.ISO_A2.toUpperCase();
@@ -164,11 +165,14 @@ $(function () {
           const newCasesStr = getCasesNew(d, year, month) === -1 ? 'No Data available' : getCasesNew(d, year, month).toLocaleString("en-US")
           const newDeathsStr = getDeathsNew(d, year, month) === -1 ? 'No Data available' : getDeathsNew(d, year, month).toLocaleString("en-US")
           const population = d.properties.POP_EST
+          const newCasesPer1000Str = getCasesNew(d, year, month) === -1 ? 'No Data available' : ((getCasesNew(d, year, month) / population) * 1000).toLocaleString("en-US")
+
           return `
                   <div class="globe-info-card rounded border p-2 shadow-sm">
                     <span class="h5"><span class="font-weight-bold">${countryName}</span> ${flag_emoji}</span><br/>
                     New monthly cases: ${newCasesStr}<br/>
-                    New monthly deaths: ${newDeathsStr}<br/>
+                    New monthly deaths: ${newDeathsStr}<br/><br/>
+                    New monthly cases per 1000: ${newCasesPer1000Str}<br/>
                     Est. population: ${nFormatter(population, 2)}
                   </div>
                 `
@@ -176,7 +180,7 @@ $(function () {
       );
 
       world.onPolygonHover(hoverD => world
-        .polygonAltitude(d => d === hoverD ? 0.05 : 0.03)
+        .polygonAltitude(d => d === hoverD ? 0.08 : 0.03)
         .polygonCapColor(d => d === hoverD ? '#e54765' : getCasesHeatmap(d, year, month) === -1 ? 'lightgrey' : get_color(colorScale, getCasesHeatmap(d, year, month), getMin(d, year, month), getMax(d, year, month)))
       );
 
