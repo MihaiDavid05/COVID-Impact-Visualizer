@@ -1,6 +1,6 @@
 const YEAR_LEFT = "2019";
 const YEAR_RIGHT = "2020";
-const SCALE_DOWN_FACTOR = 4;
+const SCALE_UP_FACTOR = 300;
 const YEARS_AVAILABLE = ["2018", "2019", "2020", "2021"]
 const COLORS_PER_YEAR = ["#3066BE", "#13142d", "#e54765", "#CFEE9E"]
 
@@ -129,7 +129,7 @@ $(function() {
         
         const leftCircle = L.circle([e.APT_LATITUDE, e.APT_LONGITUDE], {
             pane: "left",
-            radius: e[total_left_col]/SCALE_DOWN_FACTOR,
+            radius: Math.sqrt(e[total_left_col] / (2 * Math.PI)) * SCALE_UP_FACTOR,
             color: "#151752",
             stroke: false,
             fillOpacity: 0.4
@@ -142,7 +142,7 @@ $(function() {
 
         const rightCircle = L.circle([e.APT_LATITUDE, e.APT_LONGITUDE], {
             pane: "right",
-            radius: e[total_right_col]/SCALE_DOWN_FACTOR,
+            radius: Math.sqrt(e[total_right_col] /  (2 * Math.PI)) * SCALE_UP_FACTOR,
             color: "#e54765",
             stroke: false,
             fillOpacity: 0.6

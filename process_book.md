@@ -9,7 +9,7 @@ We have selected three high-quality datasets for our project, which will serve a
 - [European Flights by Eurocontrol](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-07-12)
 - [Impact of Covid-19 on Employment by ILOSTAT](https://www.kaggle.com/datasets/vineethakkinapalli/impact-of-covid19-on-employment-ilostat)
 
-We have conducted an initial exploratory data analysis of the datasets and have found them to be of high quality. However, the [Data on COVID-19 (coronavirus) by Our World in Data](https://github.com/owid/covid-19-data/tree/master/public/data) dataset does not fully reflect reality, because of the way cases and deaths are reported by each country (e.g., "`new_cases` - In rare cases where our source reports a negative daily change due to a data correction, we set this metric to NA").
+We have conducted an initial exploratory data analysis of the datasets and have found them to be of high quality. However, the [Data on COVID-19 (coronavirus) by Our World in Data](https://github.com/owid/covid-19-data/tree/master/public/data) dataset does not fully reflect reality, because of the way cases and deaths are reported by each country (e.g., "new_cases" - In rare cases where our source reports a negative daily change due to a data correction, we set this metric to NA").
 
 To further enhance our analysis, we will utilize two additional datasets for the enrichment (e.g., getting airport latitude and longitude, map borders and coutries' flags).
 - [IATA/ICAO List by IP2Location](https://github.com/ip2location/ip2location-iata-icao)
@@ -25,7 +25,7 @@ We use simple HTML, CSS, and the Bootstrap framework as a backbone, with several
 
 JQuery, JavaScript
 
-### COVID cases
+### Globe
 
 This section displays global COVID-19 statistics. It begins with a slider created using an SVG component and simple D3 slider tools. The slider ranges from 2020 to 2023, sampled monthly, with a play/pause button located on the left side of the slide bar. Users can either select a specific month and year by dragging the slider or let it run through all the timesteps automatically.
 
@@ -35,19 +35,18 @@ We compute the monthly new cases per capita per country. A heatmap with a suitab
 
 The globe displays the world's countries using predefined GeoJSON formatted data and the Polygons Layer from Globe GL to define each country's location and appearance. Hovering over a country, while a particular month is selected, displays a pop-up card with monthly information, including the country's flag, new monthly COVID-19 deaths and cases, and population. The country's borders will rise above the original surface of the earth to highlight it.
 
-### Employment
+### Infographic
 
-INFOGRAPHIC:
 JavaScript, JQuery
 
-### Flights
+### Flights map
 
 Map (two comparison panels with flights bubbles for 2019 and 2020):
 Leaflet, D3 for charts
 
-## Design decisions
 
-## Challenges
+## Design decisions and challenges
+
 
 The biggest challenges that we faced were adding responsiveness and setting the interaction with, and between some elements. 
 
