@@ -22,6 +22,10 @@
 
 [Milestone 3 report](milestone-3.md)
 
+## 🌎 Website
+
+[Website link](https://com-480-data-visualization.github.io/project-2023-dqw4w9wgxcq/)
+
 ## 🎬 Screencast
 
 [Screencast video](https://www.youtube.com/watch?v=qjn__BGkVL0)
