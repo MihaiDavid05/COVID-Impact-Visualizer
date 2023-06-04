@@ -44,7 +44,7 @@ python -m http-server
 # open a browser and visit the website (e.g., http://127.0.0.1:8000)
 ```
 
-### 📁 Project Structure
+## 📁 Project Structure
 
 ```
 project-2023-dqw4w9wgxcq
