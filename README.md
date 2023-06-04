@@ -52,23 +52,23 @@ project-2023-dqw4w9wgxcq
 ├── data
 │   ├── all_agg_flights.csv
 │   ├── data_enrichment.ipynb
-│   ├── pop-deaths-data.csv
 │   ├── employment_data.csv
-│   └── exploratory_data_analysis.ipynb
+│   ├── exploratory_data_analysis.ipynb
+│   └── pop-deaths-data.csv
 ├── docs
 │   ├── README.md
 │   ├── index.html
 │   └── res
-│       ├── data
-│       |   ├── covid_logo.png
-│       │   ├── cases_data.geojson
-│       │   └── flights_data.js
 │       ├── counter.js
+│       ├── data
+│       │   ├── cases_data.geojson
+│       │   ├── covid_logo.png
+│       │   └── flights_data.js
 │       ├── employment.js
 │       ├── flights.js
 │       ├── globe.js
 │       ├── slider.js
-│       ├── utils.js
+│       ├── style.css
 │       ├── timeline
 │       │   ├── airport.jpg
 │       │   ├── employment.jpeg
@@ -76,7 +76,7 @@ project-2023-dqw4w9wgxcq
 │       │   ├── hospital.jpg
 │       │   ├── masks.jpg
 │       │   └── wuhan.jpg
-│       └── style.css
+│       └── utils.js
 ├── milestone-1.md
 ├── milestone-2.md
 ├── milestone-3.md
