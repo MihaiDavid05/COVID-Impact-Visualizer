@@ -27,7 +27,7 @@ $(function () {
   var month  = parseInt(months[target.innerHTML.split(" ")[0]]);
   var year = parseInt(target.innerHTML.split(" ")[1])
 
-  fetch('res/ne_110m_admin_0_countries_covid_cases.geojson').then(res => res.json()).then(function(countries) {
+  fetch('res/data/cases_data.geojson').then(res => res.json()).then(function(countries) {
 
     // Set domain for color scale and get color: 
     function get_color(colorScale, value, min, max) {
