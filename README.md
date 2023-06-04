@@ -6,7 +6,33 @@
 | Mihai David              | 340559 |
 | Vuk Vuković              | 338791 |
 
-[Milestone 1](milestone-1.md) • [Milestone 2](milestone-2.md) • [Milestone 3](milestone-3.md)
+[Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
+
+## Milestones
+
+### Milestone 1
+
+[Milestone 1 report](milestone-1.md)
+
+### Milestone 2
+
+[Milestone 2 report](milestone-2.md)
+
+### Milestone 3
+
+[Milestone 3 report](milestone-3.md)
+
+## Screencast
+
+[Screencast video](todo)
+
+## Process book
+
+[Process book](todo)
+
+## Code
+
+TODO
 
 ```
 project-2023-dqw4w9wgxcq
