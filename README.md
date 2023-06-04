@@ -37,7 +37,7 @@ git clone https://github.com/com-480-data-visualization/project-2023-dqw4w9wgxcq
 cd docs
 # launch a server
 python -m http-server
-# open a browser and visit the website [locally](http://127.0.0.1:5500)
+# open a browser and visit the website (e.g., http://127.0.0.1:8000)
 ```
 
 ### Project Structure
