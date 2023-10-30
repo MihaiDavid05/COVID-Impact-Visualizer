@@ -1,8 +1,5 @@
 # 🦠 Project of Data Visualization (COM-480)
 
-### 📗 Report
-[Milestone 3 report](milestone-3.md)
-
 ## 🌎 Website
 
 [Website link](https://com-480-data-visualization.github.io/project-2023-dqw4w9wgxcq/)
