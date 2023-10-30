@@ -66,4 +66,5 @@ project-2023-dqw4w9wgxcq
     ├── menu.png
     └── summary.png
 ```
-## Contributors: Mihai David, Ioan Florin Cătălin Nițu, Vuk Vuković 
+## Contributors: 
+Mihai David, Ioan Florin Cătălin Nițu, Vuk Vuković 
