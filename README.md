@@ -1,19 +1,6 @@
 # 🦠 Project of Data Visualization (COM-480)
 
-[Milestone 1](#-milestone-1) • [Milestone 2](#-milestone-2) • [Milestone 3](#-milestone-3)
-
-## 🎒 Milestones
-
-### 📘 Milestone 1
-
-[Milestone 1 report](milestone-1.md)
-
-### 📙 Milestone 2
-
-[Milestone 2 report](milestone-2.md)
-
-### 📗 Milestone 3
-
+### 📗 Report
 [Milestone 3 report](milestone-3.md)
 
 ## 🌎 Website
